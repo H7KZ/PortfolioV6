@@ -1,0 +1,649 @@
+{
+	"errors": {
+		"300": "Požadovaný zdroj má více možností. Vyberte si vhodnou.",
+		"301": "Zdroj byl přesunut na novou adresu URL. Aktualizujte si záložky.",
+		"302": "Zdroj byl dočasně přesunut. Zkuste to později nebo sledujte přesměrování.",
+		"307": "Zdroj byl dočasně přesunut na jinou adresu URL.",
+		"308": "Zdroj byl trvale přesunut na jinou adresu URL.",
+		"400": "Požadavek byl neplatný. Zkontrolujte vstup a zkuste to znovu.",
+		"401": "Pro přístup k tomuto zdroji se musíte přihlásit.",
+		"402": "Přístup je omezen na platící uživatele.",
+		"403": "Nemáte oprávnění k přístupu k tomuto zdroji.",
+		"404": "Požadovaný zdroj nebyl nalezen. Zkontrolujte adresu URL.",
+		"405": "Použitá HTTP metoda není pro tento zdroj povolena.",
+		"406": "Požadovaný zdroj není dostupný v požadovaném formátu.",
+		"407": "Je vyžadováno ověření u proxy serveru.",
+		"408": "Server trval příliš dlouho na odpověď. Zkuste to později.",
+		"409": "Došlo ke konfliktu v požadavku. Zkontrolujte duplicitní akce.",
+		"410": "Zdroj již není dostupný a nebude znovu k dispozici.",
+		"411": "Požadavek musí obsahovat platnou hlavičku Content-Length.",
+		"412": "Jedna nebo více podmínek v hlavičce požadavku nebyly splněny.",
+		"413": "Velikost požadavku překračuje povolený limit.",
+		"414": "Požadovaná adresa URL je příliš dlouhá.",
+		"415": "Požadavek obsahuje nepodporovaný typ média.",
+		"416": "Požadovaný rozsah je neplatný nebo není dostupný.",
+		"417": "Server nemůže splnit očekávání uvedená v požadavku.",
+		"418": "Toto je žertovná odpověď indikující neplatný požadavek.",
+		"421": "Požadavek byl odeslán na server, který nemůže poskytnout platnou odpověď.",
+		"422": "Požadavek byl správně formátován, ale nemohl být zpracován.",
+		"423": "Zdroj je uzamčen a nelze jej upravit.",
+		"424": "Selhalo závislé volání, což způsobilo neúspěch tohoto požadavku.",
+		"425": "Požadavek byl odeslán příliš brzy a měl by být zopakován později.",
+		"426": "Klient musí upgradovat na jiný protokol pro přístup k tomuto zdroji.",
+		"428": "Požadavek musí obsahovat specifické předpoklady.",
+		"429": "Bylo provedeno příliš mnoho požadavků v krátkém čase. Zkuste to později.",
+		"431": "Hlavičky požadavku jsou příliš velké pro zpracování.",
+		"451": "Zdroj je blokován z právních důvodů.",
+		"500": "Na naší straně se něco pokazilo. Zkuste to později.",
+		"501": "Server nepodporuje požadovanou funkci.",
+		"502": "Byla přijata neplatná odpověď od nadřazeného serveru. Zkuste to později.",
+		"503": "Server je dočasně nedostupný. Zkuste to později.",
+		"504": "Server trval příliš dlouho na odpověď. Zkuste to později.",
+		"505": "Server nepodporuje požadovanou verzi HTTP.",
+		"506": "Server narazil na konfigurační chybu.",
+		"507": "Server nemá dostatek úložného prostoru.",
+		"508": "Požadavek způsobil nekonečnou smyčku.",
+		"510": "Požadavek vyžaduje další rozšíření.",
+		"511": "Pro přístup k síti je vyžadováno ověření."
+	},
+
+	"navbar": {
+		"work": "Práce",
+		"resume": "Životopis",
+		"linkedin": "LinkedIn",
+		"blog": "Blog",
+		"hire": "Najměte mě"
+	},
+
+	"home": {
+		"fullstack": "Senior Frontend Engineer",
+		"freelance": "Freelance",
+		"prague": "Praha, CZ",
+		"motto": "Dostupný pro part-time B2B kontrakty · 3+ let senior zkušeností",
+		"jankominek": "Jan Komínek",
+		"available": "Pro Part-Time B2B",
+		"bookACall": "Rezervujte si hovor",
+		"explore": "Prozkoumejte mé portfolio",
+
+		"valueProp": "Buduju <strong>komplexní webové aplikace od nuly — rychle.</strong> Vue, React, TypeScript, Node. Platformy pro nabíjení elektromobilů, nástroje pro datovou provenanci a infrastruktura, která to vše drží pohromadě.",
+		"startProject": "Zahájit projekt",
+		"viewResume": "Zobrazit životopis",
+		"yearsLabel": "Let praxe",
+		"projectsLabel": "Realizovaných projektů",
+		"clientsLabel": "Klientů",
+		"upToLabel": "do 10 h/týden",
+
+		"nowLabel": "Nyní",
+		"nowTitle": "Buduji DeepTrace ve CORAC Engineering",
+		"nowDesc": "Platforma pro datovou provenanci a integritu pro Earth Observation data — D3.js vizualizace lineage, klientská verifikace hash-chain, zero-trust auth s AWS Cognito.",
+		"nowDate": "Dub. 2025 — nyní",
+		"nowMeta": "Vzdáleně · Freelance",
+
+		"workLabel": "Vybrané projekty",
+		"workH2": "Postaveno end-to-end. Nasazeno. Ve výrobě.",
+		"workP": "Každý projekt níže jsem dodal — infrastruktura, backend i UI.",
+		"viewProject": "Zobrazit projekt",
+		"readCaseStudy": "Přečíst případovou studii",
+
+		"servicesLabel": "Jak pracuji s klienty",
+		"servicesH2": "Senirorní zodpovědnost. Bez nutnosti vedení za ruku.",
+		"servicesP": "Part-time B2B spolupráce. Přebírám plnou zodpovědnost za svěřenou oblast — architektura, kód, dodání, nasazení.",
+		"service1Num": "01 · GREENFIELD",
+		"service1Title": "Spustit nový produkt od nuly",
+		"service1Desc": "Máte nápad a termín. Nastavím repozitář, vyberu stack, navrhnu datovou vrstvu, dodám MVP a nasadím do produkce. Platforma pro nabíjení EV šla od nuly k veřejnému spuštění za 5 měsíců.",
+		"service2Num": "02 · ZÁCHRANA",
+		"service2Title": "Opravit co nefunguje — rychle",
+		"service2Desc": "Nestabilní nasazení, zastaralý kód, chybějící CI, nikdo neví jak to funguje. Diagnostikuji, stabilizuji, zdokumentuji a nastavím pipelines, aby váš tým mohl zase hýbat.",
+		"service3Num": "03 · ŠKÁLOVÁNÍ",
+		"service3Title": "Růst platformy spolu s týmem",
+		"service3Desc": "Průběžný frakcionální senior engineer. Code review, architektonická rozhodnutí, mentoring juniorů, vlastnictví částí, které nikdo jiný nechce. Aktuálně takto pracuji pro CORAC Engineering a Intedat.",
+
+		"testimonialsLabel": "Co říkají klienti",
+		"testimonialsH2": "Skutečná zpětná vazba od skutečných kolegů a manažerů.",
+		"testimonialsP": "Přímo z doporučení na LinkedIn — bez úprav.",
+
+		"projectCoraSithBadge": "◆ Vlajkový projekt",
+		"projectCoraSithDesc": "Klientská verifikace hash-chain, D3.js grafy supply-chain a zero-trust autentizace pro citlivý EO datový pipeline. Probíhá 1+ rok, jediný frontend engineer.",
+		"projectIontChargeDesc": "Veřejná platební brána pro EV nabíječky. Integrace ČSOB, Docker Swarm, Fastify + MongoDB.",
+		"projectCoraScorecardDesc": "Nástroj pro kybernetický audit. Shoda s NIS2, export do PDF.",
+		"projectIontAdminDesc": "Ovládací panel nabíječek s aktualizacemi firmware v reálném čase a diagnostikou stanic.",
+		"projectIontInfoDesc": "Veřejná informační aplikace pro EV nabíječky.",
+		"projectPangolinDesc": "Interaktivní analytický dashboard s komplexní vizualizací dat.",
+		"projectNotefulDesc": "Aplikace pro poznámky s hierarchií štítků a synchronizací v reálném čase.",
+		"projectDisenchantmentDesc": "Minecraft plugin vylepšující vanilkový enchanting systém.",
+
+		"testimonial1Quote": "\"Jeho schopnosti řešit problémy a zkušený přístup byly jasně viditelné. Je vynikající v vysvětlování nástrojů a postupů méně zkušeným členům týmu. Každý by měl štěstí ho mít ve svém týmu.\"",
+		"testimonial1Role": "Software Engineering · Stejný tým, 2 projekty",
+		"testimonial2Quote": "\"Janova schopnost řešit složitá technická řešení a úspěšně překonávat výzvy byla opravdu pozoruhodná. Projevil nejen technické odborné znalosti, ale také manažerské schopnosti — rozděloval práci na menší části, aby mohlo bezproblémově přispět více členů týmu.\"",
+		"testimonial2Role": "Senior Backend Developer · Přímý manažer, Precismo",
+		"testimonial3Quote": "\"Rád ho doporučím pro jeho úžasné schopnosti řešit problémy a rychlé tempo učení. Rychle se naučil novou technologii, kterou předtím nepoužíval, a velmi rychle se v ní vynikl.\"",
+		"testimonial3Role": "Full-stack Developer · HAXAGON",
+		"testimonial4Quote": "\"Všestranný přínos pro každý tým. Konzistentně demonstroval svou schopnost přeměnit projektové požadavky v úspěšné webové aplikace. Celým srdcem doporučuji Jana pro jeho silné technické dovednosti a odhodlání dosahovat výsledků.\"",
+		"testimonial4Role": "Zakladatel & CTO · PRECISMO"
+	},
+
+	"blog": {
+		"writingLabel": "◆ Psaní",
+		"h1": "Blog.",
+		"coming": "Připravujeme",
+		"draft": "Koncept"
+	},
+
+	"resume": {
+		"jankominek": "Jan Komínek",
+		"label": "◆ Životopis · 2026",
+		"subtitle": "Senior Frontend / Fullstack Engineer — 4+ let — Praha, CZ",
+		"bio": "Buduju komplexní webové aplikace od nuly — rychle. Vue, React, TypeScript, hluboká backend zkušenost v Node, PostgreSQL, Redis, Docker. Vedl jsem platformu pro nabíjení EV s vlastním platebním systémem a postavil zero-trust nástroje pro datovou provenanci.",
+		"hireBtn": "Najměte mě →",
+
+		"impact1Label": "◆ Praxe v oboru",
+		"impact1Sub": "Senior úroveň od 2024",
+		"impact2Label": "◆ Spolupracované firmy",
+		"impact2Sub": "Od startupů po enterprise",
+		"impact3Label": "◆ Primární stack",
+		"impact3Sub": "Také React / Svelte / Nuxt",
+		"impact4Label": "◆ Status",
+		"impact4Sub": "Part-time B2B · ≤10 h/týden",
+
+		"expH2": "Kde jsem budoval.",
+		"expP": "Seřazeno od nejnovějšího. Souběžné role označeny. Aktuální spolupráce označeny zeleně.",
+		"eduH2": "Formální vzdělání.",
+		"skillsH2": "Stack.",
+		"skillsP": "Tečka označuje primárně používané nástroje.",
+		"skillGroup1": "Jazyky & Frameworky",
+		"skillGroup2": "Data & Úložiště",
+		"skillGroup3": "Infra & DevOps",
+		"skillGroup4": "Dovednosti & Nástroje",
+
+		"quickSummaryLabel": "Rychlý přehled",
+		"quickSummary": "Jsem Senior Frontend / Fullstack Engineer s vášní pro budování komplexních aplikací od nuly a pověstí pro rychlé řešení problémů. Moje klíčová odbornost spočívá ve Vue.js, React.js a TypeScriptu, podpořená robustními full-stack zkušenostmi — včetně vedení vývoje platformy pro nabíjení elektromobilů s vlastním platebním systémem a infrastrukturou postavenou na Dockeru. Se silným základem v kybernetické bezpečnosti a aktuálním studiem bakalářského oboru Aplikovaná informatika na Vysoké škole ekonomické v Praze vynikám v řešení náročných technických výzev a úspěšném vedení projektů.",
+
+		"aboutLabel": "O mně",
+		"about": [
+			"Jsem Senior Frontend / Fullstack Engineer se sídlem v Praze, specializující se na Vue.js, React.js a TypeScript s hlubokými full-stack zkušenostmi. Aktuálně pracuji jako freelance Senior Frontend Engineer ve společnosti CORAC Engineering a zároveň jako Fullstack Engineer ve společnosti Intedat, kde vyvíjím robustní systémy s Node.js, AdonisJS, PostgreSQL a Redis. Nedávným úspěchem je vedení backend architektury a DevOps projektu Diář FISáka — kde jsem navrhl kontejnerizovanou infrastrukturu, postavil REST API v Node.js a implementoval asynchronní background workery pomocí BullMQ.",
+			"Moje akademické vzdělání v oboru Aplikovaná informatika na Vysoké škole ekonomické v Praze rozšířilo můj soubor dovedností nad rámec čistého vývoje. Získal jsem znalosti v oblasti marketingu, UX designu, ekonomiky, managementu a datové analýzy s nástroji jako Microsoft Power BI - což mi umožňuje přistupovat k projektům jak z technického, tak obchodního hlediska.",
+			"Profesně jsem zastával role od IT podpory po frontendový a fullstack vývoj v různých prostředích. Tyto zkušenosti zdokonalily mé schopnosti řešit problémy a přizpůsobivost, zejména na volné noze a v rámci multifunkčních týmů. Přináším také základy v oblasti kybernetické bezpečnosti, což dále posiluje mé zaměření na budování bezpečných a spolehlivých systémů.",
+			"Hnán vášní pro čistý kód, moderní frameworky a smysluplné digitální zážitky, daří se mi ve spolupracujícím prostředí, které oceňuje inovace, preciznost a design zaměřený na uživatele. Ať už jde o architekturu škálovatelného backendu, tvorbu elegantního uživatelského rozhraní nebo řešení složitých problémů, snažím se poskytovat praktická a působivá softwarová řešení."
+		],
+
+		"experienceLabel": "Zkušenosti",
+		"experience": [
+			{
+				"company": "CORAC Engineering",
+				"position": "Senior Frontend Engineer, od dubna 2025"
+			},
+			{
+				"company": "Intedat",
+				"position": "Fullstack Engineer, od září 2024"
+			},
+			{
+				"company": "IONT tech",
+				"position": "Fullstack Engineer, od srpna 2023 do září 2024"
+			},
+			{
+				"company": "Letní škola vývoje počítačových her",
+				"position": "Lektor a organizátor, červenec 2022/2023/2024/2025"
+			},
+			{
+				"company": "KMK family business",
+				"position": "IT podpora, červen 2020 až únor 2024"
+			},
+			{
+				"company": "Precismo",
+				"position": "Fullstack Web Developer, leden 2023 až listopad 2023"
+			},
+			{
+				"company": "Haxagon",
+				"position": "Frontend Developer, říjen 2022 až červenec 2023"
+			}
+		],
+
+		"educationLabel": "Vzdělávání",
+		"education": [
+			{
+				"school": "Vysoká Škola Ekonomická v Praze - Bakalář",
+				"degree": "Aplikovaná Informatika, od září 2024"
+			},
+			{
+				"school": "Smíchovská Středí Průmyslová Škola - Maturitní zkouška",
+				"degree": "Kybernetická bezpečnost, od září 2020 do května 2024"
+			}
+		],
+
+		"download": "Stáhnout životopis",
+
+		"toolsLabel": "Nástroje a technologie",
+		"tools": [
+			"!VueJS",
+			"ReactJS",
+			"SvelteKit",
+			"!TailwindCSS",
+			"!TypeScript",
+			"!Node.js",
+			"ExpressJS",
+			"AdonisJS",
+			"!MongoDB",
+			"PostgreSQL",
+			"!Docker",
+			"Kubernetes",
+			"Redis",
+			"Elasticsearch",
+			"!CI/CD",
+			"DigitalOcean",
+			"DevOps",
+			"!Figma",
+			"Microsoft Power BI",
+			"User Interface Design",
+			"User Experience (UX)",
+			"Agile Methodologies",
+			"!AWS",
+			"Networking",
+			"Network Security",
+			"System Administration",
+			"Bash",
+			"!Git",
+			"Jira",
+			"!REST",
+			"Docker Swarm",
+			"!Fastify",
+			"Nuxt.js",
+			"Microservices",
+			"BullMQ",
+			"Traefik",
+			"!MySQL"
+		],
+
+		"exp1Dates": "DUB 2025 — NYNÍ",
+		"exp1Duration": "1 rok+",
+		"exp1Role": "Senior Frontend Engineer",
+		"exp1Company": "CORAC ENGINEERING · FREELANCE · VZDÁLENĚ",
+		"exp1Desc": "Budování DeepTrace — platformy pro datovou provenanci a integritu pro Earth Observation data. Jediný frontend engineer.",
+		"exp1Hi1": "Navrhl interaktivní D3.js vizualizaci lineage pro komplexní supply-chain grafy",
+		"exp1Hi2": "Implementoval klientskou verifikaci hash-chain podle zero-trust architektury",
+		"exp1Hi3": "Integroval AWS Cognito (OAuth) pro bezpečnou autentizaci pouze na straně klienta",
+
+		"exp2Dates": "ZÁŘ 2024 — NYNÍ",
+		"exp2Duration": "1 rok 8 měs.",
+		"exp2Role": "Fullstack Engineer",
+		"exp2Company": "INTEDAT · FREELANCE · VZDÁLENĚ",
+		"exp2Desc": "Vývoj a správa fullstack datové platformy zaměřené na škálovatelnost, výkon vyhledávání a spolehlivou infrastrukturu.",
+		"exp2Hi1": "Dodávka funkcí end-to-end — Nuxt na frontendu, AdonisJS na backendu",
+		"exp2Hi2": "Elasticsearch vyhledávání přes velké datové sady",
+		"exp2Hi3": "CI/CD + DigitalOcean Linux infrastruktura pro produkční nasazení",
+
+		"exp3Dates": "ČVC 2022 — NYNÍ",
+		"exp3Duration": "Ročně · 4 ročníky",
+		"exp3Role": "Lektor & Organizátor",
+		"exp3Company": "SMÍCHOVSKÁ SPŠ · LETNÍ ŠKOLA · PREZENČNĚ",
+		"exp3Desc": "Samostatně vyučoval \"Úvod do 2D grafiky\" pro 50 žáků (8. a 9. třída). Konzistentně nejlépe hodnocený učitel po všechny čtyři roky (2022–2025).",
+
+		"exp4Dates": "SRP 2023 — ZÁŘ 2024",
+		"exp4Duration": "1 rok 2 měs.",
+		"exp4Role": "Fullstack Engineer",
+		"exp4Company": "IONT TECH · FREELANCE · VZDÁLENĚ",
+		"exp4Desc": "Vedl full-stack vývoj webové platformy pro správu elektrických vozidel — od nastavení infrastruktury po integraci plateb.",
+		"exp4Hi1": "Vybudoval veřejnou aplikaci pro nabíjení s online platbami a vzdálenou autorizací nabíječek",
+		"exp4Hi2": "Navrhl a nasadil infrastrukturu od nuly na IaaS — Docker Swarm mikroslužby",
+		"exp4Hi3": "Vyvinul systém automatické aktualizace firmware s hardwarovým týmem",
+
+		"exp5Dates": "LED 2023 — LIS 2023",
+		"exp5Duration": "11 měs.",
+		"exp5Role": "Fullstack Developer",
+		"exp5Company": "PRECISMO · FREELANCE · HYBRIDNĚ",
+		"exp5Desc": "Fullstack developer v cross-funkčním Agilním týmu budujícím interní zákaznický portál. Spolupracoval se 6 vývojáři a 1 PM v Scrumu.",
+
+		"exp6Dates": "ŘÍJ 2022 — ČVC 2023",
+		"exp6Duration": "10 měs.",
+		"exp6Role": "Frontend Developer",
+		"exp6Company": "HAXAGON · PART-TIME · VZDÁLENĚ",
+		"exp6Desc": "Frontend pro kybernetickou e-learningovou platformu. Zavedl lepší vývojové procesy pro kvalitu kódu a tok dodávek.",
+
+		"exp7Dates": "ČVN 2020 — ÚNO 2024",
+		"exp7Duration": "3 roky 9 měs.",
+		"exp7Role": "IT podpora",
+		"exp7Company": "KMK FAMILY BUSINESS · FREELANCE",
+		"exp7Desc": "Praktická IT podpora: Windows pracovní stanice, síťové tiskárny, IoT zařízení, místní síťová infrastruktura a bezpečnostní školení.",
+
+		"edu1Dates": "ZÁŘ 2024 — ČVC 2027",
+		"edu1Duration": "Bakalář, probíhá · Prospěch 2",
+		"edu1Role": "Aplikovaná informatika",
+		"edu1Org": "VYSOKÁ ŠKOLA EKONOMICKÁ V PRAZE (VŠE)",
+		"edu1Desc": "Bc. zaměřený na propojení softwarového inženýrství a obchodní strategie. Návrh systémů, strojové učení, cloud computing, datová analytika spolu s obchodními základy.",
+		"edu1Hi1": "Vedení backend + DevOps architektury pro Diář FISáka — tým 4 vývojářů na Hetzner VPS",
+		"edu1Hi2": "Dokončené certifikace: Building AI, Elements of AI, Data Science in Python, Joining Data in SQL",
+
+		"edu2Dates": "ZÁŘ 2020 — KVĚ 2024",
+		"edu2Duration": "Maturitní zkouška",
+		"edu2Role": "Kybernetická / Počítačová forenzika & Boj proti terorismu",
+		"edu2Org": "SMÍCHOVSKÁ STŘEDNÍ PRŮMYSLOVÁ ŠKOLA",
+		"edu2Desc": "Absolvoval s plnými výsledky v technických předmětech. Síťová bezpečnost, forenzika, systémová administrace. Závěrečná práce: full-stack e-commerce obchod vybudovaný od nuly, zahrnující DevOps a CI/CD."
+	},
+
+	"contact": {
+		"hireLabel": "◆ Najměte mě",
+		"h1": "Pojďme spolupracovat.",
+		"intro": "Dostupný pro part-time B2B spolupráce, až ~10 hodin týdně. Odpovídám do 24 hodin ve všední dny.",
+		"emailDirect": "Přímý email",
+		"linkedinSub": "500+ spojení · 5 doporučení",
+		"bookCall": "Rezervovat 30-min hovor",
+		"freeChat": "Bezplatný úvodní hovor",
+		"whatToInclude": "◆ CO NAPSAT",
+		"whatToIncludeText": "Stručně: problém, očekávaný rozsah, aktuální tým a stack, termín a rozpočet. Čím konkrétnější, tím rychleji mohu říci \u201eano, takhle to uděláme\u201c nebo \u201etoho není pro mě — zkuste X\u201c.",
+		"projectBrief": "Brief projektu",
+		"formStep": "01 / 02",
+		"skipForm": "◆ Chcete přeskočit formulář?",
+		"skipFormDesc": "Rezervujte 30 minut. Probereme váš projekt a uvidíme, zda se hodíme.",
+
+		"fillForm": "Vyplňte formulář",
+		"fillFormDescription": "Hledáte seniora na flexibilní part-time B2B spolupráci? Vyplňte formulář a brzy se vám ozvu.",
+
+		"orBookACall": "Nebo si <u>Zarezervujte hovor</u>",
+
+		"form": {
+			"fullName": "Vaše celé jméno",
+			"fullNamePlaceholder": "Jan Novák",
+
+			"email": "Emailová adresa",
+			"emailPlaceholder": "prikladny@email.com",
+
+			"company": "Název společnosti",
+			"companyPlaceholder": "Příkladná společnost",
+
+			"message": "Zpráva",
+			"messagePlaceholder": "Popište svůj projekt...",
+
+			"budget": "Očekávaný rozpočet",
+
+			"advanced": "Další informace",
+
+			"projectType": "Typ projektu",
+			"projects": {
+				"none": "Vyberte nebo nechte prázdné",
+				"website": "Webová stránka",
+				"webApp": "Webová aplikace",
+				"ecommerce": "E-commerce",
+				"saas": "SaaS",
+				"api": "Vývoj API",
+				"mobileApp": "Mobilní aplikace (webová)",
+				"desktopApp": "Desktopová aplikace (webová)",
+				"admin": "Admin panel",
+				"landingPage": "Landing page",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"feature": "Funkce",
+			"featurePlaceholder": "Seznam funkcí",
+			"features": {
+				"auth": "Uživatelská autentizace (přihlášení/registrace, OAuth)",
+				"admin": "Admin panel",
+				"payment": "Integrace plateb (Stripe, PayPal atd.)",
+				"database": "Databáze a CRUD operace",
+				"files": "Nahrávání a ukládání souborů",
+				"notifications": "Oznámení (e-mail, SMS, push)",
+				"realtime": "Funkce v reálném čase (WebSockets, živé aktualizace)",
+				"i18n": "Vícejazyčná podpora",
+				"analytics": "Analytika a reporty",
+				"seo": "SEO optimalizace",
+				"customAPI": "Vývoj vlastního API",
+				"thirdParty": "Integrace třetích stran",
+				"responsive": "Responzivní design",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"technology": "Technologické preference",
+			"technologyPlaceholder": "Seznam technologií",
+			"technologies": {
+				"wordpress": "WordPress",
+				"vuejs": "Vue.js",
+				"reactjs": "React.js",
+				"svelte": "Svelte",
+				"tailwind": "Tailwind CSS",
+				"nodejs": "Node.js",
+				"typescript": "TypeScript",
+				"sql": "SQL (MySQL, PostgreSQL)",
+				"nosql": "NoSQL (MongoDB, Firebase)",
+				"graphql": "GraphQL",
+				"cache": "Caching (Redis, Memcached)",
+				"docker": "Docker",
+				"aws": "AWS (S3, EC2, Lambda)",
+				"gcp": "Google Cloud Platform",
+				"azure": "Microsoft Azure",
+				"vps": "VPS (DigitalOcean, Linode)",
+				"restAPI": "REST API",
+				"websocket": "WebSocket",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"asset": "Projektové zdroje",
+			"assetPlaceholder": "Seznam projektových zdrojů",
+			"assets": {
+				"design": "Design/Wireframes",
+				"codebase": "Existující kódová základna",
+				"database": "Existující databáze",
+				"branding": "Branding/Loga",
+				"documentation": "Dokumentace",
+				"domain": "Doménové jméno",
+				"hosting": "Hosting",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"audience": "Cílová skupina",
+			"audiencePlaceholder": "Seznam cílových skupin",
+			"audiences": {
+				"public": "Veřejnost",
+				"b2b": "Business to Business (B2B)",
+				"b2c": "Business to Consumer (B2C)",
+				"startup": "Startupy a podnikatelé",
+				"internal": "Interní použití (intranet)",
+				"enterprise": "Podniková řešení",
+				"nonprofit": "Neziskové organizace",
+				"developer": "Vývojáři a technické uživatele",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"hosting": "Hosting",
+			"hostings": {
+				"none": "Vyberte nebo nechte prázdné",
+				"client": "Klient se postará o hosting",
+				"need": "Potřebuji nastavit hosting a nasazení",
+				"server": "Pomoc s konfigurací serveru/ cloudu",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"support": "Podpora a údržba",
+			"supports": {
+				"none": "Vyberte nebo nechte prázdné",
+				"onetime": "Jednorázový vývoj",
+				"ongoing": "Průběžná podpora a údržba",
+				"training": "Školení a dokumentace",
+				"consultation": "Konzultace a strategie",
+				"updates": "Opravy chyb a aktualizace podle potřeby",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"legal": "Právní úvahy",
+			"legalPlaceholder": "Seznam právních úvah",
+			"legals": {
+				"nda": "Vyžaduje se NDA (smlouva o mlčenlivosti)",
+				"contract": "Vlastní smlouva",
+				"standard": "Standardní smlouva pro freelancery",
+				"gdpr": "Soulad s GDPR",
+				"other": "Jiné (popište v zprávě)"
+			},
+
+			"deadline": "Očekávaný termín",
+
+			"priority": "Priorita",
+			"priorities": {
+				"none": "Vyberte nebo nechte prázdné",
+				"low": "Nízká",
+				"medium": "Střední",
+				"high": "Vysoká",
+				"critical": "Kritická",
+				"asap": "Co nejdříve (Rozpočet není problém)"
+			},
+
+			"send": "Odeslat",
+			"sending": "Odesílám…",
+
+			"errors": {
+				"fullName": {
+					"invalid_type": "Jméno musí být text.",
+					"too_small": "Jméno nesmí být prázdné."
+				},
+
+				"email": {
+					"invalid_type": "E-mail musí být text.",
+					"invalid_string": "Zadejte platný e-mail.",
+					"too_small": "E-mail nesmí být prázdný."
+				},
+
+				"company": {
+					"invalid_type": "Název společnosti musí být text."
+				},
+
+				"message": {
+					"invalid_type": "Zpráva musí být text.",
+					"too_small": "Zpráva nesmí být prázdná."
+				},
+
+				"budget": {
+					"invalid_type": "Rozpočet musí být číslo.",
+					"too_small": "Minimální rozpočet je 1000."
+				},
+
+				"projectType": {
+					"invalid_type": "Typ projektu musí být text.",
+					"too_small": "Musíte vyplnit typ projektu."
+				},
+
+				"features": {
+					"invalid_type": "Funkce musí být text.",
+					"too_small": "Musíte vyplnit funkce."
+				},
+
+				"technologies": {
+					"invalid_type": "Technologie musí být text.",
+					"too_small": "Musíte vyplnit technologie."
+				},
+
+				"assets": {
+					"invalid_type": "Zdroje musí být text.",
+					"too_small": "Musíte vyplnit zdroje."
+				},
+
+				"audiences": {
+					"invalid_type": "Cílová skupina musí být text.",
+					"too_small": "Musíte vyplnit cílovou skupinu."
+				},
+
+				"hosting": {
+					"invalid_type": "Hosting musí být text.",
+					"too_small": "Musíte vyplnit hosting."
+				},
+
+				"support": {
+					"invalid_type": "Podpora musí být text.",
+					"too_small": "Musíte vyplnit podporu."
+				},
+
+				"legals": {
+					"invalid_type": "Právní úvahy musí být text.",
+					"too_small": "Musíte vyplnit právní úvahy."
+				},
+
+				"deadline": {
+					"invalid_type": "Datum musí být platné.",
+					"invalid_date": "Zadejte platné datum."
+				},
+
+				"priority": {
+					"invalid_type": "Priorita musí být text.",
+					"too_small": "Musíte zadat prioritu."
+				},
+
+				"api": "Něco se pokazilo. Zkuste to za chvíli znovu."
+			},
+
+			"success": "Vaše zpráva byla úspěšně odeslána!"
+		},
+
+		"bookACall": "Rezervujte hovor",
+		"bookACallDescription": "Chcete přeskočit diskusi o tom, co se děje? Pojďme si popovídat! Objednejte si telefonát a probereme vaše potřeby.",
+
+		"calendar": {
+			"jankominek": "Jan Komínek",
+			"30minCall": "30 min Schůzka",
+
+			"meeting": "Typ schůzky",
+			"meetings": {
+				"consultation": "Konzultace",
+				"discovery": "Průzkumný hovor",
+				"followup": "Follow-up",
+				"interview": "Pohovor",
+				"other": "Jiné"
+			},
+
+			"timezone": "Časové pásmo",
+
+			"confirm": "Potvrdit",
+
+			"months": {
+				"1": "Leden",
+				"2": "Únor",
+				"3": "Březen",
+				"4": "Duben",
+				"5": "Květen",
+				"6": "Červen",
+				"7": "Červenec",
+				"8": "Srpen",
+				"9": "Září",
+				"10": "Říjen",
+				"11": "Listopad",
+				"12": "Prosinec"
+			},
+
+			"week": {
+				"1": "Po",
+				"2": "Út",
+				"3": "St",
+				"4": "Čt",
+				"5": "Pá",
+				"6": "So",
+				"7": "Ne"
+			},
+
+			"errors": {
+				"meeting": {
+					"invalid_type": "Typ schůzky musí být text.",
+					"too_small": "Musíte určit typ schůzky."
+				},
+
+				"timezone": {
+					"invalid_type": "Časové pásmo musí být text.",
+					"too_small": "Musíte určit časové pásmo."
+				},
+
+				"datetime": {
+					"invalid_type": "Datum musí být platné.",
+					"invalid_date": "Zadejte platné datum.",
+					"already_booked": "Tento časový slot je již obsazen."
+				},
+
+				"duration": {
+					"invalid_type": "Doba trvání musí být číslo.",
+					"too_small": "Doba trvání musí být minimálně 15 minut."
+				}
+			}
+		}
+	},
+
+	"footer": {
+		"contactMe": "Kontaktujte mě",
+
+		"email": "E-mail",
+		"linkedin": "LinkedIn",
+		"form": "Formulář",
+		"calendar": "Hovor"
+	}
+}

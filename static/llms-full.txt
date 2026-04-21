@@ -1,0 +1,183 @@
+# Jan Komínek — Full Context for LLMs
+
+This file provides extended context about Jan Komínek for language models with large context windows.
+See also: /llms.txt for the summary version.
+
+---
+
+## Identity
+
+**Name:** Jan Komínek (also written Jan Kominek without diacritics)
+**Disambiguation:** Software engineer and developer — NOT the Czech actor of the same name.
+**Title:** Senior Frontend / Fullstack Engineer
+**Location:** Prague, Czech Republic
+**Availability:** Part-time B2B contracts, up to 10 hours/week
+**Email:** contact@jankominek.com
+**Website:** https://jankominek.com
+**LinkedIn:** https://www.linkedin.com/in/jan-kominek
+
+---
+
+## Education
+
+**Prague University of Economics and Business (VŠE)**
+Bachelor's degree — Applied Computer Science (in progress, since Sep 2024)
+Grade 2 average. Leading backend + DevOps architecture for team project (Diář FISáka) on Hetzner VPS.
+
+**Smíchov Secondary Technical School (SSPŠ)**
+High School Diploma — Cyber / Computer Forensics & Counterterrorism (Sep 2020 – May 2024)
+Graduated with full marks in technical subjects. Final thesis: full-stack e-commerce store with DevOps and CI/CD.
+
+---
+
+## Work Experience
+
+### CORAC Engineering — Senior Frontend Engineer (current, since Apr 2025)
+Sole frontend engineer building DeepTrace — a data provenance and integrity platform for Earth Observation data.
+- Architected interactive D3.js lineage visualisation for complex supply-chain graphs
+- Implemented client-side hash-chain verification following zero-trust architecture
+- Integrated AWS Cognito (OAuth) for secure client-side authentication
+Stack: Vue 3, TypeScript, D3.js, AWS Cognito, Vite, pnpm, Shadcn
+
+### Intedat — Fullstack Engineer (current, since Sep 2024)
+Developing and maintaining a fullstack data platform focused on scalability, search performance, and reliable infrastructure.
+- End-to-end feature delivery — Nuxt on the frontend, AdonisJS on the backend
+- Elasticsearch-powered search across large datasets
+- CI/CD + DigitalOcean Linux infrastructure for production deployments
+Stack: Node.js, TypeScript, Nuxt, AdonisJS, PostgreSQL, Redis, Elasticsearch
+
+### Smíchovská SPŠ — Lecturer & Organizer (recurring, Jul 2022 – present, 4 editions)
+Solo-taught "Intro and Basics of 2D Graphics" for ~50 students per year (8th & 9th grade). Consistently top-rated teacher.
+
+### IONT tech — Fullstack Engineer (Aug 2023 – Sep 2024)
+Led full-stack development of a web platform managing electric vehicle chargers — from infrastructure setup to payment integration.
+- Built public-facing charging app with online payment (ČSOB) and remote charger authorization
+- Designed and deployed infrastructure from scratch on IaaS — Docker Swarm microservices
+- Developed auto-updating firmware delivery system with the hardware team
+Stack: SvelteKit, Fastify, TypeScript, Docker Swarm, MongoDB, Redis, Linux
+
+### Precismo — Fullstack Developer (Jan 2023 – Nov 2023)
+Fullstack developer on a cross-functional Agile team building an internal customer portal. Collaborated with 6 devs and 1 PM in Scrum.
+Stack: React, Node.js, Playwright, SQL
+
+### Haxagon — Frontend Developer (Oct 2022 – Jul 2023)
+Frontend on a cybersecurity e-learning platform. Introduced improved dev processes for code quality and delivery flow.
+Stack: Vue.js, TypeScript, Tailwind
+
+### KMK Family Business — IT Support (Jun 2020 – Feb 2024)
+Hands-on IT support: Windows workstations, network printers, IoT devices, local network infrastructure, and safety training.
+
+---
+
+## Technical Skills
+
+**Frontend:** Vue.js (primary), React.js, SvelteKit, Svelte 5, Nuxt.js, TypeScript, JavaScript, Tailwind CSS 4, HTML5, CSS3
+**Backend:** Node.js, AdonisJS, Express.js, Fastify, REST APIs
+**Databases:** PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch, BullMQ
+**DevOps:** Docker, Docker Swarm, Kubernetes, Traefik, CI/CD, DigitalOcean, AWS (Cognito, S3), Cloudflare Workers, Linux
+**Embedded / Systems:** Rust (no-std, SPI drivers, embedded-hal), Raspberry Pi, bare-metal peripheral control
+**Tools:** Git, Figma, Agile / Scrum, Zod, D3.js, Stripe, Shadcn
+
+---
+
+## Projects
+
+### CORAC SITH — DeepTrace GUI (order: 1)
+**URL:** https://jankominek.com/projects/corac_sith
+**Client:** CORAC Engineering
+**Role:** Senior Frontend Engineer (sole frontend)
+**Category:** Frontend / Data Provenance / Security
+**Stack:** Vue 3, TypeScript, D3.js, AWS Cognito, Vite
+**Description:** Data provenance and integrity platform for sensitive Earth Observation data. Implements client-side hash-chain verification (zero-trust), interactive D3.js supply-chain lineage graphs, and OAuth via AWS Cognito.
+
+### CORAC Scorecard (order: 2)
+**URL:** https://jankominek.com/projects/corac_scorecard
+**Client:** CORAC Engineering
+**Category:** Frontend / Cyber Audit
+**Stack:** Vue.js, TypeScript
+**Description:** NIS2 compliance cyber audit tool with scorecard and PDF export.
+
+### IONT Charge (order: 3)
+**URL:** https://jankominek.com/projects/iont_charge
+**Client:** IONT tech
+**Category:** Fullstack / Fintech / EV
+**Stack:** SvelteKit, Fastify, TypeScript, Docker Swarm, MongoDB
+**Description:** Public EV charging application with ČSOB payment integration, remote charger authorization, and Docker Swarm microservices infrastructure.
+
+### IONT Admin (order: 4)
+**URL:** https://jankominek.com/projects/iont_admin
+**Client:** IONT tech
+**Category:** Fullstack / Admin
+**Stack:** SvelteKit, Fastify, Redis, WebSockets
+**Description:** Admin panel for managing EV charging infrastructure. Real-time firmware updates and station diagnostics.
+
+### IONT Info (order: 5)
+**URL:** https://jankominek.com/projects/iont_info
+**Client:** IONT tech
+**Category:** Fullstack / Public Info
+**Stack:** SvelteKit, Fastify
+**Description:** Public-facing EV charger info app.
+
+### Pangolin (order: 6)
+**URL:** https://jankominek.com/projects/pangolin
+**Client:** Work
+**Category:** Frontend / Dashboard
+**Stack:** React, Chart.js
+**Description:** Interactive analytics dashboard with complex data visualisation.
+
+### Noteful (order: 7)
+**URL:** https://jankominek.com/projects/noteful
+**Category:** Personal / Fullstack
+**Stack:** Vue, Node.js
+**Description:** Note-taking app with tag hierarchies and real-time sync.
+
+### Disenchantment (order: 8)
+**URL:** https://jankominek.com/projects/disenchantment
+**Category:** Personal / Open Source
+**Stack:** Java, Minecraft Plugin API
+**Description:** Open-source Minecraft plugin with 3,000+ downloads. Enhances the vanilla enchanting system.
+
+### Portfolio v5 (order: 9)
+**URL:** https://jankominek.com
+**Category:** Personal / Design
+**Stack:** SvelteKit 2, Svelte 5, TypeScript, Tailwind CSS 4, Cloudflare Workers
+**Description:** Current portfolio website (this site). English + Czech i18n, Cloudflare Workers deployment.
+
+---
+
+## In Progress / Personal Projects
+
+### Raspberry Pi Departure Board
+Custom departure board built from scratch using a Raspberry Pi Zero 2 WH, displays, and PIR motion sensors. Programmed in Rust. Exploring embedded systems development outside of web work. Blog posts planned.
+
+---
+
+## Blog
+
+**URL:** https://jankominek.com/blog
+
+### Traefik with Cloudflare inside Docker — Simplified
+**URL:** https://jankominek.com/blog/traefik_with_cloudflare_inside_docker_simplified
+**Tags:** DevOps, Docker, Traefik, Cloudflare
+**Description:** A practical guide to running Traefik as a reverse proxy with Cloudflare DNS inside Docker.
+
+### Planned posts
+- Building a Raspberry Pi departure board — e-ink displays, PIR motion sensors, and Rust from scratch (RUST / EMBEDDED)
+- No-std SPI drivers and bare-metal display init in Rust — Pi Zero 2 WH without a crate (RUST / HARDWARE)
+
+---
+
+## Site Technology
+
+- Framework: SvelteKit 2 + Svelte 5 (runes: $state, $derived, $effect)
+- Styling: Tailwind CSS 4
+- Content: MDSvex (Markdown → Svelte components)
+- i18n: svelte-i18n (English + Czech)
+- Deployment: Cloudflare Workers via @sveltejs/adapter-cloudflare
+- Validation: Zod v4
+- Contact form: Submits to Discord webhook via /api/forms
+- Analytics: Google Analytics (privacy-respecting, no PII)
+
+---
+
+*This file is maintained manually. For the live site see https://jankominek.com*

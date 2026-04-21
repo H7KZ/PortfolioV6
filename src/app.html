@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#121212" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="Jan Komínek" />
+		<link rel="manifest" href="/favicon/site.webmanifest" />
+
+		<!-- Robots -->
+		<meta name="robots" content="index, follow, max-image-preview:large" />
+		<meta name="googlebot" content="index, follow, max-image-preview:large" />
+		<meta name="google" content="notranslate" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- Google fonts — non-blocking via media swap trick; noscript fallback below -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&display=swap"
+			rel="stylesheet"
+			media="print"
+			onload="this.media = 'all'"
+		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
+
+		<!-- Google Analytics — deferred until after page load to avoid competing with LCP -->
+		<!-- GDPR note: this site targets EU users (Czech Republic). A cookie consent banner -->
+		<!-- should be implemented before GA collects data, per GDPR Art. 6. TODO: add consent. -->
+		<script>
+			window.addEventListener('load', function () {
+				var s = document.createElement('script');
+				s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YSK3DVJ4MF';
+				s.async = true;
+				document.head.appendChild(s);
+				s.onload = function () {
+					window.dataLayer = window.dataLayer || [];
+
+					function gtag() {
+						dataLayer.push(arguments);
+					}
+
+					gtag('js', new Date());
+					gtag('config', 'G-YSK3DVJ4MF', {
+						send_page_view: false
+					});
+					window.gtag = gtag;
+					gtag('event', 'page_view', {
+						page_title: document.title,
+						page_location: window.location.href
+					});
+				};
+			});
+		</script>
+
+		<!-- Preconnect hints for third-party origins used on specific pages -->
+		<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+		<link rel="dns-prefetch" href="https://www.google-analytics.com" />
+		<link rel="preconnect" href="https://app.cal.com" />
+
+		<!-- SEO -->
+		<title>Jan Komínek — Freelance Senior Frontend Engineer, Prague</title>
+		<meta name="title" content="Jan Komínek — Freelance Senior Frontend Engineer, Prague" />
+		<meta
+			name="description"
+			content="Portfolio of Jan Komínek — Freelance Senior Frontend Engineer based in Prague. Available for part-time B2B contracts. Vue.js, React.js, TypeScript, Node.js."
+		/>
+		<meta
+			name="keywords"
+			content="Fullstack Development, Frontend Development, Backend Development, Vue.js, React.js, SvelteKit, Node.js, TypeScript, JavaScript, Fastify, AdonisJS, ExpressJS, Nuxt.js, PostgreSQL, MongoDB, Redis, Elasticsearch, DigitalOcean, Hetzner, Kubernetes, Docker, Docker Swarm, CI/CD, System Architecture, Server Administration, Network Administration, Network Security, Cybersecurity, Microsoft Power BI, Microsoft Excel, Management, Marketing, UI/UX Design, Figma, Web Design, Git, Agile Methodologies, REST API, Stripe, Jan Komínek, Senior Frontend Engineer, Fullstack Engineer, Software Engineer, Web Developer, Cloud Computing, DevOps, System Design, API Development, Smichov Secondary Technical School and Gymnasium, SSPŠ, Prague University of Economics and Business, VŠE, Haxagon, Precismo, KMK family business, IONT tech, Intedat, CORAC Engineering, freelance, part-time B2B, contract developer, Prague developer"
+		/>
+		<meta name="language" content="en" />
+		<meta name="author" content="Jan Komínek" />
+		<link rel="author" href="/humans.txt" />
+
+		<link rel="canonical" href="https://jankominek.com" />
+		<link rel="alternate" hreflang="en" href="https://jankominek.com/" />
+		<link rel="alternate" hreflang="cs" href="https://jankominek.com/" />
+		<link rel="alternate" hreflang="x-default" href="https://jankominek.com/" />
+
+		<meta property="og:title" content="Jan Komínek — Freelance Senior Frontend Engineer, Prague" />
+		<meta
+			property="og:description"
+			content="Portfolio of Jan Komínek — Freelance Senior Frontend Engineer based in Prague. Available for part-time B2B contracts. Vue.js, React.js, TypeScript, Node.js."
+		/>
+		<meta property="og:url" content="https://jankominek.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Jan Komínek" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:image" content="https://jankominek.com/images/resume_profile.webp" />
+		<meta property="og:image_width" content="585" />
+		<meta property="og:image_height" content="980" />
+		<meta property="og:image:alt" content="Jan Komínek — Freelance Senior Frontend Engineer" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Jan Komínek — Freelance Senior Frontend Engineer, Prague" />
+		<meta
+			name="twitter:description"
+			content="Portfolio of Jan Komínek — Freelance Senior Frontend Engineer based in Prague. Available for part-time B2B contracts. Vue.js, React.js, TypeScript, Node.js."
+		/>
+		<meta name="twitter:image" content="https://jankominek.com/images/resume_profile.webp" />
+
+		<meta name="discord:card" content="summary" />
+		<meta name="discord:title" content="Jan Komínek — Freelance Senior Frontend Engineer, Prague" />
+		<meta
+			name="discord:description"
+			content="Portfolio of Jan Komínek — Freelance Senior Frontend Engineer based in Prague. Available for part-time B2B contracts. Vue.js, React.js, TypeScript, Node.js."
+		/>
+
+		<meta name="facebook:card" content="summary" />
+		<meta name="facebook:title" content="Jan Komínek — Freelance Senior Frontend Engineer, Prague" />
+		<meta
+			name="facebook:description"
+			content="Portfolio of Jan Komínek — Freelance Senior Frontend Engineer based in Prague. Available for part-time B2B contracts. Vue.js, React.js, TypeScript, Node.js."
+		/>
+
+		<meta name="instagram:card" content="summary" />
+		<meta name="instagram:title" content="Jan Komínek — Freelance Senior Frontend Engineer, Prague" />
+		<meta
+			name="instagram:description"
+			content="Portfolio of Jan Komínek — Freelance Senior Frontend Engineer based in Prague. Available for part-time B2B contracts. Vue.js, React.js, TypeScript, Node.js."
+		/>
+
+		<meta name="messenger:card" content="summary" />
+		<meta name="messenger:title" content="Jan Komínek — Freelance Senior Frontend Engineer, Prague" />
+		<meta
+			name="messenger:description"
+			content="Portfolio of Jan Komínek — Freelance Senior Frontend Engineer based in Prague. Available for part-time B2B contracts. Vue.js, React.js, TypeScript, Node.js."
+		/>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "ProfilePage",
+				"@id": "https://jankominek.com/#profilepage",
+				"url": "https://jankominek.com",
+				"name": "Jan Komínek — Senior Frontend / Fullstack Engineer",
+				"description": "Portfolio of Jan Komínek, Senior Frontend and Fullstack Engineer based in Prague, Czech Republic. Not the Czech actor of the same name.",
+				"mainEntity": {
+					"@type": "Person",
+					"@id": "https://jankominek.com/#person",
+					"name": "Jan Komínek",
+					"alternateName": "Jan Kominek",
+					"jobTitle": "Senior Frontend / Fullstack Engineer",
+					"description": "Senior Frontend and Fullstack Engineer based in Prague, Czech Republic. Available for part-time B2B contracts up to 10 hours per week. Specialising in Vue.js, React.js, SvelteKit, TypeScript, and Node.js. Not the Czech actor of the same name.",
+					"image": "https://jankominek.com/images/resume_profile.webp",
+					"email": "contact@jankominek.com",
+					"url": "https://jankominek.com",
+					"sameAs": ["https://www.linkedin.com/in/jan-kominek/"],
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": "Prague",
+						"addressCountry": "CZ"
+					},
+					"worksFor": [
+						{
+							"@type": "Organization",
+							"name": "CORAC Engineering"
+						},
+						{
+							"@type": "Organization",
+							"name": "Intedat"
+						}
+					],
+					"alumniOf": [
+						{
+							"@type": "EducationalOrganization",
+							"name": "Prague University of Economics and Business",
+							"alternateName": "VŠE"
+						},
+						{
+							"@type": "EducationalOrganization",
+							"name": "Smíchov Secondary Technical School and Gymnasium",
+							"alternateName": "SSPŠ"
+						}
+					],
+					"hasOccupation": {
+						"@type": "Occupation",
+						"name": "Software Engineer",
+						"occupationLocation": {
+							"@type": "City",
+							"name": "Prague"
+						},
+						"skills": "Vue.js, React.js, SvelteKit, TypeScript, Node.js, AdonisJS, PostgreSQL, Docker, Kubernetes, DevOps"
+					},
+					"knowsAbout": [
+						"Vue.js",
+						"React.js",
+						"SvelteKit",
+						"TypeScript",
+						"Node.js",
+						"Docker",
+						"Kubernetes",
+						"DevOps",
+						"System Architecture",
+						"PostgreSQL",
+						"Redis"
+					]
+				}
+			}
+		</script>
+
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover" class="h-full w-full">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+# Jan Komínek — Senior Frontend / Fullstack Engineer
+
+> Jan Komínek is a Senior Frontend and Fullstack Engineer based in Prague, Czech Republic. He specialises in Vue.js, React, TypeScript, Node.js, and Docker, and is available for flexible part-time B2B contracts (up to 10 hours/week). He is also pursuing a Bachelor's degree in Applied Computer Science at the Prague University of Economics and Business (VŠE).
+
+## About
+
+Jan has 4+ years of professional development experience across freelance and corporate environments. His core stack includes SvelteKit, Vue.js, React, TypeScript, Node.js, AdonisJS, PostgreSQL, Docker, and Redis. He has led an EV charging platform with its own payment system, built zero-trust data-lineage tooling for Earth Observation data, and designed containerised infrastructure with Docker Swarm and microservices. Currently exploring embedded systems and Rust for hobby projects.
+
+**Note on disambiguation:** Jan Komínek the engineer should not be confused with Jan Komínek the Czech actor. This site and all its content relate exclusively to software engineering work.
+
+## Key pages
+
+- [Homepage](https://jankominek.com/): Portfolio overview, availability status, and contact CTAs
+- [Resume](https://jankominek.com/resume): Full work history, education, and technical skills
+- [Contact](https://jankominek.com/contact): Inquiry form and calendar booking for project discussions
+- [Blog](https://jankominek.com/blog): Technical articles on DevOps, web development, infrastructure, and embedded systems
+
+## Featured projects
+
+- [CORAC SITH — DeepTrace GUI](https://jankominek.com/projects/corac_sith?locale=en): Data provenance and integrity platform for Earth Observation data — D3.js supply-chain graphs, client-side hash-chain verification, zero-trust auth with AWS Cognito
+- [CORAC Scorecard](https://jankominek.com/projects/corac_scorecard?locale=en): NIS2 cyber audit tool with PDF export
+- [IONT Charge App](https://jankominek.com/projects/iont_charge?locale=en): Public-facing EV charging application with ČSOB payment integration, Docker Swarm, Fastify + MongoDB
+- [IONT Admin](https://jankominek.com/projects/iont_admin?locale=en): Admin panel for managing EV charging infrastructure with real-time firmware updates
+- [IONT Info](https://jankominek.com/projects/iont_info?locale=en): Public-facing EV charger info app
+- [Pangolin](https://jankominek.com/projects/pangolin?locale=en): Interactive analytics dashboard with complex data visualisation
+- [Noteful](https://jankominek.com/projects/noteful?locale=en): Note-taking app with tag hierarchies and real-time sync
+- [Disenchantment](https://jankominek.com/projects/disenchantment?locale=en): Open-source Minecraft plugin with 3K+ downloads
+
+## In progress / personal
+
+- Raspberry Pi departure board: Custom departure board built with a Pi Zero 2 WH, displays, PIR motion sensors, and bare-metal Rust. Blog posts planned.
+
+## Professional profiles
+
+- [LinkedIn](https://www.linkedin.com/in/jan-kominek)
+
+## Technical expertise
+
+TypeScript, Vue.js, React.js, SvelteKit, Node.js, AdonisJS, Express.js, Fastify, Nuxt.js, PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch, BullMQ, Docker, Docker Swarm, Kubernetes, Traefik, CI/CD, DigitalOcean, AWS, Cloudflare Workers, Rust (embedded, no-std), Figma, REST APIs, Microservices, Agile, System Architecture, Network Administration
+
+## Availability
+
+Open to part-time B2B contracts — up to 10 hours per week. Located in Prague, Czech Republic. Remote-friendly.

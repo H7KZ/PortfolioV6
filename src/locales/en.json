@@ -1,0 +1,649 @@
+{
+	"errors": {
+		"300": "The requested resource has multiple options. Please select an appropriate one.",
+		"301": "The resource has been moved to a new URL. Update your bookmarks.",
+		"302": "The resource is temporarily moved. Try again later or follow the redirect.",
+		"307": "The resource has been temporarily moved to a different URL.",
+		"308": "The resource has been permanently moved to a different URL.",
+		"400": "The request was invalid. Check your input and try again.",
+		"401": "You need to log in to access this resource.",
+		"402": "Access is restricted to paid users.",
+		"403": "You do not have permission to access this resource.",
+		"404": "The requested resource could not be found. Check the URL.",
+		"405": "The HTTP method used is not allowed for this resource.",
+		"406": "The requested resource is not available in a format acceptable to your request.",
+		"407": "Authentication with a proxy server is required.",
+		"408": "The server took too long to respond. Try again later.",
+		"409": "There was a conflict with the request. Check for duplicate actions.",
+		"410": "The resource is no longer available and will not be available again.",
+		"411": "The request must include a valid Content-Length header.",
+		"412": "One or more conditions given in the request header were not met.",
+		"413": "The request payload exceeds the allowable limit.",
+		"414": "The requested URL is too long to process.",
+		"415": "The request has a media type that the server does not support.",
+		"416": "The requested range is invalid or not available.",
+		"417": "The server cannot meet the expectations in the request.",
+		"418": "This is a joke response indicating an invalid request.",
+		"421": "The request was sent to a server that cannot produce a valid response.",
+		"422": "The request was well-formed but could not be processed.",
+		"423": "The resource is locked and cannot be modified.",
+		"424": "A previous request dependency failed, causing this request to fail.",
+		"425": "The request was sent too early and may be retried later.",
+		"426": "The client must upgrade to a different protocol to access this resource.",
+		"428": "The request must include specific preconditions.",
+		"429": "You have made too many requests in a short period. Try again later.",
+		"431": "The request headers are too large to process.",
+		"451": "The resource is blocked due to legal restrictions.",
+		"500": "Something went wrong on our end. Try again later.",
+		"501": "The server does not support the requested functionality.",
+		"502": "Received an invalid response from the upstream server. Try again later.",
+		"503": "The server is temporarily unavailable. Try again later.",
+		"504": "The server took too long to respond. Please try again later.",
+		"505": "The server does not support the requested HTTP version.",
+		"506": "The server encountered a configuration error.",
+		"507": "The server is out of storage space.",
+		"508": "The request resulted in an infinite loop.",
+		"510": "Further extensions to the request are required.",
+		"511": "Authentication is required to access the network."
+	},
+
+	"navbar": {
+		"work": "Work",
+		"resume": "Resumé",
+		"linkedin": "LinkedIn",
+		"blog": "Blog",
+		"hire": "Hire me"
+	},
+
+	"home": {
+		"fullstack": "Senior Frontend Engineer",
+		"freelance": "Freelance",
+		"prague": "Prague, CZ",
+		"motto": "Open to part-time B2B contracts · 3+ years senior-level experience",
+		"jankominek": "Jan Komínek",
+		"available": "Open to Part-Time B2B",
+		"bookACall": "Book a Call",
+		"explore": "Explore my portfolio",
+
+		"valueProp": "I build <strong>complex web applications from scratch — fast.</strong> Vue, React, TypeScript, Node. EV charging platforms, data-lineage tooling, and the infrastructure that holds it all together.",
+		"startProject": "Start a project",
+		"viewResume": "View resumé",
+		"yearsLabel": "Years industry",
+		"projectsLabel": "Shipped projects",
+		"clientsLabel": "Client companies",
+		"upToLabel": "up to 10 h/wk",
+
+		"nowLabel": "Now",
+		"nowTitle": "Building DeepTrace at CORAC Engineering",
+		"nowDesc": "Data-provenance & integrity platform for Earth Observation data — D3.js lineage viz, client-side hash-chain verification, zero-trust auth with AWS Cognito.",
+		"nowDate": "Apr 2025 — present",
+		"nowMeta": "Remote · Freelance",
+
+		"workLabel": "Selected Work",
+		"workH2": "Built end-to-end. Deployed. In production.",
+		"workP": "Every project below I shipped — infrastructure, backend, and UI.",
+		"viewProject": "View project",
+		"readCaseStudy": "Read case study",
+
+		"servicesLabel": "How I work with clients",
+		"servicesH2": "Senior ownership. No hand-holding required.",
+		"servicesP": "Part-time B2B engagements. I take full responsibility for the area I own — architecture, code, delivery, deployment.",
+		"service1Num": "01 · GREENFIELD",
+		"service1Title": "Ship a new product from zero",
+		"service1Desc": "You have an idea and a deadline. I set up the repo, pick the stack, design the data layer, ship the MVP, and deploy it to production. EV-charging platform went from 0 to public launch in 5 months.",
+		"service2Num": "02 · RESCUE",
+		"service2Title": "Fix what's broken — fast",
+		"service2Desc": "Flaky deploys, rotting codebase, missing CI, nobody knows how it works. I diagnose, stabilize, document, and set up the pipelines so your team can move again.",
+		"service3Num": "03 · SCALE",
+		"service3Title": "Grow the platform alongside the team",
+		"service3Desc": "Ongoing fractional senior engineer. Code review, architecture decisions, mentoring juniors, owning the parts nobody else wants. Currently doing this for CORAC Engineering & Intedat.",
+
+		"testimonialsLabel": "What clients say",
+		"testimonialsH2": "Real feedback from real teammates and managers.",
+		"testimonialsP": "Pulled directly from LinkedIn recommendations — unedited.",
+
+		"projectCoraSithBadge": "◆ Flagship",
+		"projectCoraSithDesc": "Client-side hash-chain verification, D3.js supply-chain graphs, and zero-trust auth for a sensitive EO data pipeline. 1yr+ ongoing, sole frontend engineer.",
+		"projectIontChargeDesc": "Public EV-charger payment gateway. ČSOB integration, Docker Swarm, Fastify + MongoDB.",
+		"projectCoraScorecardDesc": "Cyber audit tool. NIS2 compliance, PDF export.",
+		"projectIontAdminDesc": "Charger control panel with real-time firmware updates and station diagnostics.",
+		"projectIontInfoDesc": "Public-facing EV charger info app.",
+		"projectPangolinDesc": "Interactive analytics dashboard with complex data viz.",
+		"projectNotefulDesc": "Note-taking app with tag hierarchies & real-time sync.",
+		"projectDisenchantmentDesc": "A minecraft plugin that enhances the vanilla enchanting system.",
+
+		"testimonial1Quote": "\"His problem-solving skills and experienced approach shined through. He is excellent at explaining tools and procedures to less experienced team members. Anyone would be lucky to have him.\"",
+		"testimonial1Role": "Software Engineering · Same team, 2 projects",
+		"testimonial2Quote": "\"Jan's ability to tackle complex technical solutions and successfully overcome challenges was truly remarkable. He displayed not only technical expertise but also management skills — breaking work into smaller items so multiple team members could contribute seamlessly.\"",
+		"testimonial2Role": "Senior Backend Developer · Direct manager, Precismo",
+		"testimonial3Quote": "\"Happy to recommend him for his amazing problem-solving skills and fast learning pace. He quickly picked up on new technology he hadn't used before and very quickly excelled at it.\"",
+		"testimonial3Role": "Full-stack Developer · HAXAGON",
+		"testimonial4Quote": "\"A versatile asset to any team. He consistently demonstrated his ability to turn project requirements into successful web applications. I wholeheartedly recommend Jan for his strong technical skills and commitment to delivering results.\"",
+		"testimonial4Role": "Founder & CTO · PRECISMO"
+	},
+
+	"blog": {
+		"writingLabel": "◆ Writing",
+		"h1": "Blog.",
+		"coming": "Coming",
+		"draft": "Draft"
+	},
+
+	"resume": {
+		"jankominek": "Jan Komínek",
+		"label": "◆ Resumé · 2026",
+		"subtitle": "Senior Frontend / Fullstack Engineer — 4+ yrs — Prague, CZ",
+		"bio": "I build complex web applications from scratch — fast. Vue, React, TypeScript, deep backend experience in Node, PostgreSQL, Redis, Docker. I've led an EV charging platform with its own payment system and built zero-trust data-lineage tooling.",
+		"hireBtn": "Hire me →",
+
+		"impact1Label": "◆ Industry experience",
+		"impact1Sub": "Senior level since 2024",
+		"impact2Label": "◆ Companies worked with",
+		"impact2Sub": "From startups to enterprise",
+		"impact3Label": "◆ Primary stack",
+		"impact3Sub": "Also React / Svelte / Nuxt",
+		"impact4Label": "◆ Status",
+		"impact4Sub": "Part-time B2B · ≤10h/wk",
+
+		"expH2": "Where I've been shipping.",
+		"expP": "Ordered newest to oldest. Concurrent roles noted. Current engagements marked in green.",
+		"eduH2": "Formal training.",
+		"skillsH2": "Stack.",
+		"skillsP": "Dot marks primary daily tools.",
+		"skillGroup1": "Languages & Frameworks",
+		"skillGroup2": "Data & Storage",
+		"skillGroup3": "Infra & DevOps",
+		"skillGroup4": "Craft & Tools",
+
+		"quickSummaryLabel": "Quick summary",
+		"quickSummary": "I am a Senior Frontend / Fullstack Engineer with a passion for building complex applications from scratch and a reputation for rapid problem-solving. My core expertise is in Vue.js, React.js, and TypeScript, backed by robust full-stack experience — including leading development of an EV charging platform with its own payment system and Docker-based service infrastructure. With a strong foundation in Cybersecurity and currently pursuing a B.S. in Applied Computer Science at the Prague University of Economics and Business, I excel at tackling difficult technical challenges and leading projects to successful completion.",
+
+		"aboutLabel": "About",
+		"about": [
+			"I am a Senior Frontend / Fullstack Engineer based in Prague, specializing in Vue.js, React.js, and TypeScript while maintaining deep full-stack experience. I currently work as a freelance Senior Frontend Engineer at CORAC Engineering, building technically advanced, cloud-integrated applications, and as a Fullstack Engineer at Intedat, developing robust systems with Node.js, AdonisJS, PostgreSQL, and Redis. A recent highlight is leading the backend and DevOps architecture for Diář FISáka — a university project where I designed the containerized infrastructure, built a Node.js REST API, and implemented async background workers using BullMQ.",
+			"My academic background in Applied Computer Science at the Prague University of Economics and Business has broadened my skill set beyond pure development. I've gained knowledge in marketing, UX design, economics, management, and data analytics with tools like Microsoft Power BI—enabling me to approach projects from both technical and business standpoints.",
+			"Professionally, I've taken on roles ranging from IT Support to Frontend and Fullstack Development across diverse environments. These experiences have sharpened my problem-solving abilities and adaptability, especially in freelance and cross-functional team settings. I also bring a foundation in cybersecurity, further strengthening my focus on building secure and dependable systems.",
+			"Driven by a passion for clean code, modern frameworks, and meaningful digital experiences, I thrive in collaborative environments that value innovation, precision, and user-centered design. Whether it's architecting a scalable backend, crafting an elegant UI, or navigating complex challenges, I'm committed to delivering practical and impactful software solutions."
+		],
+
+		"experienceLabel": "Experience",
+		"experience": [
+			{
+				"company": "CORAC Engineering",
+				"position": "Senior Frontend Engineer, ongoing since April 2025"
+			},
+			{
+				"company": "Intedat",
+				"position": "Fullstack Engineer, ongoing since Sep 2024"
+			},
+			{
+				"company": "IONT tech",
+				"position": "Fullstack Engineer, Aug 2023 to Sep 2024"
+			},
+			{
+				"company": "Summer School of Computer Game Development",
+				"position": "Lecturer & Organizer, Jul 2022/2023/2024/2025"
+			},
+			{
+				"company": "KMK family business",
+				"position": "IT Support, Jun 2020 to Feb 2024"
+			},
+			{
+				"company": "Precismo",
+				"position": "Fullstack Developer, Jan 2023 to Nov 2023"
+			},
+			{
+				"company": "Haxagon",
+				"position": "Frontend Developer, Oct 2022 to Jul 2023"
+			}
+		],
+
+		"educationLabel": "Education",
+		"education": [
+			{
+				"school": "Prague University of Economics and Business – Bachelor's degree",
+				"degree": "Applied Computer Science, ongoing since Sep 2024"
+			},
+			{
+				"school": "Smichov Secondary Technical School – High School Diploma",
+				"degree": "Cyber/Computer Forensics and Counterterrorism, Sep 2020 to May 2024"
+			}
+		],
+
+		"download": "Download Resume",
+
+		"toolsLabel": "Tools & Technologies",
+		"tools": [
+			"!VueJS",
+			"ReactJS",
+			"SvelteKit",
+			"!TailwindCSS",
+			"!TypeScript",
+			"!Node.js",
+			"ExpressJS",
+			"AdonisJS",
+			"!MongoDB",
+			"PostgreSQL",
+			"!Docker",
+			"Kubernetes",
+			"Redis",
+			"Elasticsearch",
+			"!CI/CD",
+			"DigitalOcean",
+			"DevOps",
+			"!Figma",
+			"Microsoft Power BI",
+			"User Interface Design",
+			"User Experience (UX)",
+			"Agile Methodologies",
+			"!AWS",
+			"Networking",
+			"Network Security",
+			"System Administration",
+			"Bash",
+			"!Git",
+			"Jira",
+			"!REST",
+			"Docker Swarm",
+			"!Fastify",
+			"Nuxt.js",
+			"Microservices",
+			"BullMQ",
+			"Traefik",
+			"!MySQL"
+		],
+
+		"exp1Dates": "APR 2025 — PRESENT",
+		"exp1Duration": "1 yr+",
+		"exp1Role": "Senior Frontend Engineer",
+		"exp1Company": "CORAC ENGINEERING · FREELANCE · REMOTE",
+		"exp1Desc": "Building DeepTrace — a data provenance and integrity platform for Earth Observation data. Sole frontend engineer.",
+		"exp1Hi1": "Architected interactive D3.js lineage visualization for complex supply-chain graphs",
+		"exp1Hi2": "Implemented client-side hash-chain verification following zero-trust architecture",
+		"exp1Hi3": "Integrated AWS Cognito (OAuth) for secure client-side-only authentication",
+
+		"exp2Dates": "SEP 2024 — PRESENT",
+		"exp2Duration": "1 yr 8 mos",
+		"exp2Role": "Fullstack Engineer",
+		"exp2Company": "INTEDAT · FREELANCE · REMOTE",
+		"exp2Desc": "Developing and maintaining a fullstack data platform focused on scalability, search performance, and reliable infrastructure.",
+		"exp2Hi1": "End-to-end feature delivery — Nuxt on the frontend, AdonisJS on the backend",
+		"exp2Hi2": "Elasticsearch-powered search across large datasets",
+		"exp2Hi3": "CI/CD + DigitalOcean Linux infrastructure for production deployments",
+
+		"exp3Dates": "JUL 2022 — PRESENT",
+		"exp3Duration": "Yearly · 4 editions",
+		"exp3Role": "Lecturer & Organizer",
+		"exp3Company": "SMÍCHOVSKÁ SPŠ · SUMMER SCHOOL · ON-SITE",
+		"exp3Desc": "Solo-taught \"Intro and Basics of 2D Graphics\" for 50 students (8th & 9th grade). Consistently top-rated teacher across all four years (2022–2025).",
+
+		"exp4Dates": "AUG 2023 — SEP 2024",
+		"exp4Duration": "1 yr 2 mos",
+		"exp4Role": "Fullstack Engineer",
+		"exp4Company": "IONT TECH · FREELANCE · REMOTE",
+		"exp4Desc": "Led full-stack development of a web platform managing electric vehicle chargers — from infrastructure setup to payment integration.",
+		"exp4Hi1": "Built public-facing charging app with online payment and remote charger authorization",
+		"exp4Hi2": "Designed + deployed infrastructure from scratch on IaaS — Docker Swarm microservices",
+		"exp4Hi3": "Developed auto-updating firmware delivery system with the hardware team",
+
+		"exp5Dates": "JAN 2023 — NOV 2023",
+		"exp5Duration": "11 mos",
+		"exp5Role": "Fullstack Developer",
+		"exp5Company": "PRECISMO · FREELANCE · HYBRID",
+		"exp5Desc": "Fullstack developer on a cross-functional Agile team building an internal customer portal. Collaborated with 6 devs and 1 PM in Scrum.",
+
+		"exp6Dates": "OCT 2022 — JUL 2023",
+		"exp6Duration": "10 mos",
+		"exp6Role": "Frontend Developer",
+		"exp6Company": "HAXAGON · PART-TIME · REMOTE",
+		"exp6Desc": "Frontend on a cybersecurity e-learning platform. Introduced improved dev processes for code quality and delivery flow.",
+
+		"exp7Dates": "JUN 2020 — FEB 2024",
+		"exp7Duration": "3 yrs 9 mos",
+		"exp7Role": "IT Support",
+		"exp7Company": "KMK FAMILY BUSINESS · FREELANCE",
+		"exp7Desc": "Hands-on IT support: Windows workstations, network printers, IoT devices, local network infrastructure, and safety training.",
+
+		"edu1Dates": "SEP 2024 — JUL 2027",
+		"edu1Duration": "Bachelor's, ongoing · Grade 2",
+		"edu1Role": "Applied Computer Science",
+		"edu1Org": "PRAGUE UNIVERSITY OF ECONOMICS AND BUSINESS (VŠE)",
+		"edu1Desc": "B.S. focused on bridging software engineering and business strategy. System design, machine learning, cloud computing, data analytics alongside business fundamentals.",
+		"edu1Hi1": "Leading backend + DevOps architecture for Diář FISáka — team of 4 developers on Hetzner VPS",
+		"edu1Hi2": "Completed certifications: Building AI, Elements of AI, Data Science in Python, Joining Data in SQL",
+
+		"edu2Dates": "SEP 2020 — MAY 2024",
+		"edu2Duration": "High School Diploma",
+		"edu2Role": "Cyber / Computer Forensics & Counterterrorism",
+		"edu2Org": "SMICHOV SECONDARY TECHNICAL SCHOOL",
+		"edu2Desc": "Graduated with full marks in technical subjects. Network security, forensics, system admin. Final thesis: full-stack e-commerce store built from scratch, covering DevOps and CI/CD."
+	},
+
+	"contact": {
+		"hireLabel": "◆ Hire me",
+		"h1": "Let's work together.",
+		"intro": "Available for part-time B2B engagements, up to ~10 hours per week. I reply within 24 hours on weekdays.",
+		"emailDirect": "Email direct",
+		"linkedinSub": "500+ connections · 5 recs",
+		"bookCall": "Book a 30-min call",
+		"freeChat": "Free discovery chat",
+		"whatToInclude": "◆ WHAT TO INCLUDE",
+		"whatToIncludeText": "Briefly: the problem, expected scale, current team & stack, timeline, and budget range. The more concrete, the faster I can say \"yes, and here's how\" or \"not the right fit — try X\".",
+		"projectBrief": "Project brief",
+		"formStep": "01 / 02",
+		"skipForm": "◆ Prefer to skip the form?",
+		"skipFormDesc": "Grab 30 minutes. We'll chat through your project and see if it's a fit.",
+
+		"fillForm": "Fill out Form",
+		"fillFormDescription": "Looking for a senior dev on a flexible part-time B2B basis? Fill out the form and I'll get back to you soon.",
+
+		"orBookACall": "Or <u>Book a Call</u>",
+
+		"form": {
+			"fullName": "Your full name",
+			"fullNamePlaceholder": "John Doe",
+
+			"email": "Email address",
+			"emailPlaceholder": "mock.company@gmail.com",
+
+			"company": "Company name",
+			"companyPlaceholder": "Mock Company",
+
+			"message": "Message",
+			"messagePlaceholder": "Describe your project...",
+
+			"budget": "Expected budget",
+
+			"advanced": "More information",
+
+			"projectType": "Project type",
+			"projects": {
+				"none": "Select or leave blank",
+				"website": "Website",
+				"webApp": "Web App",
+				"ecommerce": "E-commerce",
+				"saas": "SaaS",
+				"api": "API Development",
+				"mobileApp": "Mobile App (Web-based)",
+				"desktopApp": "Desktop App (Web-based)",
+				"admin": "Dashboard/Admin Panel",
+				"landingPage": "Landing Page",
+				"other": "Other (Describe in Message)"
+			},
+
+			"feature": "Features",
+			"featurePlaceholder": "List of features",
+			"features": {
+				"auth": "User Authentication (Login/Signup, OAuth)",
+				"admin": "Admin Panel",
+				"payment": "Payment Integration (Stripe, PayPal, etc.)",
+				"database": "Database & CRUD Operations",
+				"files": "File Uploads & Storage",
+				"notifications": "Notifications (Email, SMS, Push)",
+				"realtime": "Real-time Features (WebSockets, Live Updates)",
+				"i18n": "Multi-language Support",
+				"analytics": "Analytics & Reporting",
+				"seo": "SEO Optimization",
+				"customAPI": "Custom API Development",
+				"thirdParty": "Third-party API Integration",
+				"responsive": "Responsive Design",
+				"other": "Other (Describe in Message)"
+			},
+
+			"technology": "Technology preferences",
+			"technologyPlaceholder": "List of technologies",
+			"technologies": {
+				"wordpress": "WordPress",
+				"vuejs": "Vue.js",
+				"reactjs": "React.js",
+				"svelte": "Svelte",
+				"tailwind": "Tailwind CSS",
+				"nodejs": "Node.js",
+				"typescript": "TypeScript",
+				"sql": "SQL (MySQL, PostgreSQL)",
+				"nosql": "NoSQL (MongoDB, Firebase)",
+				"graphql": "GraphQL",
+				"cache": "Caching (Redis, Memcached)",
+				"docker": "Docker",
+				"aws": "AWS (S3, EC2, Lambda)",
+				"gcp": "Google Cloud Platform",
+				"azure": "Microsoft Azure",
+				"vps": "VPS (DigitalOcean, Linode)",
+				"restAPI": "REST API",
+				"websocket": "WebSocket",
+				"other": "Other (Describe in Message)"
+			},
+
+			"asset": "Assets",
+			"assetPlaceholder": "List of assets",
+			"assets": {
+				"design": "Design/Wireframes",
+				"codebase": "Existing Codebase",
+				"database": "Existing Database",
+				"branding": "Branding/Logos",
+				"documentation": "Documentation",
+				"domain": "Domain Name",
+				"hosting": "Hosting",
+				"other": "Other (Describe in Message)"
+			},
+
+			"audience": "Target audience",
+			"audiencePlaceholder": "List of target audiences",
+			"audiences": {
+				"public": "General Public",
+				"b2b": "Business to Business (B2B)",
+				"b2c": "Business to Consumer (B2C)",
+				"startup": "Startups & Entrepreneurs",
+				"internal": "Internal Use (Intranet)",
+				"enterprise": "Enterprise Solutions",
+				"nonprofit": "Non-profit Organizations",
+				"developer": "Developers & Tech Users",
+				"other": "Other (Describe in Message)"
+			},
+
+			"hosting": "Hosting",
+			"hostings": {
+				"none": "Select or leave blank",
+				"client": "Client Will Handle Hosting",
+				"need": "Need Hosting Setup & Deployment",
+				"server": "Help with Server/Cloud Configuration",
+				"other": "Other (Describe in Message)"
+			},
+
+			"support": "Support & Maintenance",
+			"supports": {
+				"none": "Select or leave blank",
+				"onetime": "One-time Development Only",
+				"ongoing": "Ongoing Support & Maintenance",
+				"training": "Training & Documentation",
+				"consultation": "Consultation & Strategy",
+				"updates": "Bug Fixes & Updates as Needed",
+				"other": "Other (Describe in Message)"
+			},
+
+			"legal": "Legal Considerations",
+			"legalPlaceholder": "List of legal considerations",
+			"legals": {
+				"nda": "NDA Required (Non-Disclosure Agreement)",
+				"contract": "Custom Contract",
+				"standard": "Standard Freelance Agreement",
+				"gdpr": "GDPR Compliance",
+				"other": "Other (Describe in Message)"
+			},
+
+			"deadline": "Expected deadline",
+
+			"priority": "Priority",
+			"priorities": {
+				"none": "Select or leave blank",
+				"low": "Low (Nice to Have)",
+				"medium": "Medium (Standard Timeline)",
+				"high": "High (Time-Sensitive)",
+				"critical": "Critical (Urgent)",
+				"asap": "ASAP (Budget is not a concern)"
+			},
+
+			"send": "Send",
+			"sending": "Sending…",
+
+			"errors": {
+				"fullName": {
+					"invalid_type": "Name must be text.",
+					"too_small": "Name must not be empty."
+				},
+
+				"email": {
+					"invalid_type": "Email must be text.",
+					"invalid_string": "Enter a valid email.",
+					"too_small": "Email must not be empty."
+				},
+
+				"company": {
+					"invalid_type": "Company name must be text."
+				},
+
+				"message": {
+					"invalid_type": "Message must be text.",
+					"too_small": "Message must not be empty."
+				},
+
+				"budget": {
+					"invalid_type": "Budget must be a number.",
+					"too_small": "Minimum budget is 1000."
+				},
+
+				"projectType": {
+					"invalid_type": "Project type must be text.",
+					"too_small": "You must fill in the project type."
+				},
+
+				"features": {
+					"invalid_type": "Feature must be text.",
+					"too_small": "You must fill in the feature."
+				},
+
+				"technologies": {
+					"invalid_type": "Technology must be text.",
+					"too_small": "You must fill in the technology."
+				},
+
+				"assets": {
+					"invalid_type": "Asset must be text.",
+					"too_small": "You must fill in the asset."
+				},
+
+				"audiences": {
+					"invalid_type": "Audience must be text.",
+					"too_small": "You must fill in the audience."
+				},
+
+				"hosting": {
+					"invalid_type": "Hosting must be text.",
+					"too_small": "You must fill in the hosting."
+				},
+
+				"support": {
+					"invalid_type": "Support must be text.",
+					"too_small": "You must fill in the support."
+				},
+
+				"legals": {
+					"invalid_type": "Legal must be text.",
+					"too_small": "You must fill in the legal."
+				},
+
+				"deadline": {
+					"invalid_type": "Date must be valid.",
+					"invalid_date": "Enter a valid date."
+				},
+
+				"priority": {
+					"invalid_type": "Priority must be text.",
+					"too_small": "You must specify a priority."
+				},
+
+				"api": "An error occurred while sending the message. Please try again later."
+			},
+
+			"success": "Your message has been sent successfully!"
+		},
+
+		"bookACall": "Book a Call",
+		"bookACallDescription": "Want to skip the back-and-forth? Let's chat! Book a call, and we'll go over your needs.",
+
+		"calendar": {
+			"jankominek": "Jan Komínek",
+			"30minCall": "30 min Meeting",
+
+			"meeting": "Meeting type",
+			"meetings": {
+				"consultation": "Consultation",
+				"discovery": "Discovery Call",
+				"followup": "Follow-up",
+				"interview": "Interview",
+				"other": "Other"
+			},
+
+			"timezone": "Timezone",
+
+			"confirm": "Confirm",
+
+			"months": {
+				"1": "January",
+				"2": "February",
+				"3": "March",
+				"4": "April",
+				"5": "May",
+				"6": "June",
+				"7": "July",
+				"8": "August",
+				"9": "September",
+				"10": "October",
+				"11": "November",
+				"12": "December"
+			},
+
+			"week": {
+				"1": "Mon",
+				"2": "Tue",
+				"3": "Wed",
+				"4": "Thu",
+				"5": "Fri",
+				"6": "Sat",
+				"7": "Sun"
+			},
+
+			"errors": {
+				"meeting": {
+					"invalid_type": "Meeting type must be text.",
+					"too_small": "You must specify a meeting type."
+				},
+
+				"timezone": {
+					"invalid_type": "Timezone must be text.",
+					"too_small": "You must specify a timezone."
+				},
+
+				"datetime": {
+					"invalid_type": "Date must be valid.",
+					"invalid_date": "Enter a valid date.",
+					"already_booked": "This time slot is already booked."
+				},
+
+				"duration": {
+					"invalid_type": "Duration must be a number.",
+					"too_small": "Duration must be at least 15 minutes."
+				}
+			}
+		}
+	},
+
+	"footer": {
+		"contactMe": "Contact me",
+
+		"email": "Email",
+		"linkedin": "LinkedIn",
+		"form": "Contact form",
+		"calendar": "Book a call"
+	}
+}

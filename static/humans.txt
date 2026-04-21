@@ -1,0 +1,15 @@
+/* TEAM */
+Developer: Jan Komínek
+Role: Senior Frontend / Fullstack Engineer
+Site: https://jankominek.com
+LinkedIn: https://www.linkedin.com/in/jan-kominek
+Location: Prague, Czech Republic
+
+/* SITE */
+Last update: 2026-03-19
+Language: English, Czech
+Standards: HTML5, CSS3, ES2022
+Framework: SvelteKit 2, Svelte 5
+Styling: Tailwind CSS 4
+Deployment: Cloudflare Workers
+Content: MDSvex (Markdown)

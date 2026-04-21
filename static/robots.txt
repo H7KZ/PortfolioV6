@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /fragment/
+
+Sitemap: https://jankominek.com/sitemap.xml
+
+# AI crawlers — allow indexing for knowledge / answer engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /fragment/
