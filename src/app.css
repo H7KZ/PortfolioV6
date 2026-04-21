@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@plugin '@tailwindcss/typography';
+@plugin '../node_modules/@tailwindcss/typography';
 
 :root {
 	/* Design tokens */

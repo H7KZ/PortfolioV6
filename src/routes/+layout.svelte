@@ -3,7 +3,7 @@
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
 	import { onMount } from 'svelte';
 	import { afterNavigate, onNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { locale } from 'svelte-i18n';
 	import { trackPageView } from '$lib/utils/analytics';
 
@@ -40,15 +40,13 @@
 		})}</` + `script>`;
 
 	onMount(() => {
-		locale.subscribe((l) => {
+		return locale.subscribe((l) => {
 			localStorage.setItem('locale', l || window.navigator.language || 'en');
 		});
-
-		locale.set(localStorage.getItem('locale') || 'en');
 	});
 
 	afterNavigate(() => {
-		trackPageView($page.url.href, document.title);
+		trackPageView(page.url.href, document.title);
 	});
 
 	onNavigate((navigation) => {

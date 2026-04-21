@@ -1,29 +1,10 @@
 <script lang="ts">
 	import ContactFooter from '$lib/components/ContactFooter.svelte';
 	import { _, locale } from 'svelte-i18n';
-	import type { Post } from '$lib/types';
+	import { formatDate } from '$lib/utils/formatDate';
+	import type { PageData } from './$types';
 
-	let posts: Post[] = $state([]);
-
-	$effect(() => {
-		getPosts().then((data) => {
-			posts = data;
-		});
-	});
-
-	async function getPosts() {
-		const response = await fetch(`/api/posts`);
-		return await response.json();
-	}
-
-	function formatDate(dateStr: string, loc: string | null | undefined): string {
-		return new Date(dateStr).toLocaleDateString(loc ?? 'en', { month: 'short', year: 'numeric', timeZone: 'UTC' });
-	}
-
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	function readTime(_post: Post): string {
-		return '8 MIN';
-	}
+	let { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
@@ -46,7 +27,7 @@
 	</div>
 
 	<div class="mb-20 flex flex-col">
-		{#each posts as post (post.slug)}
+		{#each data.posts as post (post.slug)}
 			<a
 				href={`/blog/${post.slug}`}
 				class="grid grid-cols-[120px_1fr_auto_auto] items-center gap-7 border-t border-(--line) py-6 text-(--fg) no-underline transition-[padding-left] duration-200 last:border-b last:border-(--line) hover:pl-2.5 max-md:grid-cols-1 max-md:gap-1.5 max-md:py-4.5"
@@ -61,7 +42,7 @@
 						<span class="text-(--fg-5)">/</span>
 					{/each}
 				</div>
-				<div class="mono text-[11px] tracking-[0.04em] whitespace-nowrap text-(--fg-4)">{readTime(post)}</div>
+				<div class="mono text-[11px] tracking-[0.04em] whitespace-nowrap text-(--fg-4)">8 MIN</div>
 			</a>
 		{/each}
 

@@ -3,19 +3,12 @@
 	import type { Project } from '$lib/types';
 	import { _, locale } from 'svelte-i18n';
 	import { trackEvent } from '$lib/utils/analytics';
+	import type { PageData } from './$types';
+	import SectionHeader from '$lib/components/SectionHeader.svelte';
 
-	let projects: Project[] = $state([]);
+	let { data }: { data: PageData } = $props();
 
-	$effect(() => {
-		getProjects($locale).then((data) => {
-			projects = data;
-		});
-	});
-
-	async function getProjects(l: string | null | undefined) {
-		const response = await fetch(`/api/projects?locale=${l}`);
-		return await response.json();
-	}
+	let projects = $derived<Project[]>(data.projects[$locale ?? 'en'] ?? data.projects['en'] ?? []);
 
 	type CardSize = 'featured' | 'wide' | 'narrow' | 'default';
 
@@ -96,10 +89,10 @@
 		}
 	};
 
-	const serviceChips = [
-		['Architecture', 'Full-stack', 'DevOps'],
-		['Refactor', 'CI / CD', 'Docker'],
-		['Mentoring', 'Code review', 'System design']
+	const services = [
+		{ num: 'service1Num', title: 'service1Title', desc: 'service1Desc', chips: ['Architecture', 'Full-stack', 'DevOps'] },
+		{ num: 'service2Num', title: 'service2Title', desc: 'service2Desc', chips: ['Refactor', 'CI / CD', 'Docker'] },
+		{ num: 'service3Num', title: 'service3Title', desc: 'service3Desc', chips: ['Mentoring', 'Code review', 'System design'] }
 	];
 
 	const testimonials = [
@@ -218,16 +211,7 @@
 
 <!-- PROJECTS BENTO -->
 <section class="mx-auto mb-35 max-w-(--max) px-8 max-sm:px-5">
-	<div class="mb-10 grid grid-cols-[1fr_2fr] gap-10 border-b border-(--line) pb-5 max-md:grid-cols-1 max-md:gap-3">
-		<div class="mono pt-3 text-[11px] tracking-[0.12em] text-(--fg-4) uppercase">
-			◆ {$_('home.workLabel')}
-			— {projects.length}
-		</div>
-		<div>
-			<h2 class="serif m-0 text-[clamp(24px,3.5vw,44px)] leading-[1.05] tracking-[-0.02em]">{$_('home.workH2')}</h2>
-			<p class="mt-3.5 mb-0 max-w-130 text-[15px] text-(--fg-3)">{$_('home.workP')}</p>
-		</div>
-	</div>
+	<SectionHeader label="{$_('home.workLabel')} — {projects.length}" heading={$_('home.workH2')} sub={$_('home.workP')} />
 
 	<div class="grid grid-cols-6 gap-3.5 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
 		{#each projects as project (project.slug)}
@@ -302,74 +286,32 @@
 
 <!-- SERVICES -->
 <section class="mx-auto mb-35 max-w-(--max) px-8 max-sm:px-5">
-	<div class="mb-10 grid grid-cols-[1fr_2fr] gap-10 border-b border-(--line) pb-5 max-md:grid-cols-1 max-md:gap-3">
-		<div class="mono pt-3 text-[11px] tracking-[0.12em] text-(--fg-4) uppercase">◆ {$_('home.servicesLabel')}</div>
-		<div>
-			<h2 class="serif m-0 text-[clamp(24px,3.5vw,44px)] leading-[1.05] tracking-[-0.02em]">{$_('home.servicesH2')}</h2>
-			<p class="mt-3.5 mb-0 max-w-130 text-[15px] text-(--fg-3)">{$_('home.servicesP')}</p>
-		</div>
-	</div>
+	<SectionHeader label={$_('home.servicesLabel')} heading={$_('home.servicesH2')} sub={$_('home.servicesP')} />
 
 	<div class="grid grid-cols-3 gap-3.5 max-md:grid-cols-1">
-		<div
-			class="group relative overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2) p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-(--fg-5)"
-		>
-			<div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-(--accent)/[0.05] to-transparent"></div>
+		{#each services as s (s.num)}
 			<div
-				class="mono mb-5 inline-flex rounded-full border border-(--accent)/20 bg-(--accent)/[0.06] px-3 py-1 text-[11px] tracking-widest text-(--accent)"
+				class="group relative overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2) p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-(--fg-5)"
 			>
-				{$_('home.service1Num')}
+				<div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-(--accent)/[0.05] to-transparent"></div>
+				<div
+					class="mono mb-5 inline-flex rounded-full border border-(--accent)/20 bg-(--accent)/[0.06] px-3 py-1 text-[11px] tracking-widest text-(--accent)"
+				>
+					{$_('home.' + s.num)}
+				</div>
+				<h3 class="serif m-0 mb-2.5 text-[22px]">{$_('home.' + s.title)}</h3>
+				<p class="m-0 text-[14px] leading-[1.55] text-(--fg-3)">{$_('home.' + s.desc)}</p>
+				<div class="mt-4.5 flex flex-wrap gap-1.5">
+					{#each s.chips as chip (chip)}<span class="chip">{chip}</span>{/each}
+				</div>
 			</div>
-			<h3 class="serif m-0 mb-2.5 text-[22px]">{$_('home.service1Title')}</h3>
-			<p class="m-0 text-[14px] leading-[1.55] text-(--fg-3)">{$_('home.service1Desc')}</p>
-			<div class="mt-4.5 flex flex-wrap gap-1.5">
-				{#each serviceChips[0] as chip (chip)}<span class="chip">{chip}</span>{/each}
-			</div>
-		</div>
-		<div
-			class="group relative overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2) p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-(--fg-5)"
-		>
-			<div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-(--accent)/[0.05] to-transparent"></div>
-			<div
-				class="mono mb-5 inline-flex rounded-full border border-(--accent)/20 bg-(--accent)/[0.06] px-3 py-1 text-[11px] tracking-widest text-(--accent)"
-			>
-				{$_('home.service2Num')}
-			</div>
-			<h3 class="serif m-0 mb-2.5 text-[22px]">{$_('home.service2Title')}</h3>
-			<p class="m-0 text-[14px] leading-[1.55] text-(--fg-3)">{$_('home.service2Desc')}</p>
-			<div class="mt-4.5 flex flex-wrap gap-1.5">
-				{#each serviceChips[1] as chip (chip)}<span class="chip">{chip}</span>{/each}
-			</div>
-		</div>
-		<div
-			class="group relative overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2) p-6 transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-(--fg-5)"
-		>
-			<div class="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-(--accent)/[0.05] to-transparent"></div>
-			<div
-				class="mono mb-5 inline-flex rounded-full border border-(--accent)/20 bg-(--accent)/[0.06] px-3 py-1 text-[11px] tracking-widest text-(--accent)"
-			>
-				{$_('home.service3Num')}
-			</div>
-			<h3 class="serif m-0 mb-2.5 text-[22px]">{$_('home.service3Title')}</h3>
-			<p class="m-0 text-[14px] leading-[1.55] text-(--fg-3)">{$_('home.service3Desc')}</p>
-			<div class="mt-4.5 flex flex-wrap gap-1.5">
-				{#each serviceChips[2] as chip (chip)}<span class="chip">{chip}</span>{/each}
-			</div>
-		</div>
+		{/each}
 	</div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="mx-auto mb-35 max-w-(--max) px-8 max-sm:px-5">
-	<div class="mb-10 grid grid-cols-[1fr_2fr] gap-10 border-b border-(--line) pb-5 max-md:grid-cols-1 max-md:gap-3">
-		<div class="mono pt-3 text-[11px] tracking-[0.12em] text-(--fg-4) uppercase">
-			◆ {$_('home.testimonialsLabel')}
-		</div>
-		<div>
-			<h2 class="serif m-0 text-[clamp(24px,3.5vw,44px)] leading-[1.05] tracking-[-0.02em]">{$_('home.testimonialsH2')}</h2>
-			<p class="mt-3.5 mb-0 max-w-130 text-[15px] text-(--fg-3)">{$_('home.testimonialsP')}</p>
-		</div>
-	</div>
+	<SectionHeader label={$_('home.testimonialsLabel')} heading={$_('home.testimonialsH2')} sub={$_('home.testimonialsP')} />
 
 	<div class="grid grid-cols-2 gap-3.5 max-md:grid-cols-1">
 		{#each testimonials as t (t.name)}

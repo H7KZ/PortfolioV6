@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { _, locale, locales } from 'svelte-i18n';
 	import { page } from '$app/state';
+	import { cycleLocale } from '$lib/utils/locale';
 
 	let menuOpen = $state(false);
 </script>
@@ -70,9 +71,7 @@
 			<button
 				class="cursor-pointer border-0 bg-transparent px-0 py-2 text-left text-[11px] font-(--font-mono) tracking-[0.08em] text-(--fg-4) transition-colors duration-150 hover:text-(--fg)"
 				onclick={() => {
-					const all = $locales ?? ['en', 'cs'];
-					const idx = all.indexOf($locale ?? 'en');
-					locale.set(all[(idx + 1) % all.length]);
+					cycleLocale();
 					menuOpen = false;
 				}}
 			>

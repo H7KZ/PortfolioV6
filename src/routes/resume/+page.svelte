@@ -1,7 +1,66 @@
 <script lang="ts">
 	import ContactFooter from '$lib/components/ContactFooter.svelte';
+	import SectionHeader from '$lib/components/SectionHeader.svelte';
 	import { _ } from 'svelte-i18n';
 	import { trackEvent } from '$lib/utils/analytics';
+
+	const experiences = [
+		{
+			key: 'exp1',
+			current: true,
+			highlights: ['Hi1', 'Hi2', 'Hi3'],
+			chips: [
+				{ label: 'Vue 3', accent: true },
+				{ label: 'TypeScript' },
+				{ label: 'D3.js' },
+				{ label: 'AWS Cognito' },
+				{ label: 'Vite' },
+				{ label: 'pnpm' }
+			]
+		},
+		{
+			key: 'exp2',
+			current: true,
+			highlights: ['Hi1', 'Hi2', 'Hi3'],
+			chips: [
+				{ label: 'Node.js', accent: true },
+				{ label: 'TypeScript' },
+				{ label: 'Nuxt' },
+				{ label: 'AdonisJS' },
+				{ label: 'PostgreSQL' },
+				{ label: 'Redis' },
+				{ label: 'Elasticsearch' }
+			]
+		},
+		{ key: 'exp3', current: false, highlights: [] as string[], chips: [] as { label: string; accent?: boolean }[] },
+		{
+			key: 'exp4',
+			current: false,
+			highlights: ['Hi1', 'Hi2', 'Hi3'],
+			chips: [
+				{ label: 'SvelteKit' },
+				{ label: 'Fastify' },
+				{ label: 'TypeScript' },
+				{ label: 'Docker Swarm' },
+				{ label: 'MongoDB' },
+				{ label: 'Redis' },
+				{ label: 'Linux' }
+			]
+		},
+		{
+			key: 'exp5',
+			current: false,
+			highlights: [] as string[],
+			chips: [{ label: 'React' }, { label: 'Node.js' }, { label: 'Playwright' }, { label: 'SQL' }]
+		},
+		{ key: 'exp6', current: false, highlights: [] as string[], chips: [{ label: 'Vue.js' }, { label: 'TypeScript' }, { label: 'Tailwind' }] },
+		{ key: 'exp7', current: false, highlights: [] as string[], chips: [] as { label: string; accent?: boolean }[] }
+	];
+
+	const education = [
+		{ key: 'edu1', current: true, highlights: ['Hi1', 'Hi2'] },
+		{ key: 'edu2', current: false, highlights: [] as string[] }
+	];
 </script>
 
 <svelte:head>
@@ -86,174 +145,64 @@
 
 <!-- EXPERIENCE -->
 <section class="mx-auto mb-25 max-w-(--max) px-8 max-sm:px-5">
-	<div class="mb-10 grid grid-cols-[1fr_2fr] gap-10 border-b border-(--line) pb-5 max-md:grid-cols-1 max-md:gap-3">
-		<div class="mono pt-3 text-[11px] tracking-[0.12em] text-(--fg-4) uppercase">{$_('resume.experienceLabel')}</div>
-		<div>
-			<h2 class="serif m-0 text-[clamp(24px,3vw,42px)] leading-[1.05] tracking-[-0.02em]">{$_('resume.expH2')}</h2>
-			<p class="mt-3 mb-0 text-[14px] text-(--fg-3)">{$_('resume.expP')}</p>
-		</div>
-	</div>
+	<SectionHeader label={$_('resume.experienceLabel')} heading={$_('resume.expH2')} sub={$_('resume.expP')} headingSize="text-[clamp(24px,3vw,42px)]" />
 
 	<div class="timeline relative pl-8">
-		<div class="tl-item current relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.exp1Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.exp1Duration')}</span>
+		{#each experiences as exp (exp.key)}
+			<div class="tl-item {exp.current ? 'current ' : ''}relative pb-10">
+				<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
+					{$_(`resume.${exp.key}Dates`)} <span class="ml-1.5 text-(--fg-3)">· {$_(`resume.${exp.key}Duration`)}</span>
+				</div>
+				<h3 class="m-0 mb-1 text-[18px] font-medium">{$_(`resume.${exp.key}Role`)}</h3>
+				<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_(`resume.${exp.key}Company`)}</div>
+				<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_(`resume.${exp.key}Desc`)}</p>
+				{#if exp.highlights.length}
+					<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
+						{#each exp.highlights as h (h)}
+							<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_(`resume.${exp.key}${h}`)}</li>
+						{/each}
+					</ul>
+				{/if}
+				{#if exp.chips.length}
+					<div class="flex flex-wrap gap-1.25">
+						{#each exp.chips as chip (chip.label)}
+							<span class="chip {chip.accent ? 'accent' : ''}">{chip.label}</span>
+						{/each}
+					</div>
+				{/if}
 			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.exp1Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.exp1Company')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.exp1Desc')}</p>
-			<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp1Hi1')}</li>
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp1Hi2')}</li>
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp1Hi3')}</li>
-			</ul>
-			<div class="flex flex-wrap gap-1.25">
-				<span class="chip accent">Vue 3</span>
-				<span class="chip">TypeScript</span>
-				<span class="chip">D3.js</span>
-				<span class="chip">AWS Cognito</span>
-				<span class="chip">Vite</span>
-				<span class="chip">pnpm</span>
-			</div>
-		</div>
-
-		<div class="tl-item current relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.exp2Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.exp2Duration')}</span>
-			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.exp2Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.exp2Company')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.exp2Desc')}</p>
-			<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp2Hi1')}</li>
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp2Hi2')}</li>
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp2Hi3')}</li>
-			</ul>
-			<div class="flex flex-wrap gap-1.25">
-				<span class="chip accent">Node.js</span>
-				<span class="chip">TypeScript</span>
-				<span class="chip">Nuxt</span>
-				<span class="chip">AdonisJS</span>
-				<span class="chip">PostgreSQL</span>
-				<span class="chip">Redis</span>
-				<span class="chip">Elasticsearch</span>
-			</div>
-		</div>
-
-		<div class="tl-item relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.exp3Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.exp3Duration')}</span>
-			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.exp3Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.exp3Company')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.exp3Desc')}</p>
-		</div>
-
-		<div class="tl-item relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.exp4Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.exp4Duration')}</span>
-			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.exp4Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.exp4Company')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.exp4Desc')}</p>
-			<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp4Hi1')}</li>
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp4Hi2')}</li>
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.exp4Hi3')}</li>
-			</ul>
-			<div class="flex flex-wrap gap-1.25">
-				<span class="chip">SvelteKit</span>
-				<span class="chip">Fastify</span>
-				<span class="chip">TypeScript</span>
-				<span class="chip">Docker Swarm</span>
-				<span class="chip">MongoDB</span>
-				<span class="chip">Redis</span>
-				<span class="chip">Linux</span>
-			</div>
-		</div>
-
-		<div class="tl-item relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.exp5Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.exp5Duration')}</span>
-			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.exp5Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.exp5Company')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.exp5Desc')}</p>
-			<div class="flex flex-wrap gap-1.25">
-				<span class="chip">React</span>
-				<span class="chip">Node.js</span>
-				<span class="chip">Playwright</span>
-				<span class="chip">SQL</span>
-			</div>
-		</div>
-
-		<div class="tl-item relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.exp6Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.exp6Duration')}</span>
-			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.exp6Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.exp6Company')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.exp6Desc')}</p>
-			<div class="flex flex-wrap gap-1.25">
-				<span class="chip">Vue.js</span>
-				<span class="chip">TypeScript</span>
-				<span class="chip">Tailwind</span>
-			</div>
-		</div>
-
-		<div class="tl-item relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.exp7Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.exp7Duration')}</span>
-			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.exp7Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.exp7Company')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.exp7Desc')}</p>
-		</div>
+		{/each}
 	</div>
 </section>
 
 <!-- EDUCATION -->
 <section class="mx-auto mb-25 max-w-(--max) px-8 max-sm:px-5">
-	<div class="mb-10 grid grid-cols-[1fr_2fr] gap-10 border-b border-(--line) pb-5 max-md:grid-cols-1 max-md:gap-3">
-		<div class="mono pt-3 text-[11px] tracking-[0.12em] text-(--fg-4) uppercase">{$_('resume.educationLabel')}</div>
-		<div>
-			<h2 class="serif m-0 text-[clamp(24px,3vw,42px)] leading-[1.05] tracking-[-0.02em]">{$_('resume.eduH2')}</h2>
-		</div>
-	</div>
+	<SectionHeader label={$_('resume.educationLabel')} heading={$_('resume.eduH2')} headingSize="text-[clamp(24px,3vw,42px)]" />
 
 	<div class="timeline relative pl-8">
-		<div class="tl-item current relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.edu1Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.edu1Duration')}</span>
+		{#each education as edu (edu.key)}
+			<div class="tl-item {edu.current ? 'current ' : ''}relative pb-10">
+				<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
+					{$_(`resume.${edu.key}Dates`)} <span class="ml-1.5 text-(--fg-3)">· {$_(`resume.${edu.key}Duration`)}</span>
+				</div>
+				<h3 class="m-0 mb-1 text-[18px] font-medium">{$_(`resume.${edu.key}Role`)}</h3>
+				<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_(`resume.${edu.key}Org`)}</div>
+				<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_(`resume.${edu.key}Desc`)}</p>
+				{#if edu.highlights.length}
+					<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
+						{#each edu.highlights as h (h)}
+							<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_(`resume.${edu.key}${h}`)}</li>
+						{/each}
+					</ul>
+				{/if}
 			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.edu1Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.edu1Org')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.edu1Desc')}</p>
-			<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.edu1Hi1')}</li>
-				<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_('resume.edu1Hi2')}</li>
-			</ul>
-		</div>
-		<div class="tl-item relative pb-10">
-			<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
-				{$_('resume.edu2Dates')} <span class="ml-1.5 text-(--fg-3)">· {$_('resume.edu2Duration')}</span>
-			</div>
-			<h3 class="m-0 mb-1 text-[18px] font-medium">{$_('resume.edu2Role')}</h3>
-			<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_('resume.edu2Org')}</div>
-			<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_('resume.edu2Desc')}</p>
-		</div>
+		{/each}
 	</div>
 </section>
 
 <!-- SKILLS -->
 <section class="mx-auto mb-25 max-w-(--max) px-8 max-sm:px-5">
-	<div class="mb-10 grid grid-cols-[1fr_2fr] gap-10 border-b border-(--line) pb-5 max-md:grid-cols-1 max-md:gap-3">
-		<div class="mono pt-3 text-[11px] tracking-[0.12em] text-(--fg-4) uppercase">{$_('resume.toolsLabel')}</div>
-		<div>
-			<h2 class="serif m-0 text-[clamp(24px,3vw,42px)] leading-[1.05] tracking-[-0.02em]">{$_('resume.skillsH2')}</h2>
-			<p class="mt-3 mb-0 text-[14px] text-(--fg-3)">{$_('resume.skillsP')}</p>
-		</div>
-	</div>
+	<SectionHeader label={$_('resume.toolsLabel')} heading={$_('resume.skillsH2')} sub={$_('resume.skillsP')} headingSize="text-[clamp(24px,3vw,42px)]" />
 
 	<div class="grid grid-cols-4 gap-8 max-[480px]:grid-cols-1 max-md:grid-cols-2">
 		<div>

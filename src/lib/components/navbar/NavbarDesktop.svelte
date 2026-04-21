@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { _, locale, locales } from 'svelte-i18n';
+	import { _, locale } from 'svelte-i18n';
 	import { page } from '$app/state';
+	import { cycleLocale } from '$lib/utils/locale';
 </script>
 
 <div class="sticky top-0 z-40 border-b border-(--line) bg-[color-mix(in_srgb,var(--bg)_85%,transparent)] backdrop-blur-[14px]">
@@ -57,11 +58,7 @@
 			</a>
 			<button
 				class="cursor-pointer rounded-md border-0 bg-transparent px-2.5 py-1.5 text-[11px] font-(--font-mono) tracking-[0.08em] text-(--fg-3) transition-all duration-150 hover:bg-(--bg-3) hover:text-(--fg)"
-				onclick={() => {
-					const all = $locales ?? ['en', 'cs'];
-					const idx = all.indexOf($locale ?? 'en');
-					locale.set(all[(idx + 1) % all.length]);
-				}}
+				onclick={cycleLocale}
 				aria-label="Toggle language"
 			>
 				{($locale ?? 'en').toUpperCase()}

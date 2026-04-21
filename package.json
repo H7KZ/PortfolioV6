@@ -16,11 +16,12 @@
 	"devDependencies": {
 		"@eslint/compat": "^2.0.5",
 		"@eslint/js": "^10.0.1",
+		"@iconify/json": "^2.2.464",
 		"@sveltejs/adapter-cloudflare": "^7.2.8",
 		"@sveltejs/kit": "^2.57.1",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@tailwindcss/typography": "^0.5.19",
-		"@tailwindcss/vite": "^4.2.2",
+		"@tailwindcss/vite": "^4.2.3",
 		"eslint": "^10.2.1",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.17.0",
@@ -33,10 +34,11 @@
 		"svelte": "^5.55.4",
 		"svelte-check": "^4.4.6",
 		"svelte-i18n": "^4.0.1",
-		"tailwindcss": "^4.2.2",
+		"tailwindcss": "^4.2.3",
 		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.58.2",
-		"vite": "^8.0.8",
+		"typescript-eslint": "^8.59.0",
+		"unplugin-icons": "^23.0.1",
+		"vite": "^8.0.9",
 		"zod": "^4.3.6"
 	},
 	"pnpm": {

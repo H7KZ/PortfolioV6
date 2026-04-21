@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import type ContactFormInterface from '$lib/interfaces/ContactFormInterface';
+import type { ContactFormInterface } from '$lib/validations/ContactFormValidation';
 import { validateContactForm } from '$lib/validations/ContactFormValidation';
 import { env } from '$env/dynamic/private';
 

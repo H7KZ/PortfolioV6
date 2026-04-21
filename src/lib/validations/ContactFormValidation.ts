@@ -1,5 +1,42 @@
-import type ContactFormInterface from '$lib/interfaces/ContactFormInterface';
 import { z } from 'zod';
+
+export interface ContactFormInterface {
+	fullName: string;
+	email: string;
+	company: string;
+	message: string;
+	budget: number;
+	projectType: string;
+	features: string[];
+	technologies: string[];
+	assets: string[];
+	audiences: string[];
+	hosting: string;
+	support: string;
+	legals: string[];
+	deadline: string;
+	priority: string;
+}
+
+export function getInitialContactForm(): ContactFormInterface {
+	return {
+		fullName: '',
+		email: '',
+		company: '',
+		message: '',
+		budget: 2500,
+		projectType: '',
+		features: [],
+		technologies: [],
+		assets: [],
+		audiences: [],
+		hosting: '',
+		support: '',
+		legals: [],
+		deadline: '',
+		priority: ''
+	};
+}
 
 export const ContactFormValidationSchema = z.object({
 	fullName: z.string().trim().min(1).max(100),
@@ -21,20 +58,7 @@ export const ContactFormValidationSchema = z.object({
 
 export function validateContactForm(form: ContactFormInterface) {
 	return ContactFormValidationSchema.safeParse({
-		fullName: form.fullName,
-		email: form.email,
-		company: form.company,
-		message: form.message,
-		budget: form.budget,
-		projectType: form.projectType,
-		features: form.features,
-		technologies: form.technologies,
-		assets: form.assets,
-		audiences: form.audiences,
-		hosting: form.hosting,
-		support: form.support,
-		legals: form.legals,
-		deadline: form.deadline ? new Date(form.deadline) : null,
-		priority: form.priority
+		...form,
+		deadline: form.deadline ? new Date(form.deadline) : null
 	});
 }

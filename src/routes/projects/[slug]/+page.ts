@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import type { Project } from '$lib/types';
+import { parseLocale } from '$lib/utils/locale';
 
 export const prerender = true;
 
@@ -25,11 +26,7 @@ export const load: PageLoad = async ({ params, url }): Promise<ProjectData> => {
 		localeParam = 'en';
 	}
 
-	let match = localeParam.match(/^[a-z]+(?=[-_])/i);
-
-	if (!match) match = localeParam.match(/^[a-z]+/i);
-
-	const locale = match ? match[0].toLowerCase() : 'en';
+	const locale = parseLocale(localeParam);
 
 	try {
 		const post = await import(`../../../projects/${params.slug}/${locale}.md`);

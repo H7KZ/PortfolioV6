@@ -1,27 +1,26 @@
-import TablerFileTypeBMP from '$lib/icons/files/TablerFileTypeBMP.svelte';
-import TablerFileTypeCSS from '$lib/icons/files/TablerFileTypeCSS.svelte';
-import TablerFileTypeCSV from '$lib/icons/files/TablerFileTypeCSV.svelte';
-import TablerFileTypeDOC from '$lib/icons/files/TablerFileTypeDOC.svelte';
-import TablerFileTypeDOCX from '$lib/icons/files/TablerFileTypeDOCX.svelte';
-import TablerFileTypeHTML from '$lib/icons/files/TablerFileTypeHTML.svelte';
-import TablerFileTypeJPG from '$lib/icons/files/TablerFileTypeJPG.svelte';
-import TablerFileTypeJS from '$lib/icons/files/TablerFileTypeJS.svelte';
-import TablerFileTypeJSX from '$lib/icons/files/TablerFileTypeJSX.svelte';
-import TablerFileTypePDF from '$lib/icons/files/TablerFileTypePDF.svelte';
-import TablerFileTypePHP from '$lib/icons/files/TablerFileTypePHP.svelte';
-import TablerFileTypePNG from '$lib/icons/files/TablerFileTypePNG.svelte';
-import TablerFileTypePPT from '$lib/icons/files/TablerFileTypePPT.svelte';
-import TablerFileTypeRS from '$lib/icons/files/TablerFileTypeRS.svelte';
-import TablerFileTypeSQL from '$lib/icons/files/TablerFileTypeSQL.svelte';
-import TablerFileTypeSVG from '$lib/icons/files/TablerFileTypeSVG.svelte';
-import TablerFileTypeTS from '$lib/icons/files/TablerFileTypeTS.svelte';
-import TablerFileTypeTSX from '$lib/icons/files/TablerFileTypeTSX.svelte';
-import TablerFileTypeTXT from '$lib/icons/files/TablerFileTypeTXT.svelte';
-import TablerFileTypeTypography from '$lib/icons/files/TablerFileTypeTypography.svelte';
-import TablerFileTypeVUE from '$lib/icons/files/TablerFileTypeVUE.svelte';
-import TablerFileTypeXLS from '$lib/icons/files/TablerFileTypeXLS.svelte';
-import TablerFileTypeXML from '$lib/icons/files/TablerFileTypeXML.svelte';
-import TablerFileTypeZIP from '$lib/icons/files/TablerFileTypeZIP.svelte';
+import TablerFileTypeBMP from '~icons/tabler/file-type-bmp';
+import TablerFileTypeCSS from '~icons/tabler/file-type-css';
+import TablerFileTypeCSV from '~icons/tabler/file-type-csv';
+import TablerFileTypeDOC from '~icons/tabler/file-type-doc';
+import TablerFileTypeDOCX from '~icons/tabler/file-type-docx';
+import TablerFileTypeHTML from '~icons/tabler/file-type-html';
+import TablerFileTypeJPG from '~icons/tabler/file-type-jpg';
+import TablerFileTypeJS from '~icons/tabler/file-type-js';
+import TablerFileTypeJSX from '~icons/tabler/file-type-jsx';
+import TablerFileTypePDF from '~icons/tabler/file-type-pdf';
+import TablerFileTypePHP from '~icons/tabler/file-type-php';
+import TablerFileTypePNG from '~icons/tabler/file-type-png';
+import TablerFileTypePPT from '~icons/tabler/file-type-ppt';
+import TablerFileTypeRS from '~icons/tabler/file-type-rs';
+import TablerFileTypeSQL from '~icons/tabler/file-type-sql';
+import TablerFileTypeSVG from '~icons/tabler/file-type-svg';
+import TablerFileTypeTS from '~icons/tabler/file-type-ts';
+import TablerFileTypeTSX from '~icons/tabler/file-type-tsx';
+import TablerFileTypeTXT from '~icons/tabler/file-type-txt';
+import TablerFileTypeVUE from '~icons/tabler/file-type-vue';
+import TablerFileTypeXLS from '~icons/tabler/file-type-xls';
+import TablerFileTypeXML from '~icons/tabler/file-type-xml';
+import TablerFileTypeZIP from '~icons/tabler/file-type-zip';
 import type { Component } from 'svelte';
 
 const filesIconsComponents: Record<string, Component> = {
@@ -61,7 +60,6 @@ const filesIconsComponents: Record<string, Component> = {
 	ini: TablerFileTypeTXT,
 	config: TablerFileTypeTXT,
 	env: TablerFileTypeTXT,
-	typography: TablerFileTypeTypography,
 	vue: TablerFileTypeVUE,
 	xls: TablerFileTypeXLS,
 	xlsx: TablerFileTypeXLS,

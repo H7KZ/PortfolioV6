@@ -1,7 +1,7 @@
 <script lang="ts">
-	import TablerFileLike from '$lib/icons/TablerFileLike.svelte';
-	import TablerFilePlus from '$lib/icons/TablerFilePlus.svelte';
-	import TablerX from '$lib/icons/TablerX.svelte';
+	import TablerFileLike from '~icons/tabler/file-like';
+	import TablerFilePlus from '~icons/tabler/file-plus';
+	import TablerX from '~icons/tabler/x';
 	import filesIconsComponents from '$lib/utils/filesIconsComponents';
 
 	interface Props {
@@ -16,12 +16,8 @@
 	function onFileInput(e: Event) {
 		const file = (e.target as HTMLInputElement).files?.[0];
 		if (file) {
-			const reader = new FileReader();
-			reader.onload = () => {
-				value = file;
-				extension = file.name.split('.').pop() ?? '';
-			};
-			reader.readAsDataURL(file);
+			value = file;
+			extension = file.name.split('.').pop() ?? '';
 		}
 	}
 
@@ -29,6 +25,8 @@
 		value = new File([], '');
 		extension = '';
 	}
+
+	let FileIcon = $derived(filesIconsComponents[extension] ?? TablerFileLike);
 </script>
 
 <div class="flex w-full flex-col">
@@ -38,9 +36,7 @@
 				<TablerFilePlus class="h-9 w-9 cursor-pointer transition-all hover:text-neutral-400" />
 			</label>
 		{:else}
-			<!-- svelte-ignore svelte_component_deprecated -->
-			<svelte:component this={filesIconsComponents?.[extension] ?? TablerFileLike} class="h-9 w-9" />
-
+			<FileIcon class="h-9 w-9" />
 			<button class="absolute -top-1.5 right-0 z-40" onclick={clearInput}>
 				<TablerX class="text-background h-3 w-3 cursor-pointer rounded-full bg-red-400 transition-all hover:bg-neutral-200" />
 			</button>

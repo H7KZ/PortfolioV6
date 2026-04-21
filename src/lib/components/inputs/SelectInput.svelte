@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
-	import IconamoonArrowUp from '$lib/icons/IconamoonArrowUp.svelte';
+	import IconamoonArrowUp from '~icons/iconamoon/arrow-up-2';
 	import { clickOutside, tapOutside } from '$lib/utils/clickOutside';
 
 	interface Option {

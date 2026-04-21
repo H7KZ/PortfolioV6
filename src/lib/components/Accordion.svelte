@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IconamoonArrowUp from '$lib/icons/IconamoonArrowUp.svelte';
+	import IconamoonArrowUp from '~icons/iconamoon/arrow-up-2';
 	import type { Snippet } from 'svelte';
 
 	interface Props {

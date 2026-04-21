@@ -4,6 +4,7 @@
 	import ContactFooter from '$lib/components/ContactFooter.svelte';
 	import { locale } from 'svelte-i18n';
 	import type { ProjectData } from './+page';
+	import { formatDate } from '$lib/utils/formatDate';
 
 	let { data }: { data: ProjectData } = $props();
 
@@ -13,10 +14,6 @@
 			goto(`/projects/${data.slug}?locale=${loc}`, { invalidateAll: true });
 		}
 	});
-
-	function formatDate(dateStr: string, loc: string | null | undefined): string {
-		return new Date(dateStr).toLocaleDateString(loc ?? 'en', { month: 'long', year: 'numeric', timeZone: 'UTC' });
-	}
 </script>
 
 <svelte:head>
@@ -42,7 +39,9 @@
 				{#each data.meta.tags as tag (tag)}
 					<span class="chip">{tag}</span>
 				{/each}
-				<span class="mono ml-1 text-[11px] text-(--fg-4)">{formatDate(data.meta.date, $locale)}</span>
+				<span class="mono ml-1 text-[11px] text-(--fg-4)"
+					>{formatDate(data.meta.date, $locale, { month: 'long', year: 'numeric', timeZone: 'UTC' })}</span
+				>
 			</div>
 			<h1 class="serif m-0 text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.025em] text-(--fg)">{data.meta.title}</h1>
 		</header>

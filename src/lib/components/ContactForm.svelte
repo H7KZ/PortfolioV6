@@ -5,13 +5,12 @@
 	import SliderInput from '$lib/components/inputs/SliderInput.svelte';
 	import TextAreaInput from '$lib/components/inputs/TextAreaInput.svelte';
 	import TextInput from '$lib/components/inputs/TextInput.svelte';
-	import MynaUiSend from '$lib/icons/MynaUISend.svelte';
-	import TablerCalendarWeek from '$lib/icons/TablerCalendarWeek.svelte';
+	import MynaUiSend from '~icons/mynaui/send';
+	import TablerCalendarWeek from '~icons/tabler/calendar-week';
 	import { _ } from 'svelte-i18n';
 	import Accordition from '$lib/components/Accordion.svelte';
 	import MultiSelectInput from '$lib/components/inputs/MultiSelectInput.svelte';
-	import { getInitialContactForm } from '$lib/interfaces/ContactFormInterface';
-	import { validateContactForm } from '$lib/validations/ContactFormValidation';
+	import { getInitialContactForm, validateContactForm } from '$lib/validations/ContactFormValidation';
 	import { trackEvent } from '$lib/utils/analytics';
 
 	let form = $state(getInitialContactForm());
