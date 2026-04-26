@@ -89,36 +89,25 @@
 </script>
 
 <form class="flex w-full flex-col gap-3">
-	<div class="flex w-full flex-col gap-3">
-		<div class="flex w-full flex-col gap-3 sm:flex-row sm:gap-8">
-			<TextInput
-				bind:value={form.fullName}
-				label={$_('contact.form.fullName')}
-				placeholder={$_('contact.form.fullNamePlaceholder')}
-				required
-				error={error.fullName}
-				oninput={() => (error.fullName = '')}
-			/>
-			<TextInput
-				type="email"
-				autocomplete="email"
-				bind:value={form.email}
-				label={$_('contact.form.email')}
-				placeholder={$_('contact.form.emailPlaceholder')}
-				required
-				error={error.email}
-				oninput={() => (error.email = '')}
-			/>
-		</div>
-		<div class="w-full xl:w-1/2">
-			<TextInput
-				bind:value={form.company}
-				label={$_('contact.form.company')}
-				placeholder={$_('contact.form.companyPlaceholder')}
-				error={error.company}
-				oninput={() => (error.company = '')}
-			/>
-		</div>
+	<div class="flex w-full flex-col gap-3 sm:flex-row sm:gap-8">
+		<TextInput
+			bind:value={form.fullName}
+			label={$_('contact.form.fullName')}
+			placeholder={$_('contact.form.fullNamePlaceholder')}
+			required
+			error={error.fullName}
+			oninput={() => (error.fullName = '')}
+		/>
+		<TextInput
+			type="email"
+			autocomplete="email"
+			bind:value={form.email}
+			label={$_('contact.form.email')}
+			placeholder={$_('contact.form.emailPlaceholder')}
+			required
+			error={error.email}
+			oninput={() => (error.email = '')}
+		/>
 	</div>
 	<TextAreaInput
 		bind:value={form.message}
@@ -144,6 +133,15 @@
 	/>
 	<Accordition title={$_('contact.form.advanced')}>
 		<div class="flex w-full flex-col gap-3">
+			<div class="w-full xl:w-1/2">
+				<TextInput
+					bind:value={form.company}
+					label={$_('contact.form.company')}
+					placeholder={$_('contact.form.companyPlaceholder')}
+					error={error.company}
+					oninput={() => (error.company = '')}
+				/>
+			</div>
 			<div class="flex w-full flex-col gap-3 xl:flex-row xl:gap-8">
 				<div class="w-full xl:max-w-1/2">
 					<SelectInput
@@ -322,38 +320,36 @@
 					/>
 				</div>
 			</div>
+			<div class="flex w-full flex-col gap-3 sm:flex-row sm:gap-8">
+				<div class="w-full xl:w-52 xl:shrink-0">
+					<DateInput
+						bind:value={form.deadline}
+						label={$_('contact.form.deadline')}
+						Icon={TablerCalendarWeek}
+						error={error.deadline}
+						oninput={() => (error.deadline = '')}
+					/>
+				</div>
+				<div class="w-full">
+					<SelectInput
+						bind:value={form.priority}
+						options={[
+							{ value: '', label: $_('contact.form.priorities.none') },
+							{ value: 'low', label: $_('contact.form.priorities.low') },
+							{ value: 'medium', label: $_('contact.form.priorities.medium') },
+							{ value: 'high', label: $_('contact.form.priorities.high') },
+							{ value: 'critical', label: $_('contact.form.priorities.critical') },
+							{ value: 'asap', label: $_('contact.form.priorities.asap') }
+						]}
+						height={20}
+						label={$_('contact.form.priority')}
+						error={error.priority}
+						oninput={() => (error.priority = '')}
+					/>
+				</div>
+			</div>
 		</div>
 	</Accordition>
-	<div class="flex w-full gap-3 xl:flex-row xl:gap-8">
-		<div class="flex w-full flex-col gap-3 sm:flex-row xl:gap-8">
-			<div class="w-full xl:w-52 xl:shrink-0">
-				<DateInput
-					bind:value={form.deadline}
-					label={$_('contact.form.deadline')}
-					Icon={TablerCalendarWeek}
-					error={error.deadline}
-					oninput={() => (error.deadline = '')}
-				/>
-			</div>
-			<div class="w-full xl:w-full">
-				<SelectInput
-					bind:value={form.priority}
-					options={[
-						{ value: '', label: $_('contact.form.priorities.none') },
-						{ value: 'low', label: $_('contact.form.priorities.low') },
-						{ value: 'medium', label: $_('contact.form.priorities.medium') },
-						{ value: 'high', label: $_('contact.form.priorities.high') },
-						{ value: 'critical', label: $_('contact.form.priorities.critical') },
-						{ value: 'asap', label: $_('contact.form.priorities.asap') }
-					]}
-					height={20}
-					label={$_('contact.form.priority')}
-					error={error.priority}
-					oninput={() => (error.priority = '')}
-				/>
-			</div>
-		</div>
-	</div>
 	<div class="mt-4 flex w-full flex-col items-end gap-4">
 		<BoldButton Icon={MynaUiSend} type="submit" onclick={handleSubmit} disabled={loading}>
 			{loading ? $_('contact.form.sending') : $_('contact.form.send')}

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import Navbar from '$lib/components/navbar/Navbar.svelte';
+	import CookieConsent from '$lib/components/CookieConsent.svelte';
 	import { onMount } from 'svelte';
 	import { afterNavigate, onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
@@ -76,6 +77,8 @@
 </a>
 
 <div class="grid-bg"></div>
+
+<CookieConsent />
 
 <div class="relative z-[1] flex h-full min-h-screen w-full flex-col">
 	<header>

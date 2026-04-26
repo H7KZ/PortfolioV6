@@ -22,6 +22,7 @@ declare global {
 		Cal: any;
 		gtag: (...args: unknown[]) => void;
 		dataLayer: unknown[];
+		_initGA: () => void;
 	}
 }
 

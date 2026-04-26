@@ -36,32 +36,31 @@
 			/>
 		</noscript>
 
-		<!-- Google Analytics — deferred until after page load to avoid competing with LCP -->
-		<!-- GDPR note: this site targets EU users (Czech Republic). A cookie consent banner -->
-		<!-- should be implemented before GA collects data, per GDPR Art. 6. TODO: add consent. -->
+		<!-- Google Analytics — loaded only after explicit cookie consent (GDPR Art. 6) -->
 		<script>
-			window.addEventListener('load', function () {
+			window._initGA = function () {
 				var s = document.createElement('script');
 				s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YSK3DVJ4MF';
 				s.async = true;
 				document.head.appendChild(s);
 				s.onload = function () {
 					window.dataLayer = window.dataLayer || [];
-
 					function gtag() {
 						dataLayer.push(arguments);
 					}
-
 					gtag('js', new Date());
-					gtag('config', 'G-YSK3DVJ4MF', {
-						send_page_view: false
-					});
+					gtag('config', 'G-YSK3DVJ4MF', { send_page_view: false });
 					window.gtag = gtag;
 					gtag('event', 'page_view', {
 						page_title: document.title,
 						page_location: window.location.href
 					});
 				};
+			};
+			window.addEventListener('load', function () {
+				if (localStorage.getItem('cookie_consent') === 'accepted') {
+					window._initGA();
+				}
 			});
 		</script>
 
@@ -79,7 +78,7 @@
 		/>
 		<meta
 			name="keywords"
-			content="Fullstack Development, Frontend Development, Backend Development, Vue.js, React.js, SvelteKit, Node.js, TypeScript, JavaScript, Fastify, AdonisJS, ExpressJS, Nuxt.js, PostgreSQL, MongoDB, Redis, Elasticsearch, DigitalOcean, Hetzner, Kubernetes, Docker, Docker Swarm, CI/CD, System Architecture, Server Administration, Network Administration, Network Security, Cybersecurity, Microsoft Power BI, Microsoft Excel, Management, Marketing, UI/UX Design, Figma, Web Design, Git, Agile Methodologies, REST API, Stripe, Jan Komínek, Senior Frontend Engineer, Fullstack Engineer, Software Engineer, Web Developer, Cloud Computing, DevOps, System Design, API Development, Smichov Secondary Technical School and Gymnasium, SSPŠ, Prague University of Economics and Business, VŠE, Haxagon, Precismo, KMK family business, IONT tech, Intedat, CORAC Engineering, freelance, part-time B2B, contract developer, Prague developer"
+			content="Jan Komínek, Senior Frontend Engineer, SvelteKit, Vue.js, TypeScript, Node.js, freelance developer Prague, part-time B2B"
 		/>
 		<meta name="language" content="en" />
 		<meta name="author" content="Jan Komínek" />

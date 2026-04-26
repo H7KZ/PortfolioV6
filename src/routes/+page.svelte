@@ -24,8 +24,16 @@
 			ctaKey: 'viewProject' | 'readCaseStudy';
 		}
 	> = {
-		corac_sith: {
+		iont_info: {
 			size: 'featured',
+			company: 'IONT TECH',
+			role: 'FULLSTACK',
+			descKey: 'projectIontInfoDesc',
+			chips: ['SvelteKit', 'Fastify', 'Docker Swarm', 'MongoDB', 'Raspberry Pi'],
+			ctaKey: 'readCaseStudy'
+		},
+		corac_sith: {
+			size: 'wide',
 			badgeKey: 'projectCoraSithBadge',
 			company: 'CORAC ENGINEERING',
 			role: 'SENIOR FRONTEND',
@@ -34,11 +42,10 @@
 			ctaKey: 'readCaseStudy'
 		},
 		iont_charge: {
-			size: 'wide',
+			size: 'narrow',
 			company: 'IONT TECH',
 			role: 'FULLSTACK',
 			descKey: 'projectIontChargeDesc',
-			chips: ['SvelteKit', 'Fastify', 'Docker Swarm', 'MongoDB'],
 			ctaKey: 'readCaseStudy'
 		},
 		corac_scorecard: {
@@ -48,27 +55,19 @@
 			descKey: 'projectCoraScorecardDesc',
 			ctaKey: 'viewProject'
 		},
+		disenchantment: {
+			size: 'narrow',
+			company: 'PERSONAL',
+			role: 'JAVA',
+			descKey: 'projectDisenchantmentDesc',
+			chips: ['Java'],
+			ctaKey: 'viewProject'
+		},
 		iont_admin: {
-			size: 'wide',
+			size: 'narrow',
 			company: 'IONT TECH',
 			role: 'FULLSTACK',
 			descKey: 'projectIontAdminDesc',
-			chips: ['SvelteKit', 'Fastify', 'Redis', 'WebSockets'],
-			ctaKey: 'viewProject'
-		},
-		iont_info: {
-			size: 'narrow',
-			company: 'IONT',
-			role: 'FULLSTACK',
-			descKey: 'projectIontInfoDesc',
-			ctaKey: 'viewProject'
-		},
-		pangolin: {
-			size: 'default',
-			company: 'WORK',
-			role: 'FRONTEND',
-			descKey: 'projectPangolinDesc',
-			chips: ['React', 'Chart.js'],
 			ctaKey: 'viewProject'
 		},
 		noteful: {
@@ -79,12 +78,12 @@
 			chips: ['Vue', 'Node'],
 			ctaKey: 'viewProject'
 		},
-		disenchantment: {
+		pangolin: {
 			size: 'default',
-			company: 'PERSONAL',
-			role: 'JAVA',
-			descKey: 'projectDisenchantmentDesc',
-			chips: ['Java'],
+			company: 'WORK',
+			role: 'FRONTEND',
+			descKey: 'projectPangolinDesc',
+			chips: ['React', 'Chart.js'],
 			ctaKey: 'viewProject'
 		}
 	};
@@ -214,7 +213,7 @@
 	<SectionHeader label="{$_('home.workLabel')} — {projects.length}" heading={$_('home.workH2')} sub={$_('home.workP')} />
 
 	<div class="grid grid-cols-6 gap-3.5 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
-		{#each projects as project (project.slug)}
+		{#each projects.filter((p) => p.slug in bentoConfig) as project (project.slug)}
 			{@const cfg = bentoConfig[project.slug] ?? {
 				size: 'default',
 				company: '',

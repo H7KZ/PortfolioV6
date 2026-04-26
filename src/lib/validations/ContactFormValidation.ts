@@ -53,7 +53,7 @@ export const ContactFormValidationSchema = z.object({
 	support: z.string().max(50),
 	legals: z.array(z.string().max(50)).max(10),
 	deadline: z.date().nullable(),
-	priority: z.string().min(1).max(50)
+	priority: z.string().max(50)
 });
 
 export function validateContactForm(form: ContactFormInterface) {
