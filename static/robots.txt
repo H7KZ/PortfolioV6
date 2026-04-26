@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /fragment/
 
 Sitemap: https://jankominek.com/sitemap.xml
 
@@ -33,4 +32,3 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
-Disallow: /fragment/

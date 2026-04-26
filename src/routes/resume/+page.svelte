@@ -274,6 +274,46 @@
 </div>
 
 <style>
+	@media print {
+		:global(header),
+		:global(.grid-bg),
+		:global(footer) {
+			display: none !important;
+		}
+
+		:global(body) {
+			background: #fff !important;
+			color: #111 !important;
+		}
+
+		:global(#main-content) {
+			padding: 0 !important;
+		}
+
+		/* hide CTAs */
+		a[href='/files/Jan_Kominek_Resume.pdf'],
+		a[href='/contact'] {
+			display: none !important;
+		}
+
+		/* collapse padding for print */
+		section,
+		div[class*='mb-'] {
+			margin-bottom: 1.5rem !important;
+		}
+
+		/* avoid breaking inside timeline entries */
+		.tl-item {
+			break-inside: avoid;
+		}
+
+		/* ensure skill groups stay together */
+		.timeline,
+		.grid {
+			break-inside: avoid;
+		}
+	}
+
 	/* Timeline vertical rule */
 	.timeline::before {
 		content: '';

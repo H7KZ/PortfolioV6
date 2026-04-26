@@ -3,10 +3,12 @@ date: '2025-02-21'
 title: Traefik with Cloudflare inside Docker, simplified.
 author: Jan Komínek
 thumbnail: /images/posts/traefik_with_cloudflare_inside_docker_simplified/thumbnail.webp
+description: A step-by-step guide to wiring up Traefik as a reverse proxy with Cloudflare DNS challenge for automatic wildcard TLS — all inside Docker Compose. No NGINX, no manual cert renewals.
+readingTime: 6
 tags:
     - EN
     - Traefik
-    - Cloudlfare
+    - Cloudflare
     - Docker
 ---
 

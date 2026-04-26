@@ -8,14 +8,18 @@
 </script>
 
 <svelte:head>
-	<title>Blog — Jan Komínek, Software Engineer</title>
+	<title>Blog — DevOps, SvelteKit & TypeScript · Jan Komínek</title>
 	<meta
 		name="description"
-		content="Blog by Jan Komínek — Senior Frontend / Fullstack Engineer. Articles on web development, DevOps, Traefik, Docker, and system architecture."
+		content="Engineering articles by Jan Komínek — Docker, Traefik, SvelteKit, TypeScript, and system architecture from real production projects."
 	/>
-	<meta property="og:title" content="Blog — Jan Komínek, Software Engineer" />
-	<meta property="og:description" content="Articles on web development, DevOps, and system architecture by Jan Komínek, Software Engineer." />
+	<meta property="og:title" content="Blog — DevOps, SvelteKit & TypeScript · Jan Komínek" />
+	<meta
+		property="og:description"
+		content="Engineering articles on Docker, Traefik, SvelteKit, TypeScript, and system architecture from real production projects."
+	/>
 	<meta property="og:url" content="https://jankominek.com/blog" />
+	<link rel="alternate" type="application/rss+xml" title="Jan Komínek — Engineering Blog" href="/feed.xml" />
 </svelte:head>
 
 <div class="mx-auto max-w-(--max) px-8 max-sm:px-5">
@@ -35,6 +39,9 @@
 				<div class="mono text-[12px] tracking-[0.04em] text-(--fg-4)">{formatDate(post.date, $locale)}</div>
 				<div>
 					<h2 class="serif m-0 text-[20px] leading-[1.3] font-light tracking-[-0.01em]">{post.title}</h2>
+					{#if post.description}
+						<p class="m-0 mt-1 text-[13px] leading-[1.5] text-(--fg-4) max-md:hidden">{post.description}</p>
+					{/if}
 				</div>
 				<div class="mono flex gap-1 text-[11px] whitespace-nowrap text-(--fg-4)">
 					{#each post.tags as tag (tag)}
@@ -42,7 +49,7 @@
 						<span class="text-(--fg-5)">/</span>
 					{/each}
 				</div>
-				<div class="mono text-[11px] tracking-[0.04em] whitespace-nowrap text-(--fg-4)">8 MIN</div>
+				<div class="mono text-[11px] tracking-[0.04em] whitespace-nowrap text-(--fg-4)">{post.readingTime ? `${post.readingTime} MIN` : ''}</div>
 			</a>
 		{/each}
 

@@ -14,18 +14,55 @@
 			goto(`/projects/${data.slug}?locale=${loc}`, { invalidateAll: true });
 		}
 	});
+
+	const SITE = 'https://jankominek.com';
+	const projectUrl = $derived(`${SITE}/projects/${data.slug}`);
+	const metaDescription = $derived(data.meta.tags?.filter((t) => !['Work', 'Personal'].includes(t)).join(', ') ?? data.meta.title);
+
+	const jsonLd = $derived(
+		JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'CreativeWork',
+			name: data.meta.title,
+			url: projectUrl,
+			dateCreated: data.meta.date,
+			creator: {
+				'@type': 'Person',
+				name: 'Jan Komínek',
+				url: SITE
+			},
+			keywords: metaDescription,
+			image: data.meta.thumbnail ?? undefined,
+			genre: data.meta.tags?.join(', ')
+		})
+	);
+	const jsonLdHtml = $derived(`<script type="application/ld+json">${jsonLd}</` + `script>`);
 </script>
 
 <svelte:head>
 	<title>{data.meta.title} — Jan Komínek</title>
+	<meta name="description" content="{data.meta.title} — {metaDescription}. A project by Jan Komínek, Senior Frontend / Fullstack Engineer." />
+
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
-	<meta property="og:description" content={data.meta.tags?.join(', ')} />
-	<meta property="og:url" content={`https://jankominek.com/projects/${data.slug}`} />
-	<meta property="og:image" content={data.meta.thumbnail} />
+	<meta property="og:title" content="{data.meta.title} — Jan Komínek" />
+	<meta property="og:description" content="{data.meta.title} — {metaDescription}. A project by Jan Komínek." />
+	<meta property="og:url" content={projectUrl} />
+	<meta property="og:site_name" content="Jan Komínek" />
+	{#if data.meta.thumbnail}
+		<meta property="og:image" content={data.meta.thumbnail} />
+	{/if}
+
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={data.meta.title} />
-	<meta name="twitter:image" content={data.meta.thumbnail} />
+	<meta name="twitter:title" content="{data.meta.title} — Jan Komínek" />
+	<meta name="twitter:description" content="{data.meta.title} — {metaDescription}." />
+	{#if data.meta.thumbnail}
+		<meta name="twitter:image" content={data.meta.thumbnail} />
+	{/if}
+
+	<link rel="canonical" href={projectUrl} />
+
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html jsonLdHtml}
 </svelte:head>
 
 <div class="mx-auto max-w-(--max) px-8 max-sm:px-5">

@@ -33,8 +33,7 @@
 		<div>
 			<div class="mono mb-1.5 text-[10px] tracking-widest text-(--accent) uppercase">◆ Cookies</div>
 			<p class="m-0 text-[13px] leading-[1.55] text-(--fg-3)">
-				This site uses Google Analytics to understand how visitors interact with the content. No personal data is
-				sold or shared with third parties.
+				This site uses Google Analytics to understand how visitors interact with the content. No personal data is sold or shared with third parties.
 			</p>
 		</div>
 		<div class="flex gap-2">

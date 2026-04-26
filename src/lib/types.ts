@@ -14,4 +14,6 @@ export type Post = {
 	author: string;
 	thumbnail: string | null;
 	tags: string[];
+	description?: string;
+	readingTime?: number;
 };

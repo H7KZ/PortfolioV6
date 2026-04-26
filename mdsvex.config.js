@@ -3,7 +3,7 @@ import { createHighlighter } from 'shiki';
 
 const highlighterPromise = createHighlighter({
 	themes: ['monokai'],
-	langs: ['javascript', 'typescript', 'json', 'yaml', 'csharp']
+	langs: ['javascript', 'typescript', 'json', 'yaml', 'csharp', 'bash', 'toml', 'rust']
 });
 
 const config = defineMDSveXConfig({
