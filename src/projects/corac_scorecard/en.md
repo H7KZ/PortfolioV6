@@ -66,8 +66,7 @@ interface for working with large amounts of data without unnecessary cognitive l
 fast package management system (**pnpm**), ensuring easy maintainability and future scalability of the application.
 
 **Compliance Support**: The tool is designed to structurally support processes related to risk analysis (e.g., for
-the \*
-\*NIS2\*\* directive), thereby reducing the administrative burden on auditors.
+the **NIS2** directive), thereby reducing the administrative burden on auditors.
 
 <br />
 <br />

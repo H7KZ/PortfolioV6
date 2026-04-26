@@ -31,37 +31,44 @@ tags:
 
 # Project details
 
-Noteful is a meticulously designed mobile application concept focused on enhancing personal organization and
-productivity. This project encompasses a complete user interface (UI) and user experience (UX) design, crafted entirely
-within Figma. The application aims to provide a seamless and intuitive platform for users to manage their notes, create
-and track shopping lists, and potentially utilize other organizational features. The design prioritizes a clean and
-modest aesthetic, ensuring ease of use and visual clarity across all screens.
+Noteful is a mobile application concept designed from scratch in **Figma**, focused on personal organization without the
+cognitive overhead most note apps introduce. The premise was simple: most note-taking apps try to do everything — tags,
+folders, workspaces, collaboration, markdown, attachments — and end up doing none of it well for the average user who
+just wants to write something down and find it again.
 
-This design-centric project involved the creation of a comprehensive set of mobile screens, covering various
-functionalities and user flows. The focus was on delivering a user-friendly experience optimized specifically for mobile
-resolutions. While it remains a design project within Figma, the detailed attention to every screen lays a strong
-foundation for potential future development.
+The design strips that back to two core workflows: **freeform notes** and **structured shopping lists**, unified under
+a single surface with no mode-switching or nested navigation. The information architecture is intentionally flat —
+everything lives one tap from the home screen.
+
+The visual language follows a **soft neutral palette** with a single accent color used exclusively for interactive
+states, ensuring there's no visual noise competing for attention when you're trying to focus. Typography is set large
+enough to read comfortably in motion — on a commute, in a store — without zooming.
+
+The design covers the complete user journey: onboarding, empty states, note creation and editing, list management,
+search, and settings. Each screen was designed at native mobile resolution with auto-layout components, allowing the
+design to be handed off directly to a developer without guesswork on spacing or behavior.
 
 <br />
 <br />
 <br />
 
-# Features & Contributions
+# Features & Design decisions
 
-**Designed Intuitive User Interface**: Conceptualized and designed a clean and user-friendly interface for managing
-notes and other personal information.
+**Flat information architecture**: No folders, tags, or nested views. Notes and lists are surfaced immediately on open,
+searchable by content. The constraint forces every design decision to serve discoverability rather than organization.
 
-**Developed Comprehensive Mobile Experience**: Created a complete set of mobile screens within Figma, ensuring a
-consistent and engaging user experience across the application.
+**Unified home surface**: Notes and shopping lists coexist in the same list, sorted by last modified. Switching between
+types doesn't require navigating anywhere — the distinction is visual, not structural.
 
-**Focused on Key Productivity Features**: Prioritized the design of essential features such as note-taking and shopping
-list management, with potential consideration for additional functionalities.
+**Contextual empty states**: Every screen has a crafted empty state — not a generic "nothing here" message, but one
+specific to what the user is about to do. Onboarding flows naturally from the first empty home screen without a
+separate tutorial.
 
-**Emphasized Clean and Modest Design**: Adopted a minimalist design approach to enhance usability and visual appeal on
-mobile devices.
+**Touch-first interactions**: Swipe gestures for archive and delete, long-press for multi-select, pull-to-refresh —
+all mapped to gestures users already know from iOS and Android. No custom interaction patterns to learn.
 
-**Created Detailed Screen Mockups**: Designed every screen required for the mobile application, showcasing a complete
-and well-thought-out user flow.
+**Auto-layout component system**: Built in Figma with auto-layout and component variants covering all interactive
+states (default, pressed, disabled, loading). The system scales to new screens without duplicating styles.
 
 <br />
 <br />
@@ -69,4 +76,4 @@ and well-thought-out user flow.
 
 # Technologies & Tools
 
-Figma, Mobile UI Design Principles, User Experience (UX) Design
+**Figma**, Auto-layout, Component variants, Mobile UI design, UX research, Interaction design, Prototyping

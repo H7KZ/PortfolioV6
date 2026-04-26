@@ -40,8 +40,8 @@ exportovat je do formátů pro koncové klienty.
 Projekt byl vyvíjen s důrazem na **přenositelnost dat, uživatelskou přívětivost a kustomizaci výstupů**. Klíčovou
 funkcionalitou je možnost exportovat zpracovaná data do **PDF reportů**, které jsou plně konfigurovatelné (včetně
 vložení loga klienta, názvu společnosti a dalších metadat). Aplikace rovněž podporuje ukládání a načítání stavu
-pomocí \*
-\*JSON formátu\*\*, což usnadňuje zálohování a přenos práce mezi různými zařízeními bez nutnosti serverové databáze.
+pomocí **JSON formátu**, což usnadňuje zálohování a přenos práce mezi různými zařízeními bez nutnosti serverové
+databáze.
 
 Vývoj probíhal s využitím moderního frontendového stacku. Pro zajištění konzistence a kvality kódu byly implementovány
 striktní **lintery a formátovače**. Uživatelské rozhraní využívá sadu komponent **Shadcn**, což zajišťuje čistý design a

@@ -36,10 +36,10 @@ IONT Charge je moderní webová platební brána pro veřejné nabíjecí stanic
 online platby při nabíjení. Systém propojuje řidiče s nabíjecí infrastrukturou prostřednictvím bezpečného a intuitivního
 rozhraní a zajišťuje reálnou komunikaci mezi frontendem, backendovými službami a fyzickými nabíječkami.
 
-Aplikace byla postavena na **mikroslužbové architektuře** a nasazena pomocí **Docker Swarm**. Backend je vyvíjen v \*
-\*TypeScriptu s Fastify** a obsahuje robustní vrstvu **REST API**. Součástí je i integrace s **platební bránou ČSOB**,
+Aplikace byla postavena na **mikroslužbové architektuře** a nasazena pomocí **Docker Swarm**. Backend je vyvíjen v
+**TypeScriptu s Fastify** a obsahuje robustní vrstvu **REST API**. Součástí je i integrace s **platební bránou ČSOB**,
 která zajišťuje bezpečné a standardům vyhovující zpracování finančních transakcí. Uživatelské rozhraní na frontendové
-straně, vytvořené pomocí **SvelteKit a TailwindCSS\*\*, nabízí čistý a responzivní zážitek na všech zařízeních.
+straně, vytvořené pomocí **SvelteKit a TailwindCSS**, nabízí čistý a responzivní zážitek na všech zařízeních.
 
 Klíčovou částí projektu byla hluboká integrace s **API master serveru** od firmware týmu, která umožňuje přímou
 komunikaci s nabíječkami. Úzce jsem spolupracoval s vývojáři firmwaru, abych sladil chování backendu s nízkoúrovňovou

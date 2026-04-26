@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import type { Project, Post } from '$lib/types';
+import type { Post, Project } from '$lib/types';
 
 const SITE = 'https://jankominek.com';
 const BUILD_DATE = new Date().toISOString().split('T')[0];

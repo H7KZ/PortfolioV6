@@ -37,10 +37,10 @@ transactions for public EV chargers. The system connects drivers with charging i
 intuitive interface, while handling real-time communication between the frontend, backend services, and the physical
 charger units.
 
-Built using a **microservices architecture** and deployed with **Docker Swarm**, the backend was developed in \*
-\*TypeScript with Fastify**, featuring a robust **REST API** layer. It integrates with the **ČSOB payment gateway**,
+Built using a **microservices architecture** and deployed with **Docker Swarm**, the backend was developed in
+**TypeScript with Fastify**, featuring a robust **REST API** layer. It integrates with the **ČSOB payment gateway**,
 ensuring secure and compliant handling of financial transactions. The user-facing frontend, crafted in **SvelteKit and
-TailwindCSS\*\*, delivers a clean and responsive experience across devices.
+TailwindCSS**, delivers a clean and responsive experience across devices.
 
 A critical aspect of the project involved deep integration with a **master server API** provided by the firmware team,
 enabling precise interaction with EV chargers. I worked closely with the firmware engineers to align backend behavior
@@ -56,7 +56,7 @@ resulting in a scalable and production-ready solution for public EV charging man
 
 # Features & Contributions
 
-**Payment Gateway Integration**: Integrated **ČSOB’s secure online payment system**, handling sensitive payment data
+**Payment Gateway Integration**: Integrated **ČSOB's secure online payment system**, handling sensitive payment data
 with strict compliance and security standards.
 
 **Developed Fullstack Platform**: Engineered the system using **SvelteKit**, **Fastify (TypeScript)**, and **MongoDB**,

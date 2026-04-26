@@ -53,7 +53,12 @@
 			highlights: [] as string[],
 			chips: [{ label: 'React' }, { label: 'Node.js' }, { label: 'Playwright' }, { label: 'SQL' }]
 		},
-		{ key: 'exp6', current: false, highlights: [] as string[], chips: [{ label: 'Vue.js' }, { label: 'TypeScript' }, { label: 'Tailwind' }] },
+		{
+			key: 'exp6',
+			current: false,
+			highlights: [] as string[],
+			chips: [{ label: 'Vue.js' }, { label: 'TypeScript' }, { label: 'Tailwind' }]
+		},
 		{ key: 'exp7', current: false, highlights: [] as string[], chips: [] as { label: string; accent?: boolean }[] }
 	];
 

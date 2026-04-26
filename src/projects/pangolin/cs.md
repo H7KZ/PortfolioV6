@@ -47,8 +47,8 @@ jsem se z projektu stáhl kvůli dalším podnikatelským aktivitám a příprav
 
 # Funkce & Přínosy
 
-**Design UI/UX zaměřený na klienta**: Navrhl jsem interaktivní dashboard prototyp pro klientskou prezentaci pomocí \*
-\*React.js** a **TailwindCSS\*\*.
+**Design UI/UX zaměřený na klienta**: Navrhl jsem interaktivní dashboard prototyp pro klientskou prezentaci pomocí
+**React.js** a **TailwindCSS**.
 
 **Týmová spolupráce**: Spolupracoval jsem v tříčlenném týmu, abychom zajistili včasné a kvalitní odevzdání prototypu.
 

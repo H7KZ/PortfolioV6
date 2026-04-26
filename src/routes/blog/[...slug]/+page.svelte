@@ -84,7 +84,11 @@
 			<!-- Post metadata -->
 			<div class="mono mb-8 flex w-full max-w-270 flex-wrap items-center gap-4 text-[11px] tracking-[0.06em] text-(--fg-4)">
 				<time datetime={publishedIso}>
-					{new Date(data.meta.date).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+					{new Date(data.meta.date).toLocaleDateString('en-GB', {
+						year: 'numeric',
+						month: 'long',
+						day: 'numeric'
+					})}
 				</time>
 				{#if data.meta.readingTime}
 					<span class="text-(--fg-5)">·</span>

@@ -42,8 +42,8 @@ The frontend was crafted using **React.js** in combination with **TailwindCSS**,
 consistency, and a modern, mobile-friendly layout. The application was structured as a modular and easily extendable
 codebase, allowing future teams to seamlessly build upon the initial prototype if needed.
 
-Throughout the development process, emphasis was placed on **clean design patterns**, **component reusability**, and \*
-\*responsive layouts\*\*. The project served as a valuable proof-of-concept, paving the way for the production version.
+Throughout the development process, emphasis was placed on **clean design patterns**, **component reusability**, and
+**responsive layouts**. The project served as a valuable proof-of-concept, paving the way for the production version.
 Upon completion of the showcase phase, I stepped away from the project to pursue other entrepreneurial paths and prepare
 for my university finals.
 

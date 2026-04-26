@@ -31,37 +31,46 @@ tags:
 
 # Detaily projektu
 
-Noteful je pečlivě navržený koncept mobilní aplikace zaměřený na zlepšení osobní organizace a produktivity. Tento
-projekt zahrnuje kompletní návrh uživatelského rozhraní (UI) a uživatelské zkušenosti (UX), vytvořený výhradně ve Figmě.
-Cílem aplikace je poskytnout uživatelům bezproblémovou a intuitivní platformu pro správu poznámek, vytváření a sledování
-nákupních seznamů a potenciálně i využití dalších organizačních funkcí. Návrh upřednostňuje čistou a skromnou estetiku,
-která zajišťuje snadné používání a vizuální přehlednost na všech obrazovkách.
+Noteful je koncept mobilní aplikace navržený od základu ve **Figmě**, zaměřený na osobní organizaci bez kognitivní
+zátěže, kterou většina aplikací na poznámky přináší. Premisa byla jednoduchá: většina aplikací se snaží dělat vše —
+štítky, složky, pracovní prostory, spolupráci, markdown, přílohy — a nakonec to žádné z toho nedělá dobře pro
+průměrného uživatele, který jen chce něco zapsat a zase to najít.
 
-Tento projekt zaměřený na design zahrnoval vytvoření komplexní sady mobilních obrazovek pokrývajících různé funkce a
-uživatelské toky. Důraz byl kladen na poskytnutí uživatelsky přívětivého prostředí optimalizovaného speciálně pro
-mobilní rozlišení. Přestože se jedná o designový projekt ve Figmě, detailní pozornost věnovaná každé obrazovce vytváří
-pevný základ pro potenciální budoucí vývoj.
+Design to zjednodušuje na dva základní pracovní postupy: **volné poznámky** a **strukturované nákupní seznamy**,
+sjednocené
+pod jedním rozhraním bez přepínání režimů nebo vnořené navigace. Informační architektura je záměrně plochá — vše je
+dostupné jedním kliknutím z domovské obrazovky.
+
+Vizuální jazyk aplikace vychází ze **soft neutrální palety** s jednou akcentní barvou, která se používá výhradně pro
+interaktivní stavy, takže vizuální šum nesoutěží o pozornost, když se potřebujete soustředit. Typografie je nastavena
+dostatečně velká pro pohodlné čtení v pohybu — v MHD, v obchodě — bez potřeby přiblížení.
+
+Design pokrývá celou cestu uživatele: onboarding, prázdné stavy, vytváření a úpravu poznámek, správu seznamů,
+vyhledávání a nastavení. Každá obrazovka byla navržena v nativním mobilním rozlišení s auto-layout komponentami, což
+umožňuje předání designu vývojáři přímo bez dohadování se o rozestupy nebo chování prvků.
 
 <br />
 <br />
 <br />
 
-# Funkce & Přínosy
+# Funkce & Designová rozhodnutí
 
-**Navrženo intuitivní uživatelské rozhraní**: Konceptualizováno a navrženo čisté a uživatelsky přívětivé rozhraní pro
-správu poznámek a dalších osobních informací.
+**Plochá informační architektura**: Žádné složky, štítky ani vnořené pohledy. Poznámky a seznamy jsou zobrazeny
+okamžitě po otevření, prohledatelné podle obsahu. Toto omezení nutí každé designové rozhodnutí sloužit
+objevitelnosti, ne organizaci.
 
-**Vytvořena komplexní mobilní zkušenost**: Vytvořena kompletní sada mobilních obrazovek ve Figmě, zajišťující
-konzistentní a poutavou uživatelskou zkušenost napříč aplikací.
+**Jednotný domovský prostor**: Poznámky a nákupní seznamy koexistují ve stejném seznamu seřazeném podle poslední
+úpravy. Přepínání mezi typy nevyžaduje žádnou navigaci — rozdíl je vizuální, ne strukturální.
 
-**Zaměřeno na klíčové funkce pro produktivitu**: Prioritizován návrh základních funkcí, jako je vytváření poznámek a
-správa nákupních seznamů, s potenciálním zvážením dalších funkcí.
+**Kontextuální prázdné stavy**: Každá obrazovka má propracovaný prázdný stav — ne generickou zprávu "nic zde není",
+ale zprávu specifickou pro to, co uživatel chystá udělat. Onboarding přirozeně plyne z první prázdné domovské
+obrazovky bez samostatného tutoriálu.
 
-**Důraz na čistý a skromný design**: Přijat minimalistický přístup k designu pro zlepšení použitelnosti a vizuální
-přitažlivosti na mobilních zařízeních.
+**Interakce primárně pro dotykové ovládání**: Gesta přejetím pro archivaci a smazání, dlouhý stisk pro vícenásobný
+výběr, zatažení pro obnovení — vše mapováno na gesta, která uživatelé již znají z iOS a Androidu.
 
-**Vytvořeny detailní makety obrazovek**: Navržena každá obrazovka potřebná pro mobilní aplikaci, předvádějící kompletní
-a promyšlený uživatelský tok.
+**Systém komponent s auto-layoutem**: Postaveno ve Figmě s auto-layoutem a variantami komponent pokrývajícími všechny
+interaktivní stavy (výchozí, stisknutý, zakázaný, načítání). Systém se škáluje na nové obrazovky bez duplikování stylů.
 
 <br />
 <br />
@@ -69,4 +78,4 @@ a promyšlený uživatelský tok.
 
 # Technologie & Nástroje
 
-**Figma**, Principy návrhu mobilního uživatelského rozhraní, Návrh uživatelské zkušenosti (UX)
+**Figma**, Auto-layout, Varianty komponent, Návrh mobilního UI, UX výzkum, Návrh interakcí, Prototypování

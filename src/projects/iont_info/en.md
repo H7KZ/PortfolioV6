@@ -54,17 +54,17 @@ high-performance, cloud-based solution capable of handling large-scale EV charge
 
 # Features & Contributions
 
-**Built Scalable Infrastructure**: Designed and implemented a cloud-based architecture using **Docker Swarm** and \*
-\*microservices\*\*, ensuring scalability and reliability.
+**Built Scalable Infrastructure**: Designed and implemented a cloud-based architecture using **Docker Swarm** and
+**microservices**, ensuring scalability and reliability.
 
-**Developed End-to-End System**: Led the fullstack development using **SvelteKit**, **Node.js**, **Fastify**, and \*
-\*MongoDB**, delivering an optimized and responsive UI with **TailwindCSS\*\*.
+**Developed End-to-End System**: Led the fullstack development using **SvelteKit**, **Node.js**, **Fastify**, and
+**MongoDB**, delivering an optimized and responsive UI with **TailwindCSS**.
 
 **Server and DevOps Management**: Configured **Linux-based servers**, automated deployments with **CI/CD pipelines**,
 and handled **server administration**.
 
-**Collaboration with Firmware Team**: Worked closely with the firmware developers to integrate backend services with \*
-\*Raspberry Pi-based charging stations\*\*.
+**Collaboration with Firmware Team**: Worked closely with the firmware developers to integrate backend services with
+**Raspberry Pi-based charging stations**.
 
 **Optimized System Performance**: Focused on **system architecture**, **RESTful API design**, and **cloud infrastructure
 management** to enhance efficiency.

@@ -15,7 +15,8 @@
 
 - Design tokens → `src/app.css`
 - Types → `src/lib/types.ts`
-- Form interface + validation → `src/lib/interfaces/ContactFormInterface.ts` + `src/lib/validations/ContactFormValidation.ts`
+- Form interface + validation → `src/lib/interfaces/ContactFormInterface.ts` +
+  `src/lib/validations/ContactFormValidation.ts`
 - Locale strings → `src/locales/en.json` + `cs.json`
 - Projects content → `src/projects/{slug}/en.md` + `cs.md` (YAML frontmatter)
 - Posts content → `src/posts/*.md`

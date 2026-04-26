@@ -89,9 +89,19 @@
 	};
 
 	const services = [
-		{ num: 'service1Num', title: 'service1Title', desc: 'service1Desc', chips: ['Architecture', 'Full-stack', 'DevOps'] },
+		{
+			num: 'service1Num',
+			title: 'service1Title',
+			desc: 'service1Desc',
+			chips: ['Architecture', 'Full-stack', 'DevOps']
+		},
 		{ num: 'service2Num', title: 'service2Title', desc: 'service2Desc', chips: ['Refactor', 'CI / CD', 'Docker'] },
-		{ num: 'service3Num', title: 'service3Title', desc: 'service3Desc', chips: ['Mentoring', 'Code review', 'System design'] }
+		{
+			num: 'service3Num',
+			title: 'service3Title',
+			desc: 'service3Desc',
+			chips: ['Mentoring', 'Code review', 'System design']
+		}
 	];
 
 	const testimonials = [
