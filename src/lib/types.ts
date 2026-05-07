@@ -1,3 +1,6 @@
+export type ProjectImpact = { label: string; value: string; sub: string };
+export type ProjectContribution = { num: string; title: string; body: string };
+
 export type Project = {
 	slug: string;
 	date: string;
@@ -5,6 +8,17 @@ export type Project = {
 	thumbnail: string;
 	tags: string[];
 	order?: number;
+	// Rich case study fields (opt-in via `lede` presence)
+	lede?: string;
+	client?: string;
+	role?: string;
+	team?: string;
+	timeline?: string;
+	sector?: string;
+	impact?: ProjectImpact[];
+	contributions?: ProjectContribution[];
+	stack?: string[];
+	gallery?: string[];
 };
 
 export type Post = {

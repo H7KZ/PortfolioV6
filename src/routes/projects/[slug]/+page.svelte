@@ -37,6 +37,17 @@
 		})
 	);
 	const jsonLdHtml = $derived(`<script type="application/ld+json">${jsonLd}</` + `script>`);
+
+	const isRich = $derived(!!data.meta.lede);
+
+	const metaItems = $derived(
+		[
+			data.meta.role ? { label: 'Role', value: data.meta.role } : null,
+			data.meta.team ? { label: 'Team', value: data.meta.team } : null,
+			data.meta.timeline ? { label: 'Timeline', value: data.meta.timeline } : null,
+			data.meta.sector ? { label: 'Sector', value: data.meta.sector } : null
+		].filter(Boolean) as { label: string; value: string }[]
+	);
 </script>
 
 <svelte:head>
@@ -65,42 +76,150 @@
 	{@html jsonLdHtml}
 </svelte:head>
 
-<div class="mx-auto max-w-(--max) px-8 max-sm:px-5">
-	<div class="mx-auto max-w-200 pt-10">
-		<a href="/" class="mono mb-8 inline-block text-[12px] tracking-[0.06em] text-(--fg-4) no-underline transition-colors duration-150 hover:text-(--fg)"
+{#if isRich}
+	<div class="mx-auto max-w-(--max) px-8 pt-10 pb-0 max-sm:px-5">
+		<a href="/" class="mono mb-10 inline-block text-[12px] tracking-[0.06em] text-(--fg-4) no-underline transition-colors duration-150 hover:text-(--fg)"
 			>← Work</a
 		>
 
-		<header class="mb-8">
-			<div class="mb-4 flex flex-wrap items-center gap-1.5">
-				{#each data.meta.tags as tag (tag)}
-					<span class="chip">{tag}</span>
-				{/each}
-				<span class="mono ml-1 text-[11px] text-(--fg-4)"
-					>{formatDate(data.meta.date, $locale, { month: 'long', year: 'numeric', timeZone: 'UTC' })}</span
-				>
+		<div class="mb-16 grid grid-cols-[2fr_1fr] gap-12 border-b border-(--line) pb-8 max-md:grid-cols-1 max-md:gap-8">
+			<div>
+				<div class="mb-5 flex flex-wrap items-center gap-3 font-mono text-[11px] tracking-[0.08em] text-(--fg-4) uppercase">
+					<span>Case Study</span>
+					{#if data.meta.client}
+						<span class="inline-block h-1 w-1 rounded-full bg-(--fg-5)"></span>
+						<span>{data.meta.client}</span>
+					{/if}
+					<span class="inline-block h-1 w-1 rounded-full bg-(--fg-5)"></span>
+					<span>{formatDate(data.meta.date, 'en', { year: 'numeric', timeZone: 'UTC' })}</span>
+				</div>
+				<h1 class="serif m-0 mb-5 text-[clamp(40px,6vw,80px)] leading-[1] font-light tracking-[-0.03em] text-(--fg)">
+					{data.meta.title}<span class="text-(--fg-3)">.</span>
+				</h1>
+				<p class="m-0 max-w-[640px] text-[clamp(16px,1.5vw,20px)] leading-[1.45] text-(--fg-2)">{data.meta.lede}</p>
 			</div>
-			<h1 class="serif m-0 text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.025em] text-(--fg)">{data.meta.title}</h1>
-		</header>
+
+			{#if metaItems.length > 0}
+				<div class="grid grid-cols-2 content-center gap-x-8 gap-y-6 max-sm:grid-cols-2">
+					{#each metaItems as item (item.label)}
+						<div>
+							<div class="mb-1 font-mono text-[10px] tracking-[0.1em] text-(--fg-4) uppercase">{item.label}</div>
+							<div class="text-[14px] text-(--fg)">{item.value}</div>
+						</div>
+					{/each}
+				</div>
+			{/if}
+		</div>
 
 		{#if data.meta.thumbnail}
-			<div class="mb-12 overflow-hidden rounded-lg border border-(--line)">
-				<img src={data.meta.thumbnail} alt={data.meta.title} class="block h-auto w-full" />
+			<div class="mb-16 aspect-[16/7] overflow-hidden rounded-(--radius-lg) border border-(--line)">
+				<img src={data.meta.thumbnail} alt={data.meta.title} class="h-full w-full object-cover" />
 			</div>
 		{/if}
 
-		<article
-			class="project-prose prose prose-neutral prose-invert prose-code:bg-neutral-800! prose-pre:bg-neutral-800! w-full text-[16px] leading-[1.7] text-(--fg-2)"
-		>
-			<data.content />
-		</article>
+		{#if data.meta.impact?.length}
+			<div
+				class="mb-16 grid overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2)"
+				style="grid-template-columns: repeat({data.meta.impact.length}, 1fr)"
+			>
+				{#each data.meta.impact as item, i (item.label)}
+					<div
+						class="p-7 {i < (data.meta.impact?.length ?? 0) - 1
+							? 'border-r border-(--line)'
+							: ''} last:border-0 max-sm:border-r-0 max-sm:border-b max-sm:border-(--line)"
+					>
+						<div class="mb-3.5 font-mono text-[10px] tracking-[0.1em] text-(--fg-4) uppercase">◆ {item.label}</div>
+						<div class="serif text-[36px] leading-[1] font-light tracking-[-0.02em] text-(--fg)">{item.value}</div>
+						<div class="mt-1.5 font-mono text-[12px] text-(--fg-4)">{item.sub}</div>
+					</div>
+				{/each}
+			</div>
+		{/if}
+
+		<div class="mb-24 grid grid-cols-[200px_1fr] gap-12 max-md:grid-cols-1 max-md:gap-4">
+			<div class="pt-2 font-mono text-[11px] tracking-[0.1em] text-(--fg-4) uppercase">The challenge</div>
+			<article
+				class="project-prose prose prose-neutral prose-invert prose-code:bg-neutral-800! prose-pre:bg-neutral-800! max-w-[680px] text-[15px] leading-[1.7] text-(--fg-2)"
+			>
+				<data.content />
+			</article>
+		</div>
+
+		{#if data.meta.contributions?.length}
+			<div class="mb-24 grid grid-cols-[200px_1fr] gap-12 max-md:grid-cols-1 max-md:gap-4">
+				<div class="pt-2 font-mono text-[11px] tracking-[0.1em] text-(--fg-4) uppercase">What I owned</div>
+				<div class="grid grid-cols-2 gap-6 max-sm:grid-cols-1">
+					{#each data.meta.contributions as c (c.num)}
+						<div class="rounded-(--radius) border border-(--line) bg-(--bg-2) p-5">
+							<div class="mb-3 font-mono text-[11px] tracking-[0.08em] text-(--accent)">{c.num}</div>
+							<h4 class="m-0 mb-2 text-[15px] font-medium text-(--fg)">{c.title}</h4>
+							<p class="m-0 text-[13px] leading-[1.5] text-(--fg-3)">{c.body}</p>
+						</div>
+					{/each}
+				</div>
+			</div>
+		{/if}
+
+		{#if data.meta.stack?.length}
+			<div class="mb-16 grid grid-cols-[200px_1fr] gap-12 max-md:grid-cols-1 max-md:gap-4">
+				<div class="pt-2 font-mono text-[11px] tracking-[0.1em] text-(--fg-4) uppercase">Stack</div>
+				<div class="flex flex-wrap gap-1.5">
+					{#each data.meta.stack as tech (tech)}
+						<span class="chip">{tech}</span>
+					{/each}
+				</div>
+			</div>
+		{/if}
+
+		{#if data.meta.gallery?.length}
+			<div class="mb-16 grid gap-3 max-sm:grid-cols-1" style="grid-template-columns: repeat({Math.min(data.meta.gallery.length, 3)}, 1fr)">
+				{#each data.meta.gallery as img (img)}
+					<div class="aspect-video overflow-hidden rounded-(--radius) border border-(--line)">
+						<img src={img} alt="" class="h-full w-full object-cover" loading="lazy" />
+					</div>
+				{/each}
+			</div>
+		{/if}
 
 		<ContactFooter />
 	</div>
-</div>
+{:else}
+	<div class="mx-auto max-w-(--max) px-8 max-sm:px-5">
+		<div class="mx-auto max-w-200 pt-10">
+			<a href="/" class="mono mb-8 inline-block text-[12px] tracking-[0.06em] text-(--fg-4) no-underline transition-colors duration-150 hover:text-(--fg)"
+				>← Work</a
+			>
+
+			<header class="mb-8">
+				<div class="mb-4 flex flex-wrap items-center gap-1.5">
+					{#each data.meta.tags as tag (tag)}
+						<span class="chip">{tag}</span>
+					{/each}
+					<span class="mono ml-1 text-[11px] text-(--fg-4)"
+						>{formatDate(data.meta.date, $locale, { month: 'long', year: 'numeric', timeZone: 'UTC' })}</span
+					>
+				</div>
+				<h1 class="serif m-0 text-[clamp(28px,5vw,48px)] leading-[1.1] tracking-[-0.025em] text-(--fg)">{data.meta.title}</h1>
+			</header>
+
+			{#if data.meta.thumbnail}
+				<div class="mb-12 overflow-hidden rounded-lg border border-(--line)">
+					<img src={data.meta.thumbnail} alt={data.meta.title} class="block h-auto w-full" />
+				</div>
+			{/if}
+
+			<article
+				class="project-prose prose prose-neutral prose-invert prose-code:bg-neutral-800! prose-pre:bg-neutral-800! w-full text-[16px] leading-[1.7] text-(--fg-2)"
+			>
+				<data.content />
+			</article>
+
+			<ContactFooter />
+		</div>
+	</div>
+{/if}
 
 <style>
-	/* MDSvex prose overrides — must use :global() since markdown is rendered at runtime */
 	.project-prose :global(h1),
 	.project-prose :global(h2),
 	.project-prose :global(h3),
@@ -153,7 +272,6 @@
 		border-color: var(--line);
 	}
 
-	/* Inline Tailwind classes used inside MDSvex content */
 	.project-prose :global(.bg-neutral-900) {
 		background: var(--bg-2) !important;
 		border: 1px solid var(--line);
