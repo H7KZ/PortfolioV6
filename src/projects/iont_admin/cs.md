@@ -7,74 +7,45 @@ tags:
     - Pracovní
     - Lokální Admin Panel
     - Fullstack
+lede: 'Offline-first administrační panel běžící přímo na hardwaru Raspberry Pi — dává technikům na místě bezpečné rozhraní pro konfiguraci, monitoring a aktualizace nabíječek EV.'
+client: 'IONT Tech s.r.o.'
+role: 'Frontend Engineer'
+timeline: '2023'
+sector: 'Clean Energy · SaaS'
+impact:
+    - label: 'Nasazení'
+      value: 'Embedded'
+      sub: 'Raspberry Pi'
+    - label: 'Aktualizace'
+      value: 'Podepsané'
+      sub: 'Auto-update systém'
+    - label: 'Typ'
+      value: 'Offline-first'
+      sub: 'Bez závislosti na cloudu'
+contributions:
+    - num: '01'
+      title: 'Vestavěné admin rozhraní'
+      body: 'Bezpečný offline-first admin panel postavený pomocí Svelte kompilovaného do statického HTML pro plnou kompatibilitu s nízkoenergetickou ARM architekturou Raspberry Pi.'
+    - num: '02'
+      title: 'Backend API vrstva'
+      body: 'Vývoj Fastify serveru propojujícího frontend s firmwarem v C++, zajišťujícího ovládání nabíječky, konfiguraci a monitoring v reálném čase.'
+    - num: '03'
+      title: 'Bezpečný auto-update systém'
+      body: 'Implementace mechanismu automatických aktualizací softwaru s ověřováním podpisů a obfuskací kódu pro ochranu před neoprávněnými zásahy a konzistentnost nasazení.'
+    - num: '04'
+      title: 'Automatizované nastavení systému'
+      body: 'Bash skripty pro kompletní automatizaci provisioningu, síťového nastavení, konfigurace prostředí a inicializace na nových zařízeních Raspberry Pi.'
+stack:
+    - 'Svelte'
+    - 'TailwindCSS'
+    - 'Fastify'
+    - 'Node.js'
+    - 'Bash'
+    - 'Raspberry Pi'
+    - 'Linux'
+    - 'REST API'
+gallery:
+    - /images/projects/iont_admin/thumbnail.webp
 ---
 
-<img src="/images/projects/iont_admin/thumbnail.webp" alt={title} class="w-full h-80 object-cover mb-4 rounded-lg" />
-
-<div class="bg-neutral-900 flex flex-wrap gap-y-8 gap-x-20 justify-between px-8 py-6 rounded-lg xs:px-24">
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Projekt</h3>
-        <p class="!m-0">{title}</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Klient</h3>
-        <p class="!m-0">IONT tech s.r.o.</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Kategorie</h3>
-        <p class="!m-0">Fullstack Aplikace</p>
-    </div>
-</div>
-
-<br />
-<br />
-<br />
-
-# Detaily projektu
-
-IONT Admin je lehký, lokálně hostovaný administrační panel navržený pro konfiguraci a správu EV nabíječek přímo na
-místě. Byl vytvořen speciálně pro **hardware založený na Raspberry Pi** a poskytuje přehledné rozhraní pro správce i
-uživatele, kteří tak mohou upravovat nastavení nabíječky, sledovat její stav a provádět diagnostiku. Celý systém byl
-navržen s důrazem na výkon, bezpečnost a jednoduchou údržbu.
-
-Frontend je postaven pomocí **Svelte**, kompilovaný do statického HTML kvůli kompatibilitě s nízkoenergetickou ARM
-architekturou. Komunikuje s **Fastify backendem**, který zpřístupňuje API pro ovládání nabíječky a propojuje se s \*
-\*nízkoúrovňovým firmwarem** napsaným v C++. Součástí bylo také vytvoření **Bash skriptů\*\*, které automatizují celé
-nastavení systému a jeho inicializaci na zařízeních s Raspberry Pi.
-
-Významnou částí projektu byl vývoj **vlastního systému aktualizací**, který automaticky zajišťuje bezpečné aktualizace
-softwaru – včetně ověřování podpisů a použití obfuskace pro ochranu proti neoprávněným zásahům. Tento mechanismus je
-hluboce propojen s firmwarem nabíječky pro zajištění konzistence a spolehlivosti každé aktualizace.
-
-Projekt vyžadoval silný důraz na **systémovou bezpečnost**, **vývoj s ohledem na hardware** a úzkou **spolupráci s
-firmware týmem**, aby byla zajištěna stabilita i v omezeném prostředí.
-
-<br />
-<br />
-<br />
-
-# Funkce & Přínosy
-
-**Vestavěné admin rozhraní**: Navrhl a vytvořil jsem bezpečný, offline-first admin panel pomocí **Svelte**, kompilovaný
-do **HTML** pro plnou kompatibilitu s Raspberry Pi.
-
-**Backend API vrstva**: Vyvinul jsem **Fastify server**, který propojuje frontend s firmwarem a zajišťuje ovládání,
-konfiguraci i monitoring nabíječky.
-
-**Automatizace nasazení systému**: Napsal jsem **Bash skripty** pro kompletní provisioning systému, síťové nastavení,
-inicializaci prostředí i spuštění aplikace.
-
-**Bezpečný update systém**: Implementoval jsem **automatický update mechanismus** pro software nabíječky s vestavěným \*
-\*ověřením podpisů**, **obfuskací kódu** a **ochranou proti neoprávněným zásahům\*\*.
-
-**Spolupráce s firmware týmem**: Úzce jsem spolupracoval s týmem vyvíjejícím firmware v C++, abych zajistil robustní
-propojení backendu s nízkoúrovňovými službami.
-
-<br />
-<br />
-<br />
-
-# Technologie & Nástroje
-
-**Svelte**, HTML, **TailwindCSS**, **Fastify**, **Node.js**, Bash, **Raspberry Pi**, REST API, Linux, Obfuskace,
-Auto-update systém, Zabezpečení, Git, Bitbucket, Jira
+IONT Admin je lokálně hostovaný administrační panel navržený pro provoz přímo na hardwaru Raspberry Pi zabudovaném v nabíjecích jednotkách EV, který dává správcům na místě přehledné rozhraní pro konfiguraci, diagnostiku a monitoring. Výzvou bylo vytvořit výkonnou a bezpečnou aplikaci pro omezené ARM prostředí při zachování těsné integrace s firmwarem v C++ přes Fastify API vrstvu. Byl vyvinut vlastní podepsaný auto-update systém pro správu nasazení napříč celou flotilou bez nutnosti manuálního zásahu.

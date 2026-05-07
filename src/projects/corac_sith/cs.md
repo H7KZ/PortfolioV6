@@ -1,81 +1,54 @@
 ---
 date: '2025-11-19'
 order: 2
-title: SITH GUI (DeepTrace)
+title: SITH DeepTrace
 thumbnail: /images/projects/corac_sith/thumbnail.webp
 tags:
     - Pracovní
     - Vizualizace dat
     - Frontend
+lede: 'Platforma pro ověřování původu a integrity dat o pozorování Země s nulovou důvěrou — ověřuje provenienci souborů přímo v prohlížeči uživatele, aniž by byly citlivé soubory kdy přeneseny.'
+client: 'CORAC Engineering'
+role: 'Senior Frontend Engineer'
+timeline: 'Dub 2025 — probíhá'
+sector: 'GovTech · Kosmický průmysl'
+impact:
+    - label: 'Model důvěryhodnosti'
+      value: 'Zero'
+      sub: 'Hash-chain verification'
+    - label: 'Autentizace'
+      value: 'OAuth'
+      sub: 'AWS Cognito pools'
+contributions:
+    - num: '01'
+      title: 'Lineage visualization in D3.js'
+      body: 'Interaktivní force-directed graf proveniencí. Každý uzel představuje krok zpracování; hrany jsou transformace ověřené hashem. Podporuje 1000+ uzlů se zoomem, posouváním a zvýrazňováním na základě dotazů.'
+    - num: '02'
+      title: 'Client-side hash-chain verifier'
+      body: 'Kryptografická kontrola integrity čistě v prohlížeči. Prochází řetězec od listu ke kořeni, ověřuje každý SHA-256 hash vůči důvěryhodnému ukotvení a označuje jakýkoliv pozměněný článek s přesnými diagnostikami.'
+    - num: '03'
+      title: 'Zero-trust auth with Cognito'
+      body: 'AWS Cognito OAuth flow — přístupové tokeny nikdy nedorazí na náš server. Rozsahem vymezená oprávnění pro poskytovatele vs. konzumenty dat, s ověřováním hash-chainu na úrovni relace chránícím citlivé operace.'
+    - num: '04'
+      title: 'Vue 3 + Vite + Shadcn stack'
+      body: 'Projekt nastaven od základu. Striktní TypeScript, automatizovaný linting, pnpm workspaces, CI s náhledovými nasazeními. Zavedené vzory, které přijal zbytek týmu.'
+stack:
+    - 'Vue 3'
+    - 'TypeScript'
+    - 'D3.js'
+    - 'Vite'
+    - 'pnpm'
+    - 'Shadcn UI'
+    - 'AWS Cognito'
+    - 'OAuth'
+    - 'REST API'
+    - 'SubtleCrypto'
+    - 'Node.js v22+'
+gallery:
+    - /images/projects/corac_sith/thumbnail.webp
+    - /images/projects/corac_sith/hashchain.webp
 ---
 
-<img src="/images/projects/corac_sith/hashchain.webp" alt={title} class="w-full h-56 object-cover mb-4 rounded-lg shadow-lg" />
+Data o pozorování Země jsou **citlivá a objemná**. Poskytovatelé a příjemci potřebují ověřit, že je provenience souboru v pořádku — že s ním nebylo manipulováno mezi sběrem, zpracováním a doručením — ale samotné soubory often nemohou procházet sítěmi.
 
-<div class="bg-neutral-900 flex flex-wrap gap-y-8 gap-x-20 justify-between px-8 py-6 rounded-lg xs:px-24">
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Projekt</h3>
-        <p class="!m-0">{title}</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Klient</h3>
-        <p class="!m-0">CORAC Engineering</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Kategorie</h3>
-        <p class="!m-0">Frontend</p>
-    </div>
-</div>
-
-<br />
-<br />
-<br />
-
-# Detaily projektu
-
-SITH GUI (obchodně označovaný jako **DeepTrace**) je specializovaná **webová aplikace** vyvinutá pro CORAC Engineering,
-která zajišťuje **původ a integritu dat z pozorování Země (EO)**. Aplikace slouží jako klíčové rozhraní pro
-poskytovatele a konzumenty dat, kterým umožňuje ověřit rodokmen (lineage) a autenticitu dat, aniž by bylo nutné přenášet
-samotné citlivé soubory.
-
-Projekt je postaven na moderním **Vue.js** stacku s silným důrazem na bezpečnost a vizualizaci. Integruje ověřování na
-straně klienta pomocí **AWS User Pools (Cognito) a OAuth**, což zajišťuje bezpečné řízení přístupu. Jádrem aplikace je
-interaktivní vizualizace datového rodokmenu pomocí **D3.js**, která uživatelům poskytuje přehlednou grafickou
-reprezentaci toho, jak byla data zpracována a jak procházela dodavatelským řetězcem.
-
-Vývoj se zaměřil na **výkon a spolehlivost**, s využitím **Shadcn** pro konzistentní UI/UX a přísným ověřováním
-integrity souborů pomocí kryptografických hashů. Systém umožňuje správu důvěryhodných datových zdrojů a ověřování vůči
-hash-chainu (řetězci hashů) přímo v prohlížeči uživatele, přičemž dodržuje architekturu "zero-trust", kde ověření
-probíhá na straně klienta.
-
-<br />
-<br />
-<br />
-
-# Funkce & Přínosy
-
-**Interaktivní vizualizace rodokmenu**: Využívá **D3.js** k vykreslování komplexních grafů zobrazujících historii (
-rodokmen) datových souborů. Uživatelé mohou vizuálně sledovat původ souboru a jeho následné kroky zpracování
-prostřednictvím služby "Query Trace".
-
-**Ověření integrity na straně klienta**: Implementuje robustní systém ověřování **Hash-chain**, kde prohlížeč nezávisle
-ověřuje integritu datových bloků vůči důvěryhodným záznamům, čímž zajišťuje, že s daty nebylo manipulováno.
-
-**Správa důvěryhodného dodavatelského řetězce**: Poskytuje administrativní rozhraní pro konfiguraci a schvalování (
-whitelisting) důvěryhodných zdrojů dat (poskytovatelů a zpracovatelů), což systému umožňuje automaticky vyhodnotit
-důvěryhodnost příchozích dat.
-
-**Bezpečné ověřování**: Integrováno s **AWS User Pools** a OAuth pro bezpečné ověřování pouze na straně klienta, což
-chrání přístup k citlivým údajům o historii dat při zachování plynulého uživatelského zážitku.
-
-**Moderní technologický stack**: Postaveno na **Vue.js**, **Vite** a **pnpm** pro vysoký výkon, a **Shadcn UI** pro
-profesionální, responzivní design. Kódová základna vynucuje přísné standardy kvality prostřednictvím automatizovaného
-lintingu a formátování.
-
-<br />
-<br />
-<br />
-
-# Technologie & Nástroje
-
-**Vue.js**, **D3.js**, **Node.js** (v22+), **AWS Cognito** (OAuth), **Shadcn UI**, **pnpm**, Vite, REST API Integration,
-Kryptografie (Hashing)
+DeepTrace řeší tento problém ověřováním přímo v **prohlížeči**: prohlížeč stáhne kryptografický hash-chain, rekonstruuje graf proveniencí a ověří každý krok oproti důvěryhodným zdrojům — aniž by operátor kdy držel surová data.

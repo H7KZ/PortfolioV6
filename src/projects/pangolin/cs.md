@@ -7,65 +7,42 @@ tags:
     - Work
     - Interactive Dashboard
     - Frontend
+lede: 'Interaktivní prototyp admin dashboardu vytvořený k získání klienta — funkční a vizuálně propracovaný mockup, který klientovi pomohl představit si budoucí interní nástroj.'
+client: 'Personal Project'
+role: 'Solo Developer'
+timeline: '2022'
+sector: 'Security · Networking'
+impact:
+    - label: 'Výsledek'
+      value: 'Dodáno'
+      sub: 'Klient spokojený'
+    - label: 'Tým'
+      value: '3 vývojáři'
+      sub: 'Přísný termín'
+    - label: 'Typ'
+      value: 'Prototyp'
+      sub: 'Proof of concept'
+contributions:
+    - num: '01'
+      title: 'Dashboard UI zaměřené na klienta'
+      body: 'Návrh a vývoj interaktivního prototypu admin dashboardu pro klientskou prezentaci demonstrující práci s dynamickými daty a moderní UI vzory pomocí React.js a TailwindCSS.'
+    - num: '02'
+      title: 'Komponentová architektura'
+      body: 'Frontend strukturován jako modulární a snadno rozšiřitelná kódová základna se znovupoužitelnými komponentami, aby na prototyp mohly navázat budoucí týmy.'
+    - num: '03'
+      title: 'Responzivní layouty'
+      body: 'Zajištění plné kompatibility napříč zařízeními pomocí TailwindCSS s optimalizací pro desktop, tablet i mobilní obrazovky.'
+    - num: '04'
+      title: 'Týmové dodání'
+      body: 'Spolupráce v tříčlenném týmu s cílem splnit termín prezentace a dodat propracované řešení, se kterým byl klient velmi spokojen.'
+stack:
+    - 'React.js'
+    - 'TailwindCSS'
+    - 'JavaScript'
+    - 'Figma'
+    - 'Git'
+gallery:
+    - /images/projects/pangolin/thumbnail.webp
 ---
 
-<img src="/images/projects/pangolin/thumbnail.webp" alt={title} class="w-full h-80 object-cover mb-4 rounded-lg" />
-
-<div class="bg-neutral-900 flex flex-wrap gap-y-8 gap-x-20 justify-between px-8 py-6 rounded-lg xs:px-24">
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Projekt</h3>
-        <p class="!m-0">{title}</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Klient</h3>
-        <p class="!m-0">Pangolin Software s.r.o.</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Kategorie</h3>
-        <p class="!m-0">Frontend</p>
-    </div>
-</div>
-
-<br />
-<br />
-<br />
-
-# Detaily projektu
-
-Pangolin je responzivní a interaktivní dashboard navržený jako vizuální a funkční prototyp pro klientskou prezentaci.
-Hlavním cílem bylo demonstrovat práci s dynamickými daty, plynulost uživatelského rozhraní a komponentový přístup, aby
-si klient mohl lépe představit budoucí interní administrátorské rozhraní. Projekt vznikal v malém tříčlenném týmu a byl
-úspěšně dokončen včas dle stanoveného termínu, přičemž klient vyjádřil s výsledkem velkou spokojenost.
-
-Frontend byl postaven pomocí **React.js** a **TailwindCSS**, což umožnilo rychlý vývoj, vysokou konzistenci designu a
-moderní, mobilně přívětivé rozhraní. Aplikace byla strukturována jako modulární a snadno rozšiřitelná, což umožňuje
-budoucím týmům bezproblémové navázání na prototyp.
-
-Během vývoje byl kladen důraz na **čisté návrhové vzory**, **znovupoužitelnost komponent** a **responzivní layouty**.
-Projekt posloužil jako důležitý důkaz proveditelnosti a připravil půdu pro ostrou verzi. Po dokončení fáze prezentace
-jsem se z projektu stáhl kvůli dalším podnikatelským aktivitám a přípravě na závěrečné zkoušky na vysoké škole.
-
-# Funkce & Přínosy
-
-**Design UI/UX zaměřený na klienta**: Navrhl jsem interaktivní dashboard prototyp pro klientskou prezentaci pomocí
-**React.js** a **TailwindCSS**.
-
-**Týmová spolupráce**: Spolupracoval jsem v tříčlenném týmu, abychom zajistili včasné a kvalitní odevzdání prototypu.
-
-**Komponentová architektura**: Vytvořil jsem modulární a škálovatelnou frontend architekturu pro snadné budoucí
-rozšiřování.
-
-**Responzivní rozvržení**: Optimalizace rozhraní pro různé typy zařízení pomocí **TailwindCSS**, včetně desktopu,
-tabletů a mobilů.
-
-**Komunikace s klientem a předání projektu**: Pravidelná koordinace s klientem, sladění očekávání a úspěšné předání po
-dokončení.
-
-<br />
-<br />
-<br />
-
-# Technologie & Nástroje
-
-**React.js**, TailwindCSS, HTML, JavaScript, Git, Figma, UI/UX, Prototypování, Týmová spolupráce, Komponentová
-architektura
+Pangolin je responzivní interaktivní dashboard vyvinutý jako vizuální a funkční prototyp pro klientskou prezentaci, který klientovi pomohl představit si jejich budoucí interní administrátorský panel. Výzvou bylo v rámci přísného termínu v tříčlenném týmu demonstrovat práci s dynamickými daty a propracované UI. Prototyp klienta přesvědčil a byl strukturován jako modulární kódová základna připravená pro produkční tým.

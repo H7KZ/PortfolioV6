@@ -7,70 +7,42 @@ tags:
     - Osobní
     - Design
     - Frontend
+lede: 'Kompletní redesign a přebudování mého osobního portfolia — čistá bílá estetika, ručně psaný podpis jména a SvelteKit frontend navržený i nakódovaný sólo od začátku do konce.'
+client: 'Personal Project'
+role: 'Solo Developer'
+timeline: '2023'
+sector: 'Web · Portfolio'
+impact:
+    - label: 'Typ'
+      value: 'Sólo'
+      sub: 'Design + vývoj'
+    - label: 'Framework'
+      value: 'SvelteKit'
+      sub: 'Statický frontend'
+    - label: 'Design'
+      value: 'Figma'
+      sub: 'Vlastní identita'
+contributions:
+    - num: '01'
+      title: 'Kompletní vlastnictví designu'
+      body: 'Celá vizuální identita a uživatelské rozhraní navrženy ve Figmě před zahájením vývoje — čisté bílé téma, moderní layout a ručně psaný podpis jako prvek osobního brandingu.'
+    - num: '02'
+      title: 'Kompletní vývoj'
+      body: 'Celé portfolio postaveno od nuly pomocí SvelteKit pro rychlý a efektivní frontend a TailwindCSS pro konzistentní utility-first stylování.'
+    - num: '03'
+      title: 'Responzivní & výkonný'
+      body: 'Využití výkonnostních vlastností SvelteKit pro plynulý zážitek z prohlížení na všech velikostech obrazovek s optimalizovaným produkčním buildem.'
+    - num: '04'
+      title: 'Čistá kódová základna'
+      body: 'Dobře organizovaná a snadno srozumitelná kódová základna dodržující osvědčené postupy pro kvalitu a budoucí udržovatelnost.'
+stack:
+    - 'SvelteKit'
+    - 'TailwindCSS'
+    - 'JavaScript'
+    - 'Figma'
+    - 'Git'
+gallery:
+    - /images/projects/portfolio_v4/thumbnail.webp
 ---
 
-<img src="/images/projects/portfolio_v4/thumbnail.webp" alt={title} class="w-full h-80 object-cover mb-4 rounded-lg" />
-
-<div class="bg-neutral-900 flex flex-wrap gap-y-8 gap-x-20 justify-between px-8 py-6 rounded-lg xs:px-24">
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Projekt</h3>
-        <p class="!m-0">{title}</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Klient</h3>
-        <p class="!m-0">Osobní</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Kategorie</h3>
-        <p class="!m-0">Design & Frontend</p>
-    </div>
-</div>
-
-<br />
-<br />
-<br />
-
-# Detaily projektu
-
-Portfolio v4 je mé osobní online portfolio, pečlivě navržené a vyvinuté, aby prezentovalo mé dovednosti a projekty
-čistým a moderním způsobem. Tato iterace představuje kompletní redesign a přebudování, zaměřující se na plynulý a
-poutavý uživatelský zážitek. Každý aspekt projektu, od počátečních návrhů vytvořených ve Figmě až po finální
-implementaci pomocí SvelteKitu a TailwindCSS, byl proveden výhradně mnou.
-
-Portfolio se vyznačuje svěží bílou barevnou schématem, které přispívá k jeho čistému a profesionálnímu vzhledu. Výrazným
-prvkem je zahrnutí krásně ručně psaného ztvárnění mého jména, které dodává osobní a zapamatovatelný dotek. Frontend je
-poháněn dynamickým duem **SvelteKit** pro jeho rychlost a vývojářsky přívětivé prostředí a **TailwindCSS** pro jeho
-přístup k stylingu založený na utilitách, což vede k vysoce responzivnímu a vizuálně přitažlivému webu. Kódová základna
-je strukturována s ohledem na přehlednost a udržovatelnost, což odráží závazek k psaní čistého a efektivního kódu.
-
-<br />
-<br />
-<br />
-
-# Funkce & Přínosy
-
-**Kompletní vlastnictví návrhu**: Plně jsem zodpovídal za proces návrhu, vytvořil jsem celou vizuální identitu a
-uživatelské rozhraní ve Figmě ještě před zahájením vývoje.
-
-**Kompletní vývoj**: Sám jsem postavil celé portfolio od základu pomocí **SvelteKitu** pro rychlý a efektivní frontend a
-**TailwindCSS** pro rychlé a konzistentní stylování.
-
-**Čisté a moderní UI/UX**: Navrhl jsem vizuálně přitažlivé a uživatelsky přívětivé rozhraní s čistým bílým motivem a
-moderní estetikou, zajišťující optimální zážitek ze sledování na všech zařízeních.
-
-**Personalizovaný branding**: Zahrnul jsem jedinečný a osobní prvek v podobě krásně ručně psaného ztvárnění mého jména,
-čímž jsem posílil individuální branding portfolia.
-
-**Optimalizovaný výkon frontendu**: Využitím schopností **SvelteKitu** jsem zajistil, že portfolio je výkonné a
-poskytuje návštěvníkům plynulý zážitek z prohlížení.
-
-**Čistá a udržovatelná kódová základna**: Udržoval jsem dobře organizovanou a snadno srozumitelnou kódovou základnu,
-dodržoval jsem osvědčené postupy pro kvalitu kódu a budoucí údržbu.
-
-<br />
-<br />
-<br />
-
-# Technologie & Nástroje
-
-Figma, **SvelteKit**, **TailwindCSS**, HTML, CSS, JavaScript, **Git**
+Portfolio v4 je kompletní redesign a přebudování mé osobní webové prezentace, koncipovaný a provedený výhradně mnou — od počátečních konceptů ve Figmě až po finální implementaci v SvelteKit. Výzvou bylo vytvořit web, který bude působit osobně, aniž by ztratil profesionalitu — vyřešeno čistým bílým tématem a ručně psaným podpisem jako ústředním prvkem brandingu. Každý řádek designu i kódu byl napsán sólo s důrazem na výkon a dlouhodobou udržovatelnost.

@@ -1,80 +1,54 @@
 ---
 date: '2025-11-19'
 order: 2
-title: SITH GUI (DeepTrace)
+title: SITH DeepTrace
 thumbnail: /images/projects/corac_sith/thumbnail.webp
 tags:
     - Work
     - Data Visualization
     - Frontend
+lede: "A zero-trust data provenance platform for Earth Observation data — verifying file lineage and integrity entirely in the user's browser, without ever transferring the sensitive files themselves."
+client: 'CORAC Engineering'
+role: 'Senior Frontend Engineer'
+timeline: 'Apr 2025 — ongoing'
+sector: 'GovTech · Aerospace'
+impact:
+    - label: 'Trust model'
+      value: 'Zero'
+      sub: 'Hash-chain verification'
+    - label: 'Auth'
+      value: 'OAuth'
+      sub: 'AWS Cognito pools'
+contributions:
+    - num: '01'
+      title: 'Lineage visualization in D3.js'
+      body: 'Interactive force-directed graph of provenance. Each node is a processing step; edges are hash-verified transforms. Supports 1000+ nodes with zoom, pan, and query-based highlighting.'
+    - num: '02'
+      title: 'Client-side hash-chain verifier'
+      body: 'Pure-browser cryptographic integrity check. Walks the chain from leaf to root, validates each SHA-256 hash against a trusted anchor, flags any tampered link with precise diagnostics.'
+    - num: '03'
+      title: 'Zero-trust auth with Cognito'
+      body: 'AWS Cognito OAuth flow — access tokens never hit our server. Scoped permissions for data providers vs. consumers, with session-level hash-chain verification gating sensitive operations.'
+    - num: '04'
+      title: 'Vue 3 + Vite + Shadcn stack'
+      body: 'Set up the project from scratch. Strict TypeScript, automated linting, pnpm workspaces, CI with preview deploys. Established patterns the rest of the team adopted.'
+stack:
+    - 'Vue 3'
+    - 'TypeScript'
+    - 'D3.js'
+    - 'Vite'
+    - 'pnpm'
+    - 'Shadcn UI'
+    - 'AWS Cognito'
+    - 'OAuth'
+    - 'REST API'
+    - 'SubtleCrypto'
+    - 'Node.js v22+'
+gallery:
+    - /images/projects/corac_sith/thumbnail.webp
+    - /images/projects/corac_sith/hashchain.webp
 ---
 
-<img src="/images/projects/corac_sith/hashchain.webp" alt={title} class="w-full h-56 object-cover mb-4 rounded-lg shadow-lg" />
+Earth Observation data is **sensitive and massive**. Providers and consumers need to verify that a file's lineage is intact — that nothing has been tampered with between collection, processing, and delivery — but the files themselves often can't move across networks.
 
-<div class="bg-neutral-900 flex flex-wrap gap-y-8 gap-x-20 justify-between px-8 py-6 rounded-lg xs:px-24">
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Project</h3>
-        <p class="!m-0">{title}</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Client</h3>
-        <p class="!m-0">CORAC Engineering</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Category</h3>
-        <p class="!m-0">Frontend</p>
-    </div>
-</div>
-
-<br />
-<br />
-<br />
-
-# Project Details
-
-SITH GUI (marketed as **DeepTrace**) is a specialized **web application** developed for CORAC Engineering to ensure the
-**provenance and integrity of Earth Observation (EO) data**. The application serves as a crucial interface for data
-providers and consumers, allowing them to verify the lineage and authenticity of data without ever needing to transfer
-the sensitive files themselves.
-
-The project is built on a modern **Vue.js** stack with a strong emphasis on security and visualization. It integrates
-client-side authentication via **AWS User Pools (Cognito) and OAuth**, ensuring that access control is managed securely.
-A core component of the application is the interactive visualization of data lineage using **D3.js**, which provides
-users with a clear, graphical representation of how data has been processed and moved through the supply chain.
-
-Development focused on **performance and reliability**, utilizing **Shadcn** for a consistent UI/UX and strictly
-verifying file integrity using cryptographic hashes. The system allows for the management of trusted data sources and
-enables verification against a blockchain-like hash-chain directly within the user's browser, adhering to a "zero-trust"
-architecture where verification happens on the client side.
-
-<br />
-<br />
-<br />
-
-# Features & Benefits
-
-**Interactive Lineage Visualization**: Utilizes **D3.js** to render complex graphs showing the history (lineage) of data
-files. Users can visually trace the origin of a file and its subsequent processing steps via the "Query Trace" service.
-
-**Client-Side Integrity Verification**: Implements a robust **Hash-chain** verification system where the browser
-independently verifies the integrity of data blocks against trusted records, ensuring data hasn't been tampered with.
-
-**Trusted Supply-Chain Management**: Provides an administrative interface for configuring and whitelisting trusted data
-sources (providers and processors), which allows the system to automatically evaluate the trustworthiness of incoming
-data.
-
-**Secure Authentication**: Integrated with **AWS User Pools** and OAuth for secure, client-side only authentication,
-protecting access to sensitive lineage data while maintaining a seamless user experience.
-
-**Modern Tech Stack**: Built with **Vue.js**, **Vite**, and **pnpm** for high performance, and **Shadcn UI** for a
-professional, responsive design. The codebase enforces strict quality standards through automated linting and
-formatting.
-
-<br />
-<br />
-<br />
-
-# Technologies & Tools
-
-**Vue.js**, **D3.js**, **Node.js** (v22+), **AWS Cognito** (OAuth), **Shadcn UI**, **pnpm**, Vite, REST API Integration,
-Cryptography (Hashing)
+DeepTrace solves this by doing the verification **client-side**: the browser fetches a cryptographic hash chain, reconstructs the lineage graph, and validates each step against trusted sources — without the operator ever holding the raw data.

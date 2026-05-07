@@ -7,77 +7,44 @@ tags:
     - Osobní
     - Design
     - Frontend
+lede: 'Pátá iterace mého osobního portfolia — tmavé téma, TypeScript, obsah řízený Markdownem a kontaktní formulář s webhookem, vše navrženo a vyvinuto sólo.'
+client: 'Personal Project'
+role: 'Solo Developer'
+timeline: '2024'
+sector: 'Web · Portfolio'
+impact:
+    - label: 'Typ'
+      value: 'Sólo'
+      sub: 'Design + vývoj'
+    - label: 'Téma'
+      value: 'Tmavé'
+      sub: 'Vlastní design'
+    - label: 'Obsah'
+      value: 'Markdown'
+      sub: 'File-based'
+contributions:
+    - num: '01'
+      title: 'Vlastní design systém'
+      body: 'Celé rozhraní konceptualizováno a navrženo ve Figmě — sofistikované tmavé téma s čistou minimalistickou estetikou a vlastními mockupy zařízení pro prezentaci projektů.'
+    - num: '02'
+      title: 'SvelteKit + TypeScript frontend'
+      body: 'Kompletní frontend postavený s SvelteKit a TypeScriptem pro rychlou, typově bezpečnou aplikaci stylovanou pomocí TailwindCSS pro responzivní zážitek na všech zařízeních.'
+    - num: '03'
+      title: 'Obsah řízený Markdownem'
+      body: 'Systém obsahu dynamicky načítající detaily projektů a blogové příspěvky ze souborů Markdown, zjednodušující aktualizace bez CMS nebo databáze.'
+    - num: '04'
+      title: 'Webhook integrace kontaktního formuláře'
+      body: 'Kontaktní formulář s automatickou integrací webhooků pro okamžitá upozornění na nabídky práce, zjednodušující příjem a odpovídání na nové příležitosti.'
+stack:
+    - 'SvelteKit'
+    - 'TailwindCSS'
+    - 'TypeScript'
+    - 'Figma'
+    - 'Markdown'
+    - 'Webhooks'
+    - 'Git'
+gallery:
+    - /images/projects/portfolio_v5/thumbnail.webp
 ---
 
-<img src="/images/projects/portfolio_v5/thumbnail.webp" alt={title} class="w-full h-80 object-cover mb-4 rounded-lg" />
-
-<div class="bg-neutral-900 flex flex-wrap gap-y-8 gap-x-20 justify-between px-8 py-6 rounded-lg xs:px-24">
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Projekt</h3>
-        <p class="!m-0">{title}</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Klient</h3>
-        <p class="!m-0">Osobní</p>
-    </div>
-    <div>
-        <h3 class="!m-0 !mb-1 !font-semibold">Kategorie</h3>
-        <p class="!m-0">Design & Frontend</p>
-    </div>
-</div>
-
-<br />
-<br />
-<br />
-
-# Detaily projektu
-
-Portfolio v5 představuje nejnovější iteraci mé osobní online prezentace, pečlivě vytvořenou k prezentaci mých
-designérských a vývojářských dovedností. Tato verze byla kompletně navržena mnou ve Figmě, odrážející čistou, moderní
-estetiku se sofistikovaným tmavým motivem. Celé portfolio bylo oživeno pomocí nejmodernějších technologií, aby byl
-zajištěn plynulý a poutavý uživatelský zážitek.
-
-Frontend je postavený na **SvelteKitu**, využívající rychlost a flexibilitu tohoto moderního frameworku, stylovaný
-pomocí **TailwindCSS** pro rychlé a responzivní stylování a vylepšený o typovou bezpečnost **Typescriptu**. Bylo
-implementováno vlastní API pro dynamické načítání detailů projektů a blogových příspěvků ze souborů Markdown, což
-umožňuje snadnou správu obsahu. Kromě toho byl vyvinut kontaktní formulář s automatickou integrací webhooků pro
-zjednodušení procesu přijímání a odpovídání na nabídky práce. Vizuální prezentace je vylepšena ručně vytvořenými
-mockupy, které ukazují mou práci na aplikacích a designech na realistických obrazovkách telefonů a notebooků, což dodává
-profesionální nádech. Kódová základna je dobře strukturovaná a udržovatelná, odrážející osvědčené postupy ve vývoji
-softwaru.
-
-<br />
-<br />
-<br />
-
-# Funkce & Přínosy
-
-**Kompletní vlastní design**: Konceptualizoval a navrhl celé uživatelské rozhraní portfolia od nuly pomocí Figmy, čímž
-zajistil jedinečnou a moderní vizuální identitu.
-
-**Odbornost v oblasti vývoje frontendu**: Vyvinul kompletní uživatelské rozhraní pomocí **SvelteKitu**, **TailwindCSS**
-a **Typescriptu**, což vedlo k rychlé, responzivní a typově bezpečné aplikaci.
-
-**Implementace dynamického obsahu**: Navrhl vlastní API pro dynamické načítání a zobrazování detailů projektů a
-blogových příspěvků uložených jako soubory Markdown, což zjednodušuje aktualizace obsahu.
-
-**Automatizovaná integrace nabídek práce**: Implementoval kontaktní formulář s integrací webhooků, umožňující okamžitá
-upozornění na nové pracovní příležitosti.
-
-**Vylepšená vizuální prezentace**: Vytvořil vlastní mockupy pro prezentaci práce na aplikacích a designech na různých
-zařízeních, což dodává portfoliu profesionální úroveň.
-
-**Čistá a moderní estetika**: Zaměřil se na minimalistický design s tmavým motivem, aby vytvořil poutavý a vizuálně
-přitažlivý uživatelský zážitek.
-
-**Vysoce kvalitní kódová základna**: Udržoval čistou, dobře organizovanou a snadno srozumitelnou kódovou základnu,
-dodržující moderní vývojové standardy.
-
-<br />
-<br />
-<br />
-
-# Technologie & Nástroje
-
-**Figma**, **SvelteKit**, **TailwindCSS**, **Typescript**, HTML, CSS, JavaScript, REST API, Markdown, Webhooky, Mockupy,
-**Git**
+Portfolio v5 je nejnovější iterace mé osobní online prezentace — kompletně vlastní design i vývoj realizovaný sólo od konceptu ve Figmě až po produkční nasazení. Výzvou bylo vytvořit web, který bude působit zralejším a obsahově bohatším dojmem než předchozí verze — vyřešeno tmavým tématem, TypeScriptem a systémem obsahu řízeným Markdownem pro projekty a blogové příspěvky. Přidán kontaktní formulář s webhookem pro přeposílání nabídek práce přímo na Discord.
