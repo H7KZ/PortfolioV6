@@ -105,11 +105,38 @@
 	];
 
 	const testimonials = [
-		{ quoteKey: 'testimonial1Quote', name: 'Amelie Engelmaierová', roleKey: 'testimonial1Role', initials: 'AE' },
-		{ quoteKey: 'testimonial2Quote', name: 'Petr Krejčí', roleKey: 'testimonial2Role', initials: 'PK' },
-		{ quoteKey: 'testimonial3Quote', name: 'Marek Vospěl', roleKey: 'testimonial3Role', initials: 'MV' },
-		{ quoteKey: 'testimonial4Quote', name: 'Zdeněk Glazer', roleKey: 'testimonial4Role', initials: 'ZG' }
+		{ quoteKey: 'testimonial1Quote', name: 'Petr Hric', roleKey: 'testimonial1Role', initials: 'PH', linkedin: 'https://www.linkedin.com/in/jan-kominek/' },
+		{
+			quoteKey: 'testimonial2Quote',
+			name: 'Amelie Engelmaierová',
+			roleKey: 'testimonial2Role',
+			initials: 'AE',
+			linkedin: 'https://www.linkedin.com/in/jan-kominek/'
+		},
+		{
+			quoteKey: 'testimonial3Quote',
+			name: 'Marek Vospěl',
+			roleKey: 'testimonial3Role',
+			initials: 'MV',
+			linkedin: 'https://www.linkedin.com/in/jan-kominek/'
+		},
+		{
+			quoteKey: 'testimonial4Quote',
+			name: 'Petr Krejčí',
+			roleKey: 'testimonial4Role',
+			initials: 'PK',
+			linkedin: 'https://www.linkedin.com/in/jan-kominek/'
+		},
+		{
+			quoteKey: 'testimonial5Quote',
+			name: 'Zdeněk Glazer',
+			roleKey: 'testimonial5Role',
+			initials: 'ZG',
+			linkedin: 'https://www.linkedin.com/in/jan-kominek/'
+		}
 	];
+
+	const QUOTE_LIMIT = 450;
 </script>
 
 <svelte:head>
@@ -324,10 +351,18 @@
 
 	<div class="grid grid-cols-2 gap-3.5 max-md:grid-cols-1">
 		{#each testimonials as t (t.name)}
-			<div class="relative flex flex-col overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2) p-6">
-				<div class="pointer-events-none absolute -top-2 right-4 font-serif text-[96px] leading-none text-(--accent) opacity-[0.08] select-none">"</div>
+			{@const fullQuote = $_('home.' + t.quoteKey)}
+			{@const isTruncated = fullQuote.length > QUOTE_LIMIT}
+			{@const displayQuote = isTruncated ? fullQuote.slice(0, QUOTE_LIMIT).trimEnd() : fullQuote}
+			<div class="flex flex-col overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2) p-6">
 				<blockquote class="serif relative z-[1] m-0 flex-1 pb-5 text-[15px] leading-[1.65] font-light tracking-[-0.005em] text-(--fg-2)">
-					{$_('home.' + t.quoteKey)}
+					<span class="text-(--accent)" style="opacity:0.75">"</span>{displayQuote}{#if isTruncated}<span class="text-(--fg-4)">…</span>
+						<a
+							href={t.linkedin}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="mono text-[11px] text-(--accent) no-underline transition-opacity hover:opacity-80">Read more ↗</a
+						>{:else}<span class="text-(--accent)" style="opacity:0.75">"</span>{/if}
 				</blockquote>
 				<div class="flex items-center gap-3 border-t border-(--line) pt-4">
 					<div

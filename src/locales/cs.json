@@ -112,14 +112,21 @@
 		"projectNotefulDesc": "Aplikace pro poznámky s hierarchií štítků a synchronizací v reálném čase.",
 		"projectDisenchantmentDesc": "Minecraft plugin vylepšující vanilkový enchanting systém.",
 
-		"testimonial1Quote": "\"Jeho schopnosti řešit problémy a zkušený přístup byly jasně viditelné. Je vynikající v vysvětlování nástrojů a postupů méně zkušeným členům týmu. Každý by měl štěstí ho mít ve svém týmu.\"",
-		"testimonial1Role": "Software Engineering · Stejný tým, 2 projekty",
-		"testimonial2Quote": "\"Janova schopnost řešit složitá technická řešení a úspěšně překonávat výzvy byla opravdu pozoruhodná. Projevil nejen technické odborné znalosti, ale také manažerské schopnosti — rozděloval práci na menší části, aby mohlo bezproblémově přispět více členů týmu.\"",
-		"testimonial2Role": "Senior Backend Developer · Přímý manažer, Precismo",
-		"testimonial3Quote": "\"Rád ho doporučím pro jeho úžasné schopnosti řešit problémy a rychlé tempo učení. Rychle se naučil novou technologii, kterou předtím nepoužíval, a velmi rychle se v ní vynikl.\"",
-		"testimonial3Role": "Full-stack Developer · HAXAGON",
-		"testimonial4Quote": "\"Všestranný přínos pro každý tým. Konzistentně demonstroval svou schopnost přeměnit projektové požadavky v úspěšné webové aplikace. Celým srdcem doporučuji Jana pro jeho silné technické dovednosti a odhodlání dosahovat výsledků.\"",
-		"testimonial4Role": "Zakladatel & CTO · PRECISMO"
+		"testimonial1Quote": "S Janem jsme několik měsíců spolupracovali na kompletním systému pro dobíjecí stanice elektromobilů. Jan je zkušený a promyšlený full-stack vývojář s inovativním přístupem k řešení problémů a silným týmovým duchem.",
+		"testimonial1Role": "Full-Stack vývojář · IONT Tech · Stejný tým",
+		"testimonial1Name": "Petr Hric",
+		"testimonial2Quote": "S Janem jsem dosud spolupracoval na dvou projektech. V obou případech vynikly jeho schopnosti řešit problémy a zkušený přístup. Je obeznámen s celou řadou nástrojů a postupů a dokáže je skvěle a srozumitelně vysvětlit méně zkušeným členům týmu. Rovněž se rád učí nové technologie a vždy se snaží najít řešení, která budou nejlépe fungovat jak pro projekt, tak pro tým. Kdokoli by měl štěstí, kdyby ho měl ve svém týmu!\n",
+		"testimonial2Role": "Software Engineering · On · Stejný tým, 2 projekty",
+		"testimonial2Name": "Amelie Engelmaierová",
+		"testimonial3Quote": "Měla jsem to potěšení pracovat s Janem v HAXAGONu, kde působil jako front-end vývojář pro vue.js. Ráda ho doporučuji pro jeho úžasné schopnosti řešit problémy a rychlé tempo učení. Rychle se naučil nové technologie, které předtím nepoužíval, a velmi rychle v nich vynikal.",
+		"testimonial3Role": "Full-Stack vývojář · HAXAGON · Senior",
+		"testimonial3Name": "Marek Vospěl",
+		"testimonial4Quote": "S radostí doporučuji Jana, cenného člena týmu zákaznického portálu, který jsem měl tu čest vést. Janovy výjimečné kvality se projevily během jeho působení ve společnosti Precismo. Jeho schopnost řešit složité technické úkoly a úspěšně překonávat výzvy byla skutečně pozoruhodná. Janova zdatnost při řešení technických úkolů byla opravdu působivá a zanechala trvalý dopad na naše projekty. Jeho schopnosti řešit problémy byly obzvláště patrné během jeho zapojení do projektu 3D Banner, kde sehrál klíčovou roli při řešení výzev a zajištění úspěchu projektu. Janova schopnost orientovat se v technických složitostích a přispívat inovativními řešeními ho skutečně odlišovala. Jedním z příkladů, který obzvláště ilustroval jeho schopnosti, byla situace, kdy provedl komplexní analýzu nového modulu zákaznického portálu zaměřeného na správu obsahu. V tomto případě Jan prokázal nejen svou technickou odbornost, ale také své manažerské schopnosti. Dokázal úkol rozdělit na menší, lépe zvládnutelné části. To umožnilo hladkou spolupráci více členů týmu, podpořilo spolupráci a zajistilo efektivní postup projektu. Janovy příspěvky a odhodlání byly chvályhodné a jsem přesvědčen, že jeho dovednosti a elán budou i nadále pozitivně ovlivňovat jakýkoli tým, jehož se stane součástí.",
+		"testimonial4Role": "Senior Backend Developer · Precismo · Přímý nadřízený",
+		"testimonial4Name": "Petr Krejčí",
+		"testimonial5Quote": "Měl jsem tu čest spolupracovat s Janem, středně pokročilým full-stack webovým programátorem, který se dobře orientuje v databázích MySQL, JavaScriptu, TypeScriptu a Node.js pro backendový vývoj. Jako cenný člen našeho webového vývojového týmu pracujícího na bázi Scrumu Jan důsledně prokazoval svou schopnost proměnit projektové požadavky v úspěšné webové aplikace. Jeho odborné znalosti v oblasti frontendového i backendového vývoje z něj činí všestranný přínos pro jakýkoli tým. Jana vřele doporučuji pro jeho silné technické dovednosti a odhodlání dosahovat výsledků.",
+		"testimonial5Role": "Zakladatel a CTO · PRECISMO · Senior",
+		"testimonial5Name": "Zdeněk Glazer"
 	},
 
 	"blog": {
