@@ -46,6 +46,7 @@
 			company: 'IONT TECH',
 			role: 'FULLSTACK',
 			descKey: 'projectIontChargeDesc',
+			chips: ['SvelteKit', 'Fastify', 'Docker Swarm', 'MongoDB'],
 			ctaKey: 'readCaseStudy'
 		},
 		corac_scorecard: {
@@ -53,6 +54,7 @@
 			company: 'CORAC',
 			role: 'FRONTEND',
 			descKey: 'projectCoraScorecardDesc',
+			chips: ['Vue.js', 'Shadcn UI'],
 			ctaKey: 'viewProject'
 		},
 		disenchantment: {
@@ -60,7 +62,7 @@
 			company: 'PERSONAL',
 			role: 'JAVA',
 			descKey: 'projectDisenchantmentDesc',
-			chips: ['Java'],
+			chips: ['Java', 'Spigot API'],
 			ctaKey: 'viewProject'
 		},
 		iont_admin: {
@@ -68,14 +70,15 @@
 			company: 'IONT TECH',
 			role: 'FULLSTACK',
 			descKey: 'projectIontAdminDesc',
+			chips: ['Svelte', 'Fastify', 'Raspberry Pi'],
 			ctaKey: 'viewProject'
 		},
 		noteful: {
 			size: 'default',
 			company: 'PERSONAL',
-			role: 'FULLSTACK',
+			role: 'DESIGN',
 			descKey: 'projectNotefulDesc',
-			chips: ['Vue', 'Node'],
+			chips: ['Figma'],
 			ctaKey: 'viewProject'
 		},
 		pangolin: {
@@ -83,7 +86,7 @@
 			company: 'WORK',
 			role: 'FRONTEND',
 			descKey: 'projectPangolinDesc',
-			chips: ['React', 'Chart.js'],
+			chips: ['React.js', 'TailwindCSS'],
 			ctaKey: 'viewProject'
 		}
 	};
