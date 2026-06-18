@@ -108,7 +108,20 @@
 	];
 
 	const testimonials = [
-		{ quoteKey: 'testimonial1Quote', name: 'Petr Hric', roleKey: 'testimonial1Role', initials: 'PH', linkedin: 'https://www.linkedin.com/in/jan-kominek/' },
+		{
+			quoteKey: 'testimonial0Quote',
+			name: 'Adam Motvička',
+			roleKey: 'testimonial0Role',
+			initials: 'AM',
+			linkedin: 'https://www.linkedin.com/in/jan-kominek/'
+		},
+		{
+			quoteKey: 'testimonial1Quote',
+			name: 'Petr Hric',
+			roleKey: 'testimonial1Role',
+			initials: 'PH',
+			linkedin: 'https://www.linkedin.com/in/jan-kominek/'
+		},
 		{
 			quoteKey: 'testimonial2Quote',
 			name: 'Amelie Engelmaierová',
@@ -143,14 +156,26 @@
 </script>
 
 <svelte:head>
-	<title>Jan Komínek — Freelance Senior Frontend Engineer, Prague</title>
+	<title>Jan Komínek — Senior Fullstack Engineer, Prague</title>
+	<meta
+		name="description"
+		content="Jan Komínek — Senior Fullstack Engineer in Prague. Vue.js, React.js, TypeScript, Node.js. Available for part-time B2B contracts. EV charging platforms, data tooling, real-time dashboards."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Jan Komínek — Senior Fullstack Engineer, Prague" />
+	<meta
+		property="og:description"
+		content="Jan Komínek — Senior Fullstack Engineer in Prague. Vue.js, React.js, TypeScript, Node.js. Available for part-time B2B contracts. EV charging platforms, data tooling, real-time dashboards."
+	/>
+	<meta property="og:url" content="https://jankominek.com" />
 	<link rel="preload" as="image" href="/images/profile.webp" type="image/webp" fetchpriority="high" />
 </svelte:head>
 
 <!-- GEO: machine-readable for LLMs -->
 <p class="sr-only">
-	Jan Komínek is a Freelance Senior Frontend Engineer based in Prague, Czech Republic, specializing in Vue.js, React.js, TypeScript, and Node.js. Currently
-	available for part-time B2B contracts up to 10 hours per week.
+	Jan Komínek is a Senior Fullstack Engineer based in Prague, Czech Republic, specializing in Vue.js, React.js, TypeScript, Node.js, and Docker. He has led
+	greenfield products end-to-end, mentors junior engineers, and is seeking technical leadership and CTO-track opportunities. Currently available for part-time
+	B2B contracts up to 10 hours per week.
 </p>
 
 <!-- HERO -->
@@ -210,16 +235,16 @@
 	</div>
 
 	<div
-		class="relative col-2 row-start-1 row-end-6 h-97.5 w-[320px] self-center overflow-hidden rounded-[180px_180px_12px_12px] border border-(--line-2) bg-linear-to-b from-[#2a2a2a] to-[#181818] max-[900px]:col-1 max-[900px]:row-auto max-[900px]:mx-auto max-[900px]:h-100 max-[900px]:w-full max-[900px]:max-w-[320px]"
+		class="relative col-2 row-start-1 row-end-6 h-120 w-88 self-center overflow-hidden rounded-[180px_180px_12px_12px] border border-(--line-2) bg-linear-to-b from-[#2a2a2a] to-[#181818] max-[900px]:col-1 max-[900px]:row-auto max-[900px]:mx-auto max-[900px]:h-100 max-[900px]:w-full max-[900px]:max-w-[320px]"
 	>
 		<img
 			src="/images/profile.webp"
 			alt="Jan Komínek — Senior Frontend Engineer"
-			width="1439"
-			height="1439"
+			width="1589"
+			height="2400"
 			fetchpriority="high"
 			decoding="async"
-			class="h-full w-full object-cover object-top"
+			class="h-full w-full object-cover"
 		/>
 		<div
 			class="mono absolute right-3.5 bottom-3.5 left-3.5 flex items-center gap-2 rounded-lg border border-(--line-2) bg-[color-mix(in_srgb,var(--bg)_80%,transparent)] px-3 py-2.25 text-[11px] backdrop-blur-sm"
