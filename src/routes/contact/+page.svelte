@@ -5,15 +5,16 @@
 </script>
 
 <svelte:head>
-	<title>Contact — Jan Komínek, Senior Frontend Engineer</title>
+	<title>Contact — Jan Komínek, Senior Fullstack Engineer</title>
 	<meta
 		name="description"
-		content="Get in touch with Jan Komínek — Senior Frontend / Fullstack Engineer. Book a 30-min call or fill out the project form for part-time B2B contracts."
+		content="Hire Jan Komínek — Freelance Senior Fullstack Engineer, Prague. Available part-time B2B up to 10 h/week. Book a 30-min call or send a project brief."
 	/>
-	<meta property="og:title" content="Contact — Jan Komínek, Senior Frontend Engineer" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Contact — Jan Komínek, Senior Fullstack Engineer" />
 	<meta
 		property="og:description"
-		content="Book a call or fill out the project form to work with Jan Komínek, Senior Frontend Engineer, on a part-time B2B basis."
+		content="Hire Jan Komínek — Freelance Senior Fullstack Engineer, Prague. Available part-time B2B up to 10 h/week. Book a 30-min call or send a project brief."
 	/>
 	<meta property="og:url" content="https://jankominek.com/contact" />
 </svelte:head>
@@ -22,7 +23,7 @@
 	class="mx-auto grid max-w-(--max) grid-cols-2 gap-16 px-8 pt-10 pb-30 max-[900px]:grid-cols-1 max-[900px]:gap-12 max-[900px]:px-5 max-[900px]:pt-7 max-[900px]:pb-20"
 >
 	<!-- LEFT COL -->
-	<div>
+	<div class="max-[900px]:static min-[900px]:sticky min-[900px]:top-8 min-[900px]:self-start">
 		<div class="mono mb-3.5 text-[11px] tracking-widest text-(--fg-4) uppercase">{$_('contact.hireLabel')}</div>
 		<h1 class="serif mt-0 mb-5 text-[clamp(32px,5vw,56px)] leading-none tracking-[-0.025em]">{$_('contact.h1')}</h1>
 		<p class="m-0 max-w-115 text-[17px] leading-[1.55] text-(--fg-2)">{$_('contact.intro')}</p>
