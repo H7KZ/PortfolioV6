@@ -27,3 +27,4 @@ vite.config.ts.timestamp-*
 .claude/*.local.*
 .claude/**/local
 .internal/
+docs/superpowers

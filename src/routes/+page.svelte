@@ -239,7 +239,7 @@
 	>
 		<img
 			src="/images/profile.webp"
-			alt="Jan Komínek — Senior Frontend Engineer"
+			alt="Jan Komínek — Senior Fullstack Engineer"
 			width="1589"
 			height="2400"
 			fetchpriority="high"

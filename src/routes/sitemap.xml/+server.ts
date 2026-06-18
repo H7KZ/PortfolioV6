@@ -4,7 +4,7 @@ const SITE = 'https://jankominek.com';
 const LOCALES = ['en', 'cs'];
 
 const STATIC_PAGES = [
-	{ path: '', priority: '1.0' },
+	{ path: '/', priority: '1.0' },
 	{ path: '/resume', priority: '0.6' },
 	{ path: '/contact', priority: '0.6' }
 ];
@@ -17,7 +17,9 @@ const PROJECT_SLUGS = [
 	'corac_scorecard',
 	'disenchantment',
 	'noteful',
-	'pangolin'
+	'pangolin',
+	'portfolio_v4',
+	'portfolio_v5'
 ];
 
 const PROJECT_PAGES = PROJECT_SLUGS.map((slug) => ({
@@ -50,7 +52,7 @@ ${[...STATIC_PAGES, ...PROJECT_PAGES].map(({ path, priority }) => renderUrl(path
 
 	return new Response(xml, {
 		headers: {
-			'Content-Type': 'application/xml',
+			'Content-Type': 'application/xml; charset=utf-8',
 			'Cache-Control': 'max-age=3600'
 		}
 	});
