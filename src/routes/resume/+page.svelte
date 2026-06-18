@@ -69,13 +69,17 @@
 </script>
 
 <svelte:head>
-	<title>Resumé — Jan Komínek, Senior Frontend Engineer</title>
+	<title>Resumé — Jan Komínek, Senior Fullstack Engineer, Prague</title>
 	<meta
 		name="description"
-		content="Resumé of Jan Komínek — Senior Frontend / Fullstack Engineer based in Prague. Vue.js, React.js, TypeScript, Node.js, Docker. Available for part-time B2B contracts."
+		content="CV of Jan Komínek — Senior Fullstack Engineer, Prague. 4+ years · Vue.js · React.js · TypeScript · Node.js · Docker. Open to part-time B2B and engineering leadership roles."
 	/>
-	<meta property="og:title" content="Resumé — Jan Komínek, Senior Frontend Engineer" />
-	<meta property="og:description" content="Resumé of Jan Komínek — Senior Frontend / Fullstack Engineer. Vue.js, React.js, TypeScript, Node.js." />
+	<meta property="og:type" content="profile" />
+	<meta property="og:title" content="Resumé — Jan Komínek, Senior Fullstack Engineer, Prague" />
+	<meta
+		property="og:description"
+		content="CV of Jan Komínek — Senior Fullstack Engineer, Prague. 4+ years · Vue.js · React.js · TypeScript · Node.js · Docker. Open to part-time B2B and engineering leadership roles."
+	/>
 	<meta property="og:url" content="https://jankominek.com/resume" />
 </svelte:head>
 
