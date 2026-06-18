@@ -10,18 +10,21 @@
 
 	let { children } = $props();
 
+	const SITE = 'https://jankominek.com';
+
 	const jsonLd =
 		`<script type="application/ld+json">${JSON.stringify({
 			'@context': 'https://schema.org',
 			'@type': 'Person',
 			name: 'Jan Komínek',
 			alternateName: 'Jan Kominek',
-			url: 'https://jankominek.com',
+			url: SITE,
 			email: 'contact@jankominek.com',
-			jobTitle: 'Senior Frontend / Fullstack Engineer',
+			jobTitle: 'Senior Fullstack Engineer',
 			description:
-				'Senior Frontend and Fullstack Engineer based in Prague, Czech Republic. Specialising in Vue.js, React.js, TypeScript, Node.js, and Docker. Available for part-time B2B contracts up to 10 hours per week.',
+				'Senior Fullstack Engineer based in Prague, Czech Republic. Specialising in Vue.js, React.js, TypeScript, Node.js, and Docker. Led greenfield products end-to-end and mentors junior engineers. Available for part-time B2B contracts and actively seeking technical leadership and CTO-track roles.',
 			address: { '@type': 'PostalAddress', addressLocality: 'Prague', addressCountry: 'CZ' },
+			worksFor: { '@type': 'Organization', name: 'CORAC Engineering' },
 			sameAs: ['https://www.linkedin.com/in/jan-kominek'],
 			knowsAbout: [
 				'Vue.js',
@@ -33,12 +36,42 @@
 				'Docker Swarm',
 				'PostgreSQL',
 				'Redis',
-				'Rust',
 				'CI/CD',
 				'Microservices',
-				'System Architecture'
-			]
+				'System Architecture',
+				'Team Leadership',
+				'Engineering Management'
+			],
+			hasOfferCatalog: {
+				'@type': 'OfferCatalog',
+				name: 'Freelance Engineering Services',
+				itemListElement: [
+					{
+						'@type': 'Offer',
+						itemOffered: {
+							'@type': 'Service',
+							name: 'Greenfield product development — idea to production'
+						}
+					},
+					{
+						'@type': 'Offer',
+						itemOffered: {
+							'@type': 'Service',
+							name: 'Legacy rescue and stabilisation'
+						}
+					},
+					{
+						'@type': 'Offer',
+						itemOffered: {
+							'@type': 'Service',
+							name: 'Fractional senior engineer — architecture, code review, mentoring'
+						}
+					}
+				]
+			}
 		})}</` + `script>`;
+
+	const canonicalUrl = $derived(`${SITE}${page.url.pathname}`);
 
 	onMount(() => {
 		return locale.subscribe((l) => {
@@ -67,6 +100,15 @@
 	<!-- eslint-disable svelte/no-at-html-tags -->
 	{@html jsonLd}
 	<!-- eslint-enable svelte/no-at-html-tags -->
+	<link rel="canonical" href={canonicalUrl} />
+	<link rel="alternate" hreflang="en" href="{canonicalUrl}?locale=en" />
+	<link rel="alternate" hreflang="cs" href="{canonicalUrl}?locale=cs" />
+	<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+	<meta property="og:image" content="{SITE}/images/og-default.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="{SITE}/images/og-default.jpg" />
 </svelte:head>
 
 <a
