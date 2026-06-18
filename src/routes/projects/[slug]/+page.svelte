@@ -17,13 +17,14 @@
 
 	const SITE = 'https://jankominek.com';
 	const projectUrl = $derived(`${SITE}/projects/${data.slug}`);
-	const metaDescription = $derived(data.meta.tags?.filter((t) => !['Work', 'Personal'].includes(t)).join(', ') ?? data.meta.title);
+	const metaDescription = $derived(data.meta.lede ?? data.meta.tags?.filter((t) => !['Work', 'Personal'].includes(t)).join(', ') ?? data.meta.title);
 
 	const jsonLd = $derived(
 		JSON.stringify({
 			'@context': 'https://schema.org',
 			'@type': 'CreativeWork',
 			name: data.meta.title,
+			description: data.meta.lede ?? data.meta.title,
 			url: projectUrl,
 			dateCreated: data.meta.date,
 			creator: {
@@ -52,7 +53,7 @@
 
 <svelte:head>
 	<title>{data.meta.title} — Jan Komínek</title>
-	<meta name="description" content="{data.meta.title} — {metaDescription}. A project by Jan Komínek, Senior Frontend / Fullstack Engineer." />
+	<meta name="description" content="{data.meta.title} — {metaDescription}. A project by Jan Komínek, Senior Fullstack Engineer." />
 
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{data.meta.title} — Jan Komínek" />
