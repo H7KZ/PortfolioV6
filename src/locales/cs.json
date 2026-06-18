@@ -56,7 +56,7 @@
 	},
 
 	"home": {
-		"fullstack": "Senior Frontend Engineer",
+		"fullstack": "Senior Fullstack Engineer",
 		"freelance": "Freelance",
 		"prague": "Praha, CZ",
 		"motto": "Dostupný pro part-time B2B kontrakty · 3+ let senior zkušeností",
@@ -65,7 +65,7 @@
 		"bookACall": "Rezervujte si hovor",
 		"explore": "Prozkoumejte mé portfolio",
 
-		"valueProp": "Produkčně připravené platformy, <strong>dodané bez přirážky agentury.</strong> EV nabíjecí sítě, zero-trust datové nástroje, dashboardy v reálném čase — a infrastruktura, která to vše drží pohromadě.",
+		"valueProp": "Platformy od A do Z, <strong>navržené a vedené od prvního dne.</strong> EV nabíjecí sítě, zero-trust datové nástroje, dashboardy v reálném čase — a týmy, které je provozují.",
 		"startProject": "Zahájit projekt",
 		"viewResume": "Zobrazit životopis",
 		"yearsLabel": "Let praxe",
@@ -112,6 +112,8 @@
 		"projectNotefulDesc": "Aplikace pro poznámky s hierarchií štítků a synchronizací v reálném čase.",
 		"projectDisenchantmentDesc": "Minecraft plugin vylepšující vanilkový enchanting systém.",
 
+		"testimonial0Quote": "Jan se k našemu týmu připojil jako junior, hned po zahájení studia na vysoké škole. Už tehdy mi bylo jasné, že je talentovaný programátor. Velmi dobře chápe, že jako programátor musí mít širší nadhled, který přesahuje pouhé programování. V naší společnosti zvládl velké množství práce a vždy bylo zřejmé, že dokáže sám prozkoumat souvislosti a klást správné otázky, aby si doplnil mezery ve svém porozumění produktu.",
+		"testimonial0Role": "Full-Stack Engineer · Intedat · Přímý nadřízený",
 		"testimonial1Quote": "S Janem jsme několik měsíců spolupracovali na kompletním systému pro dobíjecí stanice elektromobilů. Jan je zkušený a promyšlený full-stack vývojář s inovativním přístupem k řešení problémů a silným týmovým duchem.",
 		"testimonial1Role": "Full-Stack vývojář · IONT Tech · Stejný tým",
 		"testimonial1Name": "Petr Hric",

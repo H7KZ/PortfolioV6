@@ -56,7 +56,7 @@
 	},
 
 	"home": {
-		"fullstack": "Senior Frontend Engineer",
+		"fullstack": "Senior Fullstack Engineer",
 		"freelance": "Freelance",
 		"prague": "Prague, CZ",
 		"motto": "Open to part-time B2B contracts · 3+ years senior-level experience",
@@ -65,7 +65,7 @@
 		"bookACall": "Book a Call",
 		"explore": "Explore my portfolio",
 
-		"valueProp": "Production-ready platforms, <strong>shipped without the agency overhead.</strong> EV charging networks, zero-trust data tooling, real-time dashboards — and the infrastructure that holds it all together.",
+		"valueProp": "End-to-end platforms, <strong>architected and led from day one.</strong> EV charging networks, zero-trust data tooling, real-time dashboards — and the teams that keep them running.",
 		"startProject": "Start a project",
 		"viewResume": "View resumé",
 		"yearsLabel": "Years industry",
@@ -112,6 +112,8 @@
 		"projectNotefulDesc": "Note-taking app with tag hierarchies & real-time sync.",
 		"projectDisenchantmentDesc": "A minecraft plugin that enhances the vanilla enchanting system.",
 
+		"testimonial0Quote": "Jan joined our team as a junior, just starting university. Even back then, it was clear to me that he was a talented programmer. He understands very well that as a programmer, he needs to have a broader perspective beyond just coding. He handled a great deal of work at our company, and it was always evident that he could research the context himself and ask the right questions to fill in any missing product context.",
+		"testimonial0Role": "Full-Stack Engineer · Intedat · Direct manager",
 		"testimonial1Quote": "We worked with Jan for several months on a complete system for electric vehicle charging stations. Jan is a skilled and thoughtful full-stack developer with an innovative approach to problem-solving and a strong team spirit.",
 		"testimonial1Role": "Full-Stack Developer · IONT Tech · Same team",
 		"testimonial1Name": "Petr Hric",
