@@ -58,8 +58,7 @@
 		aria-describedby={error ? errorId : undefined}
 		{readonly}
 		{disabled}
-		{oninput}
-	></textarea>
+		{oninput}></textarea>
 	<p id={errorId} class="mt-0.5 h-4 text-xs text-red-400" aria-live="polite">
 		{error}
 	</p>

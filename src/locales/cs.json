@@ -263,7 +263,7 @@
 		],
 
 		"exp1Dates": "DUB 2025 — NYNÍ",
-		"exp1Duration": "1 rok+",
+		"exp1Duration": "probíhá",
 		"exp1Role": "Senior Frontend Engineer",
 		"exp1Company": "CORAC ENGINEERING · FREELANCE · VZDÁLENĚ",
 		"exp1Desc": "Budování DeepTrace — platformy pro datovou provenanci a integritu pro Earth Observation data. Jediný frontend engineer.",
@@ -271,8 +271,8 @@
 		"exp1Hi2": "Implementoval klientskou verifikaci hash-chain podle zero-trust architektury",
 		"exp1Hi3": "Integroval AWS Cognito (OAuth) pro bezpečnou autentizaci pouze na straně klienta",
 
-		"exp2Dates": "ZÁŘ 2024 — NYNÍ",
-		"exp2Duration": "1 rok 8 měs.",
+		"exp2Dates": "ZÁŘ 2024 — ČVN 2026",
+		"exp2Duration": "1 rok 10 měs.",
 		"exp2Role": "Fullstack Engineer",
 		"exp2Company": "INTEDAT · FREELANCE · VZDÁLENĚ",
 		"exp2Desc": "Vývoj a správa fullstack datové platformy zaměřené na škálovatelnost, výkon vyhledávání a spolehlivou infrastrukturu.",
@@ -314,7 +314,7 @@
 		"exp7Desc": "Praktická IT podpora: Windows pracovní stanice, síťové tiskárny, IoT zařízení, místní síťová infrastruktura a bezpečnostní školení.",
 
 		"edu1Dates": "ZÁŘ 2024 — ČVC 2027",
-		"edu1Duration": "Bakalář, probíhá · Prospěch 2",
+		"edu1Duration": "Bakalář, probíhá",
 		"edu1Role": "Aplikovaná informatika",
 		"edu1Org": "VYSOKÁ ŠKOLA EKONOMICKÁ V PRAZE (VŠE)",
 		"edu1Desc": "Bc. zaměřený na propojení softwarového inženýrství a obchodní strategie. Návrh systémů, strojové učení, cloud computing, datová analytika spolu s obchodními základy.",

@@ -13,15 +13,17 @@
 			</div>
 			<h2 class="serif m-0 mb-6 text-[clamp(26px,4vw,40px)] leading-[1.15] font-light tracking-[-0.02em] text-(--fg)">
 				{#if $locale === 'cs'}
-					Probereme <span
+					Probereme <a
+						href="/contact"
 						class="relative top-[-0.1em] mx-1 inline-flex items-center rounded-full bg-(--fg) px-3.5 py-1.5 align-middle text-[0.5em] font-(--font-sans) tracking-normal text-(--bg)"
-						>Napišme si →</span
+						>Napišme si →</a
 					> vaši vizi.
 				{:else}
 					Let's discuss your<br />vision
-					<span
+					<a
+						href="/contact"
 						class="relative top-[-0.1em] mx-1 inline-flex items-center rounded-full bg-(--fg) px-3.5 py-1.5 align-middle text-[0.5em] font-(--font-sans) tracking-normal text-(--bg)"
-						>Let's talk →</span
+						>Let's talk →</a
 					> with me.
 				{/if}
 			</h2>

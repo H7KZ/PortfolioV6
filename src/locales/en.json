@@ -263,7 +263,7 @@
 		],
 
 		"exp1Dates": "APR 2025 — PRESENT",
-		"exp1Duration": "1 yr+",
+		"exp1Duration": "ongoing",
 		"exp1Role": "Senior Frontend Engineer",
 		"exp1Company": "CORAC ENGINEERING · FREELANCE · REMOTE",
 		"exp1Desc": "Building DeepTrace — a data provenance and integrity platform for Earth Observation data. Sole frontend engineer.",
@@ -271,8 +271,8 @@
 		"exp1Hi2": "Implemented client-side hash-chain verification following zero-trust architecture",
 		"exp1Hi3": "Integrated AWS Cognito (OAuth) for secure client-side-only authentication",
 
-		"exp2Dates": "SEP 2024 — PRESENT",
-		"exp2Duration": "1 yr 8 mos",
+		"exp2Dates": "SEP 2024 — JUN 2026",
+		"exp2Duration": "1 yr 10 mos",
 		"exp2Role": "Fullstack Engineer",
 		"exp2Company": "INTEDAT · FREELANCE · REMOTE",
 		"exp2Desc": "Developing and maintaining a fullstack data platform focused on scalability, search performance, and reliable infrastructure.",
@@ -314,7 +314,7 @@
 		"exp7Desc": "Hands-on IT support: Windows workstations, network printers, IoT devices, local network infrastructure, and safety training.",
 
 		"edu1Dates": "SEP 2024 — JUL 2027",
-		"edu1Duration": "Bachelor's, ongoing · Grade 2",
+		"edu1Duration": "Bachelor's, ongoing",
 		"edu1Role": "Applied Computer Science",
 		"edu1Org": "PRAGUE UNIVERSITY OF ECONOMICS AND BUSINESS (VŠE)",
 		"edu1Desc": "B.S. focused on bridging software engineering and business strategy. System design, machine learning, cloud computing, data analytics alongside business fundamentals.",

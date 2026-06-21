@@ -29,9 +29,7 @@ const PROJECT_PAGES = PROJECT_SLUGS.map((slug) => ({
 
 function renderUrl(path: string, priority: string): string {
 	const loc = `${SITE}${path}`;
-	const alternates = LOCALES.map(
-		(l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${loc}?locale=${l}" />`
-	).join('\n');
+	const alternates = LOCALES.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${loc}?locale=${l}" />`).join('\n');
 	return `  <url>
     <loc>${loc}</loc>
     <changefreq>monthly</changefreq>
