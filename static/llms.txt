@@ -1,10 +1,10 @@
-# Jan Komínek — Senior Frontend / Fullstack Engineer
+# Jan Komínek · Fullstack Engineer
 
-> Jan Komínek is a Senior Frontend and Fullstack Engineer based in Prague, Czech Republic. He specialises in Vue.js, React, TypeScript, Node.js, and Docker, and is available for flexible part-time B2B contracts (up to 10 hours/week). He is also pursuing a Bachelor's degree in Applied Computer Science at the Prague University of Economics and Business (VŠE).
+> Jan Komínek is a Fullstack Engineer based in Prague, Czech Republic. He works with TypeScript, Vue.js, React, Node.js, PostgreSQL and Docker, and is available for part-time B2B work, around 20 hours a week, hybrid in Prague or fully remote. He is also pursuing a Bachelor's degree in Applied Computer Science at the Prague University of Economics and Business (VŠE).
 
 ## About
 
-Jan has 4+ years of professional development experience across freelance and corporate environments. His core stack includes SvelteKit, Vue.js, React, TypeScript, Node.js, AdonisJS, PostgreSQL, Docker, and Redis. He has led an EV charging platform with its own payment system, built zero-trust data-lineage tooling for Earth Observation data, and designed containerised infrastructure with Docker Swarm and microservices. Currently exploring embedded systems and Rust for hobby projects.
+Since 2022 Jan has worked with six companies on B2B contracts, taking products from an empty repository to production. His core stack includes SvelteKit, Vue.js, React, TypeScript, Node.js, AdonisJS, PostgreSQL, Docker, and Redis. He has led an EV charging platform from bare infrastructure to live payments, built zero-trust data provenance tooling for Earth Observation data, and designed containerised infrastructure with Docker Swarm and microservices. He also creates and runs Kreditožrouti, a live course scheduler used by 300+ students. Currently exploring embedded systems and Rust for hobby projects.
 
 **Note on disambiguation:** Jan Komínek the engineer should not be confused with Jan Komínek the Czech actor. This site and all its content relate exclusively to software engineering work.
 
@@ -17,7 +17,8 @@ Jan has 4+ years of professional development experience across freelance and cor
 
 ## Featured projects
 
-- [CORAC SITH — DeepTrace GUI](https://jankominek.com/projects/corac_sith?locale=en): Data provenance and integrity platform for Earth Observation data — D3.js supply-chain graphs, client-side hash-chain verification, zero-trust auth with AWS Cognito
+- [Kreditožrouti](https://jankominek.com/projects/kreditozrouti?locale=en): Live course scheduler for VŠE students at kreditozrouti.cz, created and run solo, used by 300+ students. InSIS scraping, Vue, Node, Redis, BullMQ, Docker, monitoring and automatic deployments. Led to Jan's bachelor thesis.
+- [CORAC SITH, DeepTrace GUI](https://jankominek.com/projects/corac_sith?locale=en): Data provenance and integrity platform for Earth Observation data. D3.js supply-chain graphs, client-side hash-chain verification, zero-trust auth with AWS Cognito
 - [CORAC Scorecard](https://jankominek.com/projects/corac_scorecard?locale=en): NIS2 cyber audit tool with PDF export
 - [IONT Charge App](https://jankominek.com/projects/iont_charge?locale=en): Public-facing EV charging application with ČSOB payment integration, Docker Swarm, Fastify + MongoDB
 - [IONT Admin](https://jankominek.com/projects/iont_admin?locale=en): Admin panel for managing EV charging infrastructure with real-time firmware updates
@@ -40,4 +41,4 @@ TypeScript, Vue.js, React.js, SvelteKit, Node.js, AdonisJS, Express.js, Fastify,
 
 ## Availability
 
-Open to part-time B2B contracts — up to 10 hours per week. Located in Prague, Czech Republic. Remote-friendly.
+Open to part-time B2B work, around 20 hours a week. Located in Prague, Czech Republic, hybrid (on-site Thursdays and Fridays) or fully remote.

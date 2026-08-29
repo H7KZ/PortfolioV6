@@ -50,9 +50,9 @@ ${categories}
 	const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>${AUTHOR} — Engineering Blog</title>
+    <title>${AUTHOR} · Engineering Blog</title>
     <link>${SITE}/blog</link>
-    <description>DevOps, SvelteKit, TypeScript, and system architecture — by Jan Komínek, Senior Frontend / Fullstack Engineer based in Prague.</description>
+    <description>DevOps, SvelteKit, TypeScript, and system architecture, by Jan Komínek, Fullstack Engineer based in Prague.</description>
     <language>en</language>
     <managingEditor>${AUTHOR_EMAIL} (${AUTHOR})</managingEditor>
     <webMaster>${AUTHOR_EMAIL} (${AUTHOR})</webMaster>

@@ -7,7 +7,7 @@
 	const experiences = [
 		{
 			key: 'exp1',
-			current: true,
+			current: false,
 			highlights: ['Hi1', 'Hi2', 'Hi3'],
 			chips: [
 				{ label: 'Vue 3', accent: true },
@@ -20,7 +20,7 @@
 		},
 		{
 			key: 'exp2',
-			current: true,
+			current: false,
 			highlights: ['Hi1', 'Hi2', 'Hi3'],
 			chips: [
 				{ label: 'Node.js', accent: true },
@@ -32,7 +32,6 @@
 				{ label: 'Elasticsearch' }
 			]
 		},
-		{ key: 'exp3', current: false, highlights: [] as string[], chips: [] as { label: string; accent?: boolean }[] },
 		{
 			key: 'exp4',
 			current: false,
@@ -58,27 +57,54 @@
 			current: false,
 			highlights: [] as string[],
 			chips: [{ label: 'Vue.js' }, { label: 'TypeScript' }, { label: 'Tailwind' }]
+		}
+	];
+
+	const ownProduct = [
+		{
+			key: 'prod1',
+			current: true,
+			highlights: ['Hi1', 'Hi2', 'Hi3'],
+			chips: [
+				{ label: 'TypeScript', accent: true },
+				{ label: 'Vue.js' },
+				{ label: 'Node.js' },
+				{ label: 'Redis' },
+				{ label: 'BullMQ' },
+				{ label: 'Docker' },
+				{ label: 'Traefik' },
+				{ label: 'CI/CD' }
+			]
+		}
+	];
+
+	const leadership = [
+		{
+			key: 'lead1',
+			current: false,
+			highlights: ['Hi1', 'Hi2', 'Hi3'],
+			chips: [{ label: 'TypeScript' }, { label: 'Node.js' }, { label: 'Docker' }, { label: 'Traefik' }, { label: 'Redis' }, { label: 'BullMQ' }]
 		},
-		{ key: 'exp7', current: false, highlights: [] as string[], chips: [] as { label: string; accent?: boolean }[] }
+		{ key: 'lead2', current: false, highlights: [] as string[], chips: [] as { label: string; accent?: boolean }[] }
 	];
 
 	const education = [
-		{ key: 'edu1', current: true, highlights: ['Hi1', 'Hi2'] },
+		{ key: 'edu1', current: false, highlights: ['Hi1', 'Hi2'] },
 		{ key: 'edu2', current: false, highlights: [] as string[] }
 	];
 </script>
 
 <svelte:head>
-	<title>Resumé — Jan Komínek, Senior Fullstack Engineer, Prague</title>
+	<title>Resumé · Jan Komínek, Fullstack Engineer, Prague</title>
 	<meta
 		name="description"
-		content="CV of Jan Komínek — Senior Fullstack Engineer, Prague. 4+ years · Vue.js · React.js · TypeScript · Node.js · Docker. Open to part-time B2B and engineering leadership roles."
+		content="CV of Jan Komínek, Fullstack Engineer in Prague. Building products from scratch since 2022. TypeScript, Vue.js, React, Node.js, PostgreSQL, Docker. Open to part-time B2B and engineering leadership."
 	/>
 	<meta property="og:type" content="profile" />
-	<meta property="og:title" content="Resumé — Jan Komínek, Senior Fullstack Engineer, Prague" />
+	<meta property="og:title" content="Resumé · Jan Komínek, Fullstack Engineer, Prague" />
 	<meta
 		property="og:description"
-		content="CV of Jan Komínek — Senior Fullstack Engineer, Prague. 4+ years · Vue.js · React.js · TypeScript · Node.js · Docker. Open to part-time B2B and engineering leadership roles."
+		content="CV of Jan Komínek, Fullstack Engineer in Prague. Building products from scratch since 2022. TypeScript, Vue.js, React, Node.js, PostgreSQL, Docker. Open to part-time B2B and engineering leadership."
 	/>
 	<meta property="og:url" content="https://jankominek.com/resume" />
 </svelte:head>
@@ -107,7 +133,7 @@
 		<p class="m-0 max-w-140 text-[15px] leading-[1.65] text-(--fg-2)">{$_('resume.bio')}</p>
 		<div class="mt-6 flex flex-wrap gap-3">
 			<a
-				href="/files/Jan_Kominek_Resume.pdf"
+				href="/files/Jan_Kominek_CV_08_2026.pdf"
 				download
 				class="inline-flex items-center gap-2 rounded-full bg-(--fg) px-5 py-2.75 text-[14px] font-medium text-(--bg) no-underline transition-all duration-200 hover:bg-(--accent)"
 				onclick={() => trackEvent('file_download', { file_name: 'resume_pdf' })}
@@ -131,12 +157,12 @@
 	<div class="grid grid-cols-4 overflow-hidden rounded-(--radius) border border-(--line) bg-(--bg-2) max-md:grid-cols-2">
 		<div class="border-r border-(--line) p-6 last:border-r-0 max-md:nth-[-n+2]:border-b max-md:nth-[-n+2]:border-b-(--line) max-md:nth-[2n]:border-r-0">
 			<div class="mono mb-3 text-[10px] tracking-widest text-(--fg-4) uppercase">{$_('resume.impact1Label')}</div>
-			<div class="serif text-[34px] leading-none tracking-[-0.02em]">4+ <span class="mono text-[20px] text-(--fg-4)">yrs</span></div>
+			<div class="serif text-[34px] leading-none tracking-[-0.02em]">2022</div>
 			<div class="mono mt-1.5 text-[11px] text-(--fg-4)">{$_('resume.impact1Sub')}</div>
 		</div>
 		<div class="border-r border-(--line) p-6 last:border-r-0 max-md:nth-[-n+2]:border-b max-md:nth-[-n+2]:border-b-(--line) max-md:nth-[2n]:border-r-0">
 			<div class="mono mb-3 text-[10px] tracking-widest text-(--fg-4) uppercase">{$_('resume.impact2Label')}</div>
-			<div class="serif text-[34px] leading-none tracking-[-0.02em]">7</div>
+			<div class="serif text-[34px] leading-none tracking-[-0.02em]">6</div>
 			<div class="mono mt-1.5 text-[11px] text-(--fg-4)">{$_('resume.impact2Sub')}</div>
 		</div>
 		<div class="border-r border-(--line) p-6 last:border-r-0 max-md:nth-[-n+2]:border-b max-md:nth-[-n+2]:border-b-(--line) max-md:nth-[2n]:border-r-0">
@@ -175,6 +201,70 @@
 				{#if exp.chips.length}
 					<div class="flex flex-wrap gap-1.25">
 						{#each exp.chips as chip (chip.label)}
+							<span class="chip {chip.accent ? 'accent' : ''}">{chip.label}</span>
+						{/each}
+					</div>
+				{/if}
+			</div>
+		{/each}
+	</div>
+</section>
+
+<!-- OWN PRODUCT -->
+<section class="mx-auto mb-25 max-w-(--max) px-8 max-sm:px-5">
+	<SectionHeader label={$_('resume.ownProductLabel')} heading={$_('resume.prodH2')} sub={$_('resume.prodP')} headingSize="text-[clamp(24px,3vw,42px)]" />
+
+	<div class="timeline relative pl-8">
+		{#each ownProduct as item (item.key)}
+			<div class="tl-item {item.current ? 'current ' : ''}relative pb-10">
+				<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
+					{$_(`resume.${item.key}Dates`)} <span class="ml-1.5 text-(--fg-3)">· {$_(`resume.${item.key}Duration`)}</span>
+				</div>
+				<h3 class="m-0 mb-1 text-[18px] font-medium">{$_(`resume.${item.key}Role`)}</h3>
+				<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_(`resume.${item.key}Company`)}</div>
+				<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_(`resume.${item.key}Desc`)}</p>
+				{#if item.highlights.length}
+					<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
+						{#each item.highlights as h (h)}
+							<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_(`resume.${item.key}${h}`)}</li>
+						{/each}
+					</ul>
+				{/if}
+				{#if item.chips.length}
+					<div class="flex flex-wrap gap-1.25">
+						{#each item.chips as chip (chip.label)}
+							<span class="chip {chip.accent ? 'accent' : ''}">{chip.label}</span>
+						{/each}
+					</div>
+				{/if}
+			</div>
+		{/each}
+	</div>
+</section>
+
+<!-- LEADERSHIP & TEACHING -->
+<section class="mx-auto mb-25 max-w-(--max) px-8 max-sm:px-5">
+	<SectionHeader label={$_('resume.leadershipLabel')} heading={$_('resume.leadH2')} sub={$_('resume.leadP')} headingSize="text-[clamp(24px,3vw,42px)]" />
+
+	<div class="timeline relative pl-8">
+		{#each leadership as item (item.key)}
+			<div class="tl-item {item.current ? 'current ' : ''}relative pb-10">
+				<div class="mono mb-1 text-[11px] tracking-[0.06em] text-(--fg-4)">
+					{$_(`resume.${item.key}Dates`)} <span class="ml-1.5 text-(--fg-3)">· {$_(`resume.${item.key}Duration`)}</span>
+				</div>
+				<h3 class="m-0 mb-1 text-[18px] font-medium">{$_(`resume.${item.key}Role`)}</h3>
+				<div class="mono mb-2.5 text-[12px] tracking-[0.02em] text-(--accent)">{$_(`resume.${item.key}Company`)}</div>
+				<p class="m-0 mb-3 text-[14px] leading-[1.55] text-(--fg-2)">{$_(`resume.${item.key}Desc`)}</p>
+				{#if item.highlights.length}
+					<ul class="tl-highlights m-0 mb-3 flex list-none flex-col gap-1.25 p-0">
+						{#each item.highlights as h (h)}
+							<li class="relative pl-3.5 text-[13px] leading-normal text-(--fg-3)">{$_(`resume.${item.key}${h}`)}</li>
+						{/each}
+					</ul>
+				{/if}
+				{#if item.chips.length}
+					<div class="flex flex-wrap gap-1.25">
+						{#each item.chips as chip (chip.label)}
 							<span class="chip {chip.accent ? 'accent' : ''}">{chip.label}</span>
 						{/each}
 					</div>
@@ -269,10 +359,10 @@
 				<span class="skill primary font-medium text-(--fg)">Git</span>
 				<span class="skill primary font-medium text-(--fg)">Figma</span>
 				<span class="skill text-(--fg-2)">Agile / Scrum</span>
-				<span class="skill text-(--fg-2)">UX Design</span>
+				<span class="skill text-(--fg-2)">Code Review</span>
 				<span class="skill text-(--fg-2)">System Architecture</span>
-				<span class="skill text-(--fg-2)">Power BI</span>
-				<span class="skill text-(--fg-2)">Network Security</span>
+				<span class="skill text-(--fg-2)">Mentoring</span>
+				<span class="skill text-(--fg-2)">Playwright E2E</span>
 			</div>
 		</div>
 	</div>
@@ -300,7 +390,7 @@
 		}
 
 		/* hide CTAs */
-		a[href='/files/Jan_Kominek_Resume.pdf'],
+		a[href='/files/Jan_Kominek_CV_08_2026.pdf'],
 		a[href='/contact'] {
 			display: none !important;
 		}

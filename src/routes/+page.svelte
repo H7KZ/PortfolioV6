@@ -24,6 +24,15 @@
 			ctaKey: 'viewProject' | 'readCaseStudy';
 		}
 	> = {
+		kreditozrouti: {
+			size: 'featured',
+			badgeKey: 'projectKreditozroutiBadge',
+			company: 'OWN PRODUCT',
+			role: 'CREATOR & MAINTAINER',
+			descKey: 'projectKreditozroutiDesc',
+			chips: ['Vue.js', 'Node.js', 'Redis', 'BullMQ', 'Docker', 'Traefik'],
+			ctaKey: 'readCaseStudy'
+		},
 		iont_info: {
 			size: 'featured',
 			company: 'IONT TECH',
@@ -156,16 +165,16 @@
 </script>
 
 <svelte:head>
-	<title>Jan Komínek — Senior Fullstack Engineer, Prague</title>
+	<title>Jan Komínek · Fullstack Engineer · Prague</title>
 	<meta
 		name="description"
-		content="Jan Komínek — Senior Fullstack Engineer in Prague. Vue.js, React.js, TypeScript, Node.js. Available for part-time B2B contracts. EV charging platforms, data tooling, real-time dashboards."
+		content="Jan Komínek, Fullstack Engineer in Prague. TypeScript, Vue.js, React, Node.js, PostgreSQL, Docker. Available for part-time B2B work, around 20 hours a week, hybrid in Prague or fully remote."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Jan Komínek — Senior Fullstack Engineer, Prague" />
+	<meta property="og:title" content="Jan Komínek · Fullstack Engineer · Prague" />
 	<meta
 		property="og:description"
-		content="Jan Komínek — Senior Fullstack Engineer in Prague. Vue.js, React.js, TypeScript, Node.js. Available for part-time B2B contracts. EV charging platforms, data tooling, real-time dashboards."
+		content="Jan Komínek, Fullstack Engineer in Prague. TypeScript, Vue.js, React, Node.js, PostgreSQL, Docker. Available for part-time B2B work, around 20 hours a week, hybrid in Prague or fully remote."
 	/>
 	<meta property="og:url" content="https://jankominek.com" />
 	<link rel="preload" as="image" href="/images/profile.webp" type="image/webp" fetchpriority="high" />
@@ -173,9 +182,10 @@
 
 <!-- GEO: machine-readable for LLMs -->
 <p class="sr-only">
-	Jan Komínek is a Senior Fullstack Engineer based in Prague, Czech Republic, specializing in Vue.js, React.js, TypeScript, Node.js, and Docker. He has led
-	greenfield products end-to-end, mentors junior engineers, and is seeking technical leadership and CTO-track opportunities. Currently available for part-time
-	B2B contracts up to 10 hours per week.
+	Jan Komínek is a fullstack engineer based in Prague, Czech Republic, working with TypeScript, Vue.js, React, Node.js and PostgreSQL. Since 2022 he has taken
+	products from an empty repository to production, most recently as sole frontend engineer on a zero-trust data provenance platform and as technical lead on
+	an EV charging platform. He also creates and runs Kreditožrouti, a live course scheduler used by 300+ students, and mentors junior engineers with an eye on
+	technical leadership. He is available for part-time B2B work, around 20 hours a week, hybrid in Prague or fully remote.
 </p>
 
 <!-- HERO -->
@@ -221,7 +231,7 @@
 
 	<div class="col-1 mt-12 flex flex-wrap gap-10 border-t border-(--line) pt-7">
 		<div class="flex flex-col gap-1">
-			<div class="serif text-[36px] leading-none">4<span class="text-(--fg-4)">+</span></div>
+			<div class="serif text-[36px] leading-none">2022</div>
 			<div class="mono text-[10px] tracking-widest text-(--fg-4) uppercase">{$_('home.yearsLabel')}</div>
 		</div>
 		<div class="flex flex-col gap-1">
@@ -229,7 +239,7 @@
 			<div class="mono text-[10px] tracking-widest text-(--fg-4) uppercase">{$_('home.projectsLabel')}</div>
 		</div>
 		<div class="flex flex-col gap-1">
-			<div class="serif text-[36px] leading-none">7</div>
+			<div class="serif text-[36px] leading-none">6</div>
 			<div class="mono text-[10px] tracking-widest text-(--fg-4) uppercase">{$_('home.clientsLabel')}</div>
 		</div>
 	</div>
@@ -239,7 +249,7 @@
 	>
 		<img
 			src="/images/profile.webp"
-			alt="Jan Komínek — Senior Fullstack Engineer"
+			alt="Jan Komínek, Fullstack Engineer"
 			width="1589"
 			height="2400"
 			fetchpriority="high"
@@ -275,7 +285,7 @@
 
 <!-- PROJECTS BENTO -->
 <section class="mx-auto mb-35 max-w-(--max) px-8 max-sm:px-5">
-	<SectionHeader label="{$_('home.workLabel')} — {projects.length}" heading={$_('home.workH2')} sub={$_('home.workP')} />
+	<SectionHeader label="{$_('home.workLabel')} · {projects.length}" heading={$_('home.workH2')} sub={$_('home.workP')} />
 
 	<div class="grid grid-cols-6 gap-3.5 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
 		{#each projects.filter((p) => p.slug in bentoConfig) as project (project.slug)}

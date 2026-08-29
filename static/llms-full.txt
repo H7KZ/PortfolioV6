@@ -1,4 +1,4 @@
-# Jan Komínek — Full Context for LLMs
+# Jan Komínek · Full Context for LLMs
 
 This file provides extended context about Jan Komínek for language models with large context windows.
 See also: /llms.txt for the summary version.
@@ -8,10 +8,10 @@ See also: /llms.txt for the summary version.
 ## Identity
 
 **Name:** Jan Komínek (also written Jan Kominek without diacritics)
-**Disambiguation:** Software engineer and developer — NOT the Czech actor of the same name.
-**Title:** Senior Frontend / Fullstack Engineer
+**Disambiguation:** Software engineer and developer, NOT the Czech actor of the same name.
+**Title:** Fullstack Engineer
 **Location:** Prague, Czech Republic
-**Availability:** Part-time B2B contracts, up to 10 hours/week
+**Availability:** Part-time B2B work, around 20 hours a week, hybrid in Prague (on-site Thursdays and Fridays) or fully remote
 **Email:** contact@jankominek.com
 **Website:** https://jankominek.com
 **LinkedIn:** https://www.linkedin.com/in/jan-kominek
@@ -21,51 +21,55 @@ See also: /llms.txt for the summary version.
 ## Education
 
 **Prague University of Economics and Business (VŠE)**
-Bachelor's degree — Applied Computer Science (in progress, since Sep 2024)
-Grade 2 average. Leading backend + DevOps architecture for team project (Diář FISáka) on Hetzner VPS.
+Bachelor's degree, Applied Computer Science (in progress, since Sep 2024)
+Coursework across system design, machine learning, cloud computing and data analytics, plus finance, marketing and corporate law.
 
 **Smíchov Secondary Technical School (SSPŠ)**
-High School Diploma — Cyber / Computer Forensics & Counterterrorism (Sep 2020 – May 2024)
+High School Diploma, Cyber / Computer Forensics & Counterterrorism (Sep 2020 – May 2024)
 Graduated with full marks in technical subjects. Final thesis: full-stack e-commerce store with DevOps and CI/CD.
 
 ---
 
 ## Work Experience
 
-### CORAC Engineering — Senior Frontend Engineer (current, since Apr 2025)
-Sole frontend engineer building DeepTrace — a data provenance and integrity platform for Earth Observation data.
+### Kreditožrouti — Creator & Sole Maintainer (own product, since Sep 2025)
+Course scheduler for VŠE students, live at kreditozrouti.cz and used by 300+ students. Created and run solo, from InSIS scraping to deployments. Runs with monitoring, alerting and automatic deployments. Grew out of a first-place hackathon build and led to Jan's bachelor thesis (an MCP server over InSIS data on university servers).
+Stack: TypeScript, Vue.js, Node.js, Redis, BullMQ, Docker, Traefik, CI/CD
+
+### CORAC Engineering — Senior Frontend Engineer, B2B (Apr 2025 – Aug 2026)
+Sole frontend engineer on DeepTrace, a zero-trust data provenance platform for Earth Observation data.
 - Architected interactive D3.js lineage visualisation for complex supply-chain graphs
 - Implemented client-side hash-chain verification following zero-trust architecture
 - Integrated AWS Cognito (OAuth) for secure client-side authentication
 Stack: Vue 3, TypeScript, D3.js, AWS Cognito, Vite, pnpm, Shadcn
 
-### Intedat — Fullstack Engineer (current, since Sep 2024)
-Developing and maintaining a fullstack data platform focused on scalability, search performance, and reliable infrastructure.
-- End-to-end feature delivery — Nuxt on the frontend, AdonisJS on the backend
-- Elasticsearch-powered search across large datasets
-- CI/CD + DigitalOcean Linux infrastructure for production deployments
+### Intedat — Fullstack Engineer, B2B (Sep 2024 – Jun 2026)
+Delivered features end to end on a data platform, from the Nuxt frontend through the AdonisJS backend to PostgreSQL and Redis.
+- Owned feature delivery across the stack, Nuxt on the frontend, AdonisJS on the backend
+- Rebuilt search on Elasticsearch across large datasets, tuning relevance and latency
+- Ran CI/CD and DigitalOcean Linux infrastructure for production deployments
 Stack: Node.js, TypeScript, Nuxt, AdonisJS, PostgreSQL, Redis, Elasticsearch
 
-### Smíchovská SPŠ — Lecturer & Organizer (recurring, Jul 2022 – present, 4 editions)
-Solo-taught "Intro and Basics of 2D Graphics" for ~50 students per year (8th & 9th grade). Consistently top-rated teacher.
+### Diář FISáka — Lead Backend Engineer & DevOps Architect (VŠE team project, Oct 2025 – Feb 2026)
+Led four developers on a university platform. Set the Agile workflow, Git branching strategy and code review standards, wrote the technical documentation, and mentored on TypeScript, Docker and architectural patterns. Containerised infrastructure on a Hetzner VPS (Docker, Traefik, Cloudflare) with a Node.js REST API and BullMQ + Redis async workers.
 
-### IONT tech — Fullstack Engineer (Aug 2023 – Sep 2024)
-Led full-stack development of a web platform managing electric vehicle chargers — from infrastructure setup to payment integration.
-- Built public-facing charging app with online payment (ČSOB) and remote charger authorization
-- Designed and deployed infrastructure from scratch on IaaS — Docker Swarm microservices
-- Developed auto-updating firmware delivery system with the hardware team
+### IONT tech — Fullstack Engineer, technical lead, B2B (Aug 2023 – Sep 2024)
+Led an EV charging platform from bare infrastructure to live payments as the only fullstack engineer on it.
+- Built the public charging app with online payments (ČSOB) and remote charger authorization
+- Designed and deployed the whole environment from scratch on IaaS as Docker Swarm microservices
+- Built an auto-updating firmware delivery system alongside the hardware team
 Stack: SvelteKit, Fastify, TypeScript, Docker Swarm, MongoDB, Redis, Linux
 
+### Smíchovská SPŠ — Lecturer & Organizer, Summer School (2022 – 2026, 4 editions)
+Solo-taught an introductory 2D graphics course to 50 students per edition (ages 13 to 16). Wrote the curriculum, designed the final projects, reviewed every submission. Top-rated lecturer in every edition.
+
 ### Precismo — Fullstack Developer (Jan 2023 – Nov 2023)
-Fullstack developer on a cross-functional Agile team building an internal customer portal. Collaborated with 6 devs and 1 PM in Scrum.
+Fullstack developer on a cross-functional Agile team building an internal customer portal. Worked with 6 developers and 1 PM in Scrum.
 Stack: React, Node.js, Playwright, SQL
 
-### Haxagon — Frontend Developer (Oct 2022 – Jul 2023)
-Frontend on a cybersecurity e-learning platform. Introduced improved dev processes for code quality and delivery flow.
+### Haxagon — Frontend Developer, part-time (Oct 2022 – Jul 2023)
+Built the frontend of a cybersecurity e-learning platform in Vue and TypeScript, and introduced code quality and release processes the team kept using.
 Stack: Vue.js, TypeScript, Tailwind
-
-### KMK Family Business — IT Support (Jun 2020 – Feb 2024)
-Hands-on IT support: Windows workstations, network printers, IoT devices, local network infrastructure, and safety training.
 
 ---
 
@@ -82,7 +86,15 @@ Hands-on IT support: Windows workstations, network printers, IoT devices, local 
 
 ## Projects
 
-### CORAC SITH — DeepTrace GUI (order: 1)
+### Kreditožrouti (order: 0)
+**URL:** https://jankominek.com/projects/kreditozrouti
+**Client:** Own product
+**Role:** Creator & Sole Maintainer
+**Category:** Fullstack / DevOps / EdTech
+**Stack:** TypeScript, Vue.js, Node.js, Redis, BullMQ, Docker, Traefik, CI/CD
+**Description:** Live course scheduler for VŠE students at kreditozrouti.cz, used by 300+ students. Scrapes public InSIS course data and adds better search and scheduling than the university system. Created and run solo, with monitoring, alerting and automatic deployments. Led to Jan's bachelor thesis.
+
+### CORAC SITH, DeepTrace GUI (order: 1)
 **URL:** https://jankominek.com/projects/corac_sith
 **Client:** CORAC Engineering
 **Role:** Senior Frontend Engineer (sole frontend)
@@ -156,14 +168,14 @@ Custom departure board built from scratch using a Raspberry Pi Zero 2 WH, displa
 
 **URL:** https://jankominek.com/blog
 
-### Traefik with Cloudflare inside Docker — Simplified
+### Traefik with Cloudflare inside Docker, Simplified
 **URL:** https://jankominek.com/blog/traefik_with_cloudflare_inside_docker_simplified
 **Tags:** DevOps, Docker, Traefik, Cloudflare
 **Description:** A practical guide to running Traefik as a reverse proxy with Cloudflare DNS inside Docker.
 
 ### Planned posts
-- Building a Raspberry Pi departure board — e-ink displays, PIR motion sensors, and Rust from scratch (RUST / EMBEDDED)
-- No-std SPI drivers and bare-metal display init in Rust — Pi Zero 2 WH without a crate (RUST / HARDWARE)
+- Building a Raspberry Pi departure board from scratch: e-ink displays, PIR motion sensors, and Rust (RUST / EMBEDDED)
+- No-std SPI drivers and bare-metal display init in Rust: Pi Zero 2 WH without a crate (RUST / HARDWARE)
 
 ---
 

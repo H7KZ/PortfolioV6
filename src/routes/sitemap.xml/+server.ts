@@ -10,6 +10,7 @@ const STATIC_PAGES = [
 ];
 
 const PROJECT_SLUGS = [
+	'kreditozrouti',
 	'iont_info',
 	'iont_charge',
 	'iont_admin',

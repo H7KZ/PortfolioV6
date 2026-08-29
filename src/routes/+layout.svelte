@@ -20,11 +20,10 @@
 			alternateName: 'Jan Kominek',
 			url: SITE,
 			email: 'contact@jankominek.com',
-			jobTitle: 'Senior Fullstack Engineer',
+			jobTitle: 'Fullstack Engineer',
 			description:
-				'Senior Fullstack Engineer based in Prague, Czech Republic. Specialising in Vue.js, React.js, TypeScript, Node.js, and Docker. Led greenfield products end-to-end and mentors junior engineers. Available for part-time B2B contracts and actively seeking technical leadership and CTO-track roles.',
+				'Fullstack Engineer based in Prague, Czech Republic. Working with TypeScript, Vue.js, React, Node.js, PostgreSQL and Docker. Since 2022 has taken products from an empty repository to production and creates and runs Kreditožrouti, a live course scheduler. Available for part-time B2B work, around 20 hours a week, hybrid in Prague or fully remote, with an eye on technical leadership.',
 			address: { '@type': 'PostalAddress', addressLocality: 'Prague', addressCountry: 'CZ' },
-			worksFor: { '@type': 'Organization', name: 'CORAC Engineering' },
 			sameAs: ['https://www.linkedin.com/in/jan-kominek'],
 			knowsAbout: [
 				'Vue.js',
@@ -50,7 +49,7 @@
 						'@type': 'Offer',
 						itemOffered: {
 							'@type': 'Service',
-							name: 'Greenfield product development — idea to production'
+							name: 'Product development from scratch, idea to production'
 						}
 					},
 					{
@@ -64,7 +63,7 @@
 						'@type': 'Offer',
 						itemOffered: {
 							'@type': 'Service',
-							name: 'Fractional senior engineer — architecture, code review, mentoring'
+							name: 'Fractional senior engineer: architecture, code review, mentoring'
 						}
 					}
 				]

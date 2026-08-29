@@ -52,12 +52,12 @@
 </script>
 
 <svelte:head>
-	<title>{data.meta.title} — Jan Komínek</title>
-	<meta name="description" content="{data.meta.title} — {metaDescription}. A project by Jan Komínek, Senior Fullstack Engineer." />
+	<title>{data.meta.title} · Jan Komínek</title>
+	<meta name="description" content="{data.meta.title}. {metaDescription}. A project by Jan Komínek, Fullstack Engineer." />
 
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="{data.meta.title} — Jan Komínek" />
-	<meta property="og:description" content="{data.meta.title} — {metaDescription}. A project by Jan Komínek." />
+	<meta property="og:title" content="{data.meta.title} · Jan Komínek" />
+	<meta property="og:description" content="{data.meta.title}. {metaDescription}. A project by Jan Komínek." />
 	<meta property="og:url" content={projectUrl} />
 	<meta property="og:site_name" content="Jan Komínek" />
 	{#if data.meta.thumbnail}
@@ -65,8 +65,8 @@
 	{/if}
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{data.meta.title} — Jan Komínek" />
-	<meta name="twitter:description" content="{data.meta.title} — {metaDescription}." />
+	<meta name="twitter:title" content="{data.meta.title} · Jan Komínek" />
+	<meta name="twitter:description" content="{data.meta.title}. {metaDescription}." />
 	{#if data.meta.thumbnail}
 		<meta name="twitter:image" content={data.meta.thumbnail} />
 	{/if}

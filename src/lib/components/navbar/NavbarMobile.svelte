@@ -10,7 +10,7 @@
 	<div class="flex items-center justify-between px-5 py-3.5">
 		<a
 			href="/"
-			aria-label="Jan Komínek — Home"
+			aria-label="Jan Komínek, Home"
 			onclick={() => (menuOpen = false)}
 			class="serif grid h-9 w-9 place-items-center rounded-full border border-(--line-2) text-[20px] font-normal text-(--fg) no-underline transition-[border-color] duration-200"
 			>J</a

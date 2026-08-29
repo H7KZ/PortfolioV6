@@ -8,7 +8,7 @@
 	<div class="mx-auto flex max-w-(--max) items-center justify-between px-8 py-4">
 		<a
 			href="/"
-			aria-label="Jan Komínek — Home"
+			aria-label="Jan Komínek, Home"
 			class="serif grid h-9.5 w-9.5 place-items-center rounded-full border border-(--line-2) text-[22px] font-normal text-(--fg) no-underline transition-[border-color] duration-200 hover:border-(--fg-3)"
 			>J</a
 		>

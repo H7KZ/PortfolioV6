@@ -38,7 +38,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.meta.title} — Jan Komínek</title>
+	<title>{data.meta.title} · Jan Komínek</title>
 	<meta name="description" content={description} />
 	<meta name="author" content={data.meta.author ?? 'Jan Komínek'} />
 
@@ -71,7 +71,7 @@
 	<link rel="canonical" href={postUrl} />
 
 	<!-- RSS autodiscovery -->
-	<link rel="alternate" type="application/rss+xml" title="Jan Komínek — Engineering Blog" href="/feed.xml" />
+	<link rel="alternate" type="application/rss+xml" title="Jan Komínek · Engineering Blog" href="/feed.xml" />
 
 	<!-- BlogPosting JSON-LD -->
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
@@ -123,10 +123,10 @@
 		<div class="mx-auto w-full max-w-270">
 			<div class="rounded-(--radius) border border-(--line) bg-(--bg-2) px-6 py-5">
 				<div class="mono mb-1 text-[10px] tracking-widest text-(--fg-4) uppercase">◆ Found this useful?</div>
-				<p class="m-0 mb-3 text-[13px] leading-[1.55] text-(--fg-3)">Share it with someone who'd benefit — or subscribe to get new posts.</p>
+				<p class="m-0 mb-3 text-[13px] leading-[1.55] text-(--fg-3)">Share it with someone who'd benefit, or subscribe to get new posts.</p>
 				<div class="flex flex-wrap gap-3">
 					<a
-						href="https://x.com/intent/post?text={encodeURIComponent(data.meta.title + ' — by @jankominek')}&url={encodeURIComponent(postUrl)}"
+						href="https://x.com/intent/post?text={encodeURIComponent(data.meta.title + ' by @jankominek')}&url={encodeURIComponent(postUrl)}"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="mono inline-flex items-center gap-1.5 text-[11px] tracking-[0.04em] text-(--fg-3) no-underline transition-colors duration-150 hover:text-(--fg)"

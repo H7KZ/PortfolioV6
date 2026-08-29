@@ -5,16 +5,16 @@
 </script>
 
 <svelte:head>
-	<title>Contact — Jan Komínek, Senior Fullstack Engineer</title>
+	<title>Contact · Jan Komínek, Fullstack Engineer</title>
 	<meta
 		name="description"
-		content="Hire Jan Komínek — Freelance Senior Fullstack Engineer, Prague. Available part-time B2B up to 10 h/week. Book a 30-min call or send a project brief."
+		content="Hire Jan Komínek, Fullstack Engineer in Prague. Available for part-time B2B work, around 20 hours a week, hybrid in Prague or fully remote. Book a 30-min call or send a project brief."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Contact — Jan Komínek, Senior Fullstack Engineer" />
+	<meta property="og:title" content="Contact · Jan Komínek, Fullstack Engineer" />
 	<meta
 		property="og:description"
-		content="Hire Jan Komínek — Freelance Senior Fullstack Engineer, Prague. Available part-time B2B up to 10 h/week. Book a 30-min call or send a project brief."
+		content="Hire Jan Komínek, Fullstack Engineer in Prague. Available for part-time B2B work, around 20 hours a week, hybrid in Prague or fully remote. Book a 30-min call or send a project brief."
 	/>
 	<meta property="og:url" content="https://jankominek.com/contact" />
 </svelte:head>

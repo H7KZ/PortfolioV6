@@ -356,7 +356,7 @@
 		</BoldButton>
 		<div class="flex h-4 items-center gap-2 text-sm">
 			{#if error.api}
-				<p class="text-red-400">{error.api} — <a href="mailto:contact@jankominek.com" class="underline">contact@jankominek.com</a></p>
+				<p class="text-red-400">{error.api} <a href="mailto:contact@jankominek.com" class="underline">contact@jankominek.com</a></p>
 			{:else if success}
 				<p class="text-green-400">{success}</p>
 			{/if}
